@@ -1,0 +1,14 @@
+/* color variables */
+:root{
+    --color-gold: #e9bd0a;
+    --color-light-purple: #f4effa;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #030007,#10002B, #240046, #3C096C, #4a1381, #3C096C, #240046, #10011e);
+
+}
+
+
