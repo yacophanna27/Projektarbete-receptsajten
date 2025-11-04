@@ -1,3 +1,14 @@
+# Projektarbete-receptsajten
+Team B, FUX-25
+
+
+**Deltagare**
+
+Jennifer Gahne
+Louise Rylander
+Nataliia Rusanova
+Yacop Hanna
+
 # ReceptSajten
 
 This template should help get you started developing with Vue 3 in Vite.
