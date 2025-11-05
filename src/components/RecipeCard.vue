@@ -1,17 +1,33 @@
 /*Jennifer*/
 
 <script>
+
+export default {
+  props: [ 'recipe' ],
+  data() {
+    return {
+      // Define any component-specific data properties here
+    };
+  },
+  methods: {
+    handleButtonClick() {
+      // Logic to handle button click
+    }
+  }
+}
+
+
 </script>
 
 <template>
 <section class="recipe-card">
     <img src="https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg" alt="Hummersoppa"/>
     <div class="quickview">
-        <h1>Hummersoppa</h1>
+        <h1>{{ recipe.title }}</h1>
         <div class="details">
-            <p><i class="bi bi-clock"></i> 30 minuter</p>
-            <p><i class="bi bi-person"></i> 8 portioner</p>
-            <p><i class="bi bi-basket3"></i> 19 ingredienser</p>
+            <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }}</p>
+            <p><i class="bi bi-person"></i> {{ recipe.servings }} portioner</p>
+            <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredienser</p>
             <p>★★★☆☆</p>
         </div>
         <button>Visa recept</button>
