@@ -1,6 +1,6 @@
 /*Jennifer*/
 
-<script setup>
+<script>
 </script>
 
 <template>
@@ -27,31 +27,39 @@
 }
 
 .recipe-card {
-  width:20%;
-  display:inline-flex;
-  flex-direction:column;
-  border-radius:10px;
+  width: 300px;
+  min-width: 280px;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
   box-shadow: 0 0 6px #ddd;
-  padding:15px;
+  padding: 2rem;
   text-align: center;
-  margin: 10px;
-  vertical-align: top;
+  margin: 1.5rem;
   background-color: #c6a9c326;
 }
 
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .recipe-card {
+    width: calc(100% - 3rem);
+    margin: 1.5rem auto;
+  }
+}
+
 .recipe-card .quickview{
-  aspect-ratio: 1/1;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   gap:20px;
+  border-radius:5px;
 }
 .recipe-card .quickview h1{
   font-size:1.3rem;
 }
 
 .recipe-card img {
-  aspect-ratio: 1/1;
   width:100%;
   border-radius:5px;
   cursor:pointer;
@@ -63,13 +71,16 @@
 }
 
 button {
-    background-color: #c6a9c383;
-    border: none;
-    margin: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background: #c6a9c383;
+    margin-bottom: 20px;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border: 1px solid transparent;   
+    transition: 0.2s ease;
+    border: 1px solid #fff;
     }
 
 button:hover {
