@@ -35,8 +35,8 @@ export default {
 <style scoped>
 
 .quickview {
-    background-color: #c9b6c7ff;
-    color: #555;
+    background-color: #f0e6f7;
+    color: #666;
 }
 
 .recipe-card {
@@ -49,7 +49,7 @@ export default {
   padding: 1rem;
   text-align: center;
   margin: 1.5rem;
-  background-color: #dbcbd9ff;
+  background-color: #f5f0f8;
 }
 
 .recipe-card .quickview{
@@ -84,17 +84,18 @@ export default {
 button {
     font-size: 1rem;
     font-weight: 500;
-    background: #c6a9c383;
+    background: #e1c7ea;
     margin-bottom: 20px;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
     border: 1px solid transparent;   
     transition: 0.2s ease;
+    color: #444;
     }
 
 button:hover {
-    background-color: #b589c3;
+    background-color: #d4b5dd;
     border: 1px solid #fff;
 }
 
