@@ -1,7 +1,6 @@
 /*Jennifer*/
 
 <script>
-
 export default {
   props: [ 'recipe' ],
   data() {
@@ -15,20 +14,18 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <template>
 <section class="recipe-card">
-    <img src="https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg" alt="Hummersoppa"/>
+    <img :src="recipe.image" :alt="recipe.title"/>
     <div class="quickview">
         <h1>{{ recipe.title }}</h1>
         <div class="details">
             <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }}</p>
             <p><i class="bi bi-person"></i> {{ recipe.servings }} portioner</p>
             <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredienser</p>
-            <p>★★★☆☆</p>
+            <p>{{recipe.rating}}</p>
         </div>
         <button>Visa recept</button>
     </div>
@@ -38,7 +35,7 @@ export default {
 <style scoped>
 
 .quickview {
-    background-color: #c6a9c326;
+    background-color: #c9b6c7ff;
     color: #555;
 }
 
@@ -49,18 +46,10 @@ export default {
   flex-direction: column;
   border-radius: 1.5rem;
   box-shadow: 0 0 6px #ddd;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   margin: 1.5rem;
-  background-color: #c6a9c326;
-}
-
-/* Responsiv design för mindre skärmar */
-@media (max-width: 768px) {
-  .recipe-card {
-    width: calc(100% - 3rem);
-    margin: 1.5rem auto;
-  }
+  background-color: #dbcbd9ff;
 }
 
 .recipe-card .quickview{
@@ -72,7 +61,13 @@ export default {
   border-radius:5px;
 }
 .recipe-card .quickview h1{
-  font-size:1.3rem;
+  font-size:1.6rem;
+  margin: 1rem;
+}
+
+.details p {
+  font-size: 1.2rem;
+  margin: 0.7rem;
 }
 
 .recipe-card img {
@@ -87,7 +82,7 @@ export default {
 }
 
 button {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     background: #c6a9c383;
     margin-bottom: 20px;
@@ -96,11 +91,11 @@ button {
     cursor: pointer;
     border: 1px solid transparent;   
     transition: 0.2s ease;
-    border: 1px solid #fff;
     }
 
 button:hover {
     background-color: #b589c3;
+    border: 1px solid #fff;
 }
 
 </style>
