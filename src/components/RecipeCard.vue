@@ -18,7 +18,12 @@ export default {
 
 <template>
 <section class="recipe-card">
-    <img :src="recipe.image" :alt="recipe.title"/>
+    <div class="image-container">
+        <img :src="recipe.image" :alt="recipe.title"/>
+        <div class="category-badge">
+            {{ recipe.category }}
+        </div>
+    </div>
     <div class="quickview">
         <h1>{{ recipe.title }}</h1>
         <div class="details">
@@ -45,7 +50,7 @@ export default {
   display: inline-flex;
   flex-direction: column;
   border-radius: 1.5rem;
-  box-shadow: 0 0 6px #ddd;
+  box-shadow: 0 0 6px;
   padding: 1rem;
   text-align: center;
   margin: 1.5rem;
@@ -70,6 +75,11 @@ export default {
   margin: 0.7rem;
 }
 
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
 .recipe-card img {
   width:100%;
   border-radius:5px;
@@ -79,6 +89,20 @@ export default {
 }
 .recipe-card img:hover{
   opacity:1;
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ffa726, #ff9800);
 }
 
 button {
