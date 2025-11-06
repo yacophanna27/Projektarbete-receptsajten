@@ -1,10 +1,14 @@
 <script>
 import RecipeCard from './components/RecipeCard.vue';
 import { fetchRecipes } from './fetchRecipes.js';
+import NavBar from './components/NavBar.vue';
+import Header from './components/Header.vue';
 
 export default {
   components: {
-    RecipeCard
+    RecipeCard,
+    NavBar,
+    Header
   },
   data() {
     return {
@@ -15,7 +19,10 @@ export default {
 </script>
 
 <template>
+  <NavBar />
+  <Header />
   <RecipeCard v-for="(recipe, index) in recipes" :key="index" :recipe="recipe" />
+
 </template>
 
 <style scoped></style>
