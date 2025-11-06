@@ -4,18 +4,18 @@ export default {
 </script>
 
 <template>
-    <header class="header">
+    <main class="heading">
         <div class="mainText">
             <p> 2026 Celebration</p>
         </div>
         <div class="mainText">
             <h1> New Year's Eve Recepies </h1>
         </div>
-    </header>
+    </main>
 </template>
 
 <style scoped>
-header {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -31,8 +31,24 @@ header {
 }
 
 .mainText p {
-  margin-top: 3rem;
+  margin-top: 1rem;
   color: var(--color-gold);
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 30vh; 
+    margin-bottom: 4rem;
+  }
+
+  .mainText h1 {
+    font-size: 3rem;
+  }
+
+  .mainText p {
+    font-size: 1.5rem;
+  }
+  
 }
 
 </style>

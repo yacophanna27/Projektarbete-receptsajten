@@ -52,4 +52,19 @@ export default {
   margin: 1rem;
 
 }
+
+@media (min-width: 768px) {
+  .navmenu li a {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  .logoname {
+    font-size: 2rem;
+    margin-left: 2rem; 
+  }
+  .navmenu li {
+    margin-right: 2rem; 
+  }
+}
 </style>
