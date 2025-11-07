@@ -74,25 +74,3 @@ body {
   color: var(--color-gold)
 }
 
-.categories {
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  align-items: center;
-  list-style: none;
-  margin-top: 6rem;
-}
-
-.categories li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background-color: var(--color-light-purple);
-  margin-bottom: 1.5rem;
-  width: 70%;
-  border-radius: 1.5rem;
-  font-size: 1rem;
-  font-family: monospace;
-
-}
