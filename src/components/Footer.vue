@@ -18,8 +18,9 @@ footer {
     color: var(--color-gold);
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: auto;
     font-size: 1rem;
+    width:100%;
 }
 
 @media (min-width: 768px) {
