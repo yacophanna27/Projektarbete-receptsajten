@@ -7,18 +7,25 @@ export default {
 
 <template>
     <footer class="footer">
-        <p>© 2025 New Year's Eve Recipes. All rights reserved.</p>
+        <p>© 2025 New Year's Eve Recipes. Team B - All rights reserved.</p>
     </footer>
 </template>
 
 <style scoped>
 footer {
-    font-family:'montserrat', sans-serif;
+    font-family: 'montserrat', sans-serif;
     background-color: var(--color-dark);
-     color: var(--color-gold);
+    color: var(--color-gold);
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
     font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
 </style>
