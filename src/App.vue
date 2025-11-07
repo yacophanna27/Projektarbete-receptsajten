@@ -25,7 +25,6 @@ export default {
   <Header />
   <RecipeCard v-for="(recipe, index) in recipes" :key="index" :recipe="recipe" />
   <Footer />
-
 </template>
 
 <style scoped></style>
