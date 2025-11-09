@@ -13,8 +13,8 @@ export default {
         
         <nav class="navbar">
             <ul class="navmenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Search</a></li>
+              <!--  <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li> -->
             </ul>
             <SearchBar />
         </nav>
