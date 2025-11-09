@@ -22,13 +22,13 @@ export default {
     return {
       searchText: '',
       selectedCategory: '',
-      categories: ['förrätt', 'varmrätt', 'dessert', 'drinkar']
+      categories: ['Förrätt', 'Varmrätt', 'Dessert', 'Drinkar']
     }
   },
   methods: {
     search() {
       console.log('Söker efter:', this.searchText, 'i kategori:', this.selectedCategory)
-      // Här kan du lägga till kod för att skicka sökningen till en receptlista senare
+      
     }
   }
 }
@@ -44,7 +44,7 @@ export default {
 input, select {
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #571f4c;
 }
 
 button {
@@ -55,6 +55,11 @@ button {
   color: white;
   cursor: pointer;
   font-weight: bold;
+}
+input, select {
+  background-color: #65088a;
+  color: white;
+  border: 2px solid var(--color-gold);
 }
 
 button:hover {
