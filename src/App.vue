@@ -5,6 +5,7 @@ import NavBar from './components/NavBar.vue';
 import Header from './components/Header.vue';
 import Categories from './components/Categories.vue';
 import Footer from './components/Footer.vue';
+import RollingText from "@/components/RollingText.vue";
 
 export default {
   components: {
@@ -18,8 +19,7 @@ export default {
     return {
       recipes: fetchRecipes()
     };
-  }
-}
+}}
 </script>
 
 <template>
