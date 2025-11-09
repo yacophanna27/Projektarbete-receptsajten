@@ -36,31 +36,33 @@ export default {
 
 <style scoped>
 .search-bar {
+  font-family: 'montserrat', sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: gold
 }
 
 input, select {
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
-  border: 1px solid #571f4c;
+  border: 2px solid #582f62;
+  background-color: var(--light-purple);
+  color: gold;
 }
 
 button {
+  font-family: 'montserrat', sans-serif;
   padding: 0.4rem 0.8rem;
-  background-color: var(--color-gold);
+  background-color: var(--dark-purple);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: gold;
   cursor: pointer;
   font-weight: bold;
+  font-family: 'montserrat', sans-serif;
 }
-input, select {
-  background-color: #65088a;
-  color: white;
-  border: 2px solid var(--color-gold);
-}
+
 
 button:hover {
   opacity: 0.9;
