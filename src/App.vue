@@ -4,7 +4,6 @@ import { fetchRecipes } from './fetchRecipes.js';
 import NavBar from './components/NavBar.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import RollingText from "@/components/RollingText.vue";
 
 export default {
   components: {

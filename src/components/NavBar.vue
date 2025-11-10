@@ -10,7 +10,6 @@ export default {
 <template>
     <header class="header">
         <a href="#" class="logoname"> Festive Bites</a>
-        
         <nav class="navbar">
             <ul class="navmenu">
               <!--  <li><a href="#">Home</a></li>
