@@ -1,6 +1,8 @@
 /* Yacob */
 <script>
+import SearchBar from './SearchBar.vue'
 export default {
+   components: { SearchBar }
     
 }
 </script>
@@ -8,12 +10,12 @@ export default {
 <template>
     <header class="header">
         <a href="#" class="logoname"> Festive Bites</a>
-        
         <nav class="navbar">
             <ul class="navmenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Search</a></li>
+              <!--  <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li> -->
             </ul>
+            <SearchBar />
         </nav>
     </header>
 </template>
