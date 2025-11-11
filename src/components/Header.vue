@@ -1,28 +1,34 @@
 <script>
 export default {
+  name: "Header",
+  components: {
+
+  }
 }
 </script>
 
 <template>
-    <main class="heading">
-        <div class="mainText">
-            <p> 2026 Celebration</p>
-        </div>
-        <div class="mainText">
-            <h1> New Year's Eve Recepies </h1>
-        </div>
-    </main>
+  <main class="heading">
+    <div class="mainText">
+     
+      <p>2026 CELEBRATIONS</p>
+      
+    </div>
+    <div class="mainText">
+      <h1> New Year's Eve Recepies </h1>
+    </div>
+  </main>
 </template>
 
 <style scoped>
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  height: 30vh; 
-  
+  height: 30vh;
+
 }
 
 .mainText {
@@ -37,7 +43,7 @@ main {
 
 @media (min-width: 768px) {
   main {
-    height: 30vh; 
+    height: 30vh;
     margin-bottom: 4rem;
   }
 
@@ -48,7 +54,6 @@ main {
   .mainText p {
     font-size: 1.5rem;
   }
-  
-}
 
+}
 </style>
