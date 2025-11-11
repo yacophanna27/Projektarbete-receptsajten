@@ -3,6 +3,7 @@
 <script>
 export default {
   name: 'SearchBar',
+
   data() {
     return {
       searchText: ''
@@ -54,6 +55,15 @@ button {
   color: #b39108;
   cursor: pointer;
   font-weight: bold;
+}
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  button {
+    width: 100%;
+  }
 }
 
 button:hover {
