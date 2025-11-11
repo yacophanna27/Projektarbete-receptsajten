@@ -7,7 +7,9 @@ import Footer from './components/Footer.vue';
 export default {
   components: {
     NavBar,
-    Header
+    Header,
+    Categories,
+    Footer
   }
 }
 </script>
@@ -15,7 +17,9 @@ export default {
 <template>
   <NavBar />
   <Header v-if="$route.path === '/'" />
+  <Categories />
   <router-view />
+  <Footer />
 
 </template>
 
