@@ -105,10 +105,10 @@ export default {
   color: white;
   text-transform: capitalize;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  background: linear-gradient(135deg, #ffa726, #ff9800);
+  background: linear-gradient(135deg, #e8c53a, #c69c6d);
 }
 
-button {
+.view-button {
     font-size: 1rem;
     font-weight: 500;
     background: #e1c7ea;
@@ -121,7 +121,7 @@ button {
     color: #444;
     }
 
-button:hover {
+.view-button:hover {
     background-color: #d4b5dd;
     border: 1px solid #fff;
 }
