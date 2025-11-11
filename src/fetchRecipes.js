@@ -1,6 +1,7 @@
 export function fetchRecipes() {
   return [
     {
+      id:1,
       title: 'Hummersoppa',
       cooking_time: '60 minuter',
       servings: 8,
@@ -10,6 +11,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
     },
     {
+      id:2,
       title: 'Toast skagen',
       cooking_time: '30 minuter',
       servings: 10,
@@ -19,6 +21,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
     },
     {
+      id:3,
       title: 'Pannacotta',
       cooking_time: '20 minuter',
       servings: 12,
@@ -28,6 +31,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243738/cf_259/pannacotta.jpg'
     },
     {
+      id:4,
       title: 'Tiramisu',
       cooking_time: '45 minuter',
       servings: 8,
@@ -37,6 +41,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_218797/cf_259/tiramisu.jpg'
     },
     {
+      id:5,
       title: 'Ryggbiff med rotselleripuré',
       cooking_time: '70 minuter',
       servings: 10,
@@ -46,6 +51,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
     },
     {
+      id:6,
       title: 'Toast med fikon och ricotta',
       cooking_time: '15 minuter',
       servings: 8,
@@ -55,6 +61,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
     },
     {
+      id:7,
       title: 'Rentartar med brynt sojasmör',
       cooking_time: '45 minuter',
       servings: 12,
@@ -64,6 +71,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
     },
     {
+      id:8,
       title: 'Torskrygg med räkor och dillsmör',
       cooking_time: '50 minuter',
       servings: 8,
@@ -73,6 +81,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
     },
     {
+      id:9,
       title: 'Chokladpavlova med körsbär',
       cooking_time: '60 minuter',
       servings: 8,
@@ -82,6 +91,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
     },
     {
+      id:10,
       title: 'Krämig hallonmimosa',
       cooking_time: '10 minuter',
       servings: 12,
@@ -91,6 +101,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
     },
     {
+      id:11,
       title: 'Thai Basil med kokosskum',
       cooking_time: '25 minuter',
       servings: 8,
@@ -100,6 +111,7 @@ export function fetchRecipes() {
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
     },
     {
+      id:12,
       title: 'Negroni med sötsyrlig twist',
       cooking_time: '35 minuter',
       servings: 8,

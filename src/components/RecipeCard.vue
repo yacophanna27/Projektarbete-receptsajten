@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  props: [ 'recipe' ],
+  props: [ 'recipe', 'index' ],
   data() {
     return {
       // Define any component-specific data properties here
@@ -32,7 +32,10 @@ export default {
             <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredienser</p>
             <p>{{recipe.rating}}</p>
         </div>
-        <button>Visa recept</button>
+
+        <router-link :to="`/recipe/${index}`" class="view-button">
+        Visa recept
+        </router-link>
     </div>
   </section>
 </template>
