@@ -1,27 +1,49 @@
 <script>
 import RecipeCard from './RecipeCard.vue';
 import { fetchRecipes } from '../fetchRecipes.js';
+import Categories from './Categories.vue';
 
 export default {
   name: 'HomePage',
-  components: { RecipeCard },
+  components: { RecipeCard, Categories },
   data() {
     return {
-      recipes: fetchRecipes()
+      recipes: fetchRecipes(),
+      selectedCategory: 'all'
     };
+  },
+  computed: {
+    filteredRecipes() {
+      if (this.selectedCategory === 'all'){
+        return this.recipes;
+      } else {
+        return this.recipes.filter (r => r.category === this.selectedCategory);
+      };
+    }
+  },
+  methods: {
+    onCategorySelection(value) {
+      this.selectedCategory = value;
+    }
   }
-}
+};
 </script>
 
 <template>
+  <div class="home-page-root">
+    <div class="category-bar">
+      <Categories @category-selected="onCategorySelection" />
+    </div>
+
     <div class="home-page">
-      <RecipeCard 
-        v-for="(recipe, index) in recipes" 
-        :key="index" 
+      <RecipeCard
+        v-for="(recipe, index) in filteredRecipes"
+        :key="recipe.id"
         :recipe="recipe"
-        :index='index'
+        :index="index"
       />
     </div>
+  </div>
 </template>
 
 <style scoped>
