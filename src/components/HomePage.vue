@@ -30,6 +30,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   min-height: 100vh;
-  padding: 30px;
+  margin-top: 2rem;
 }
 </style>
