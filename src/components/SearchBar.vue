@@ -1,14 +1,4 @@
-<template>
-  <div class="search-bar">
-    <input
-      type="text"
-      v-model="searchText"
-      placeholder="Sök recept..."
-      @keyup.enter="search"
-    />
-    <button @click="search">Sök</button>
-  </div>
-</template>
+/*Lollo*/
 
 <script>
 export default {
@@ -26,6 +16,17 @@ export default {
   }
 }
 </script>
+<template>
+  <div class="search-bar">
+    <input
+      type="text"
+      v-model="searchText"
+      placeholder="Sök recept..."
+      @keyup.enter="search"
+    />
+    <button @click="search">Sök</button>
+  </div>
+</template>
 
 <style scoped>
 .search-bar {
