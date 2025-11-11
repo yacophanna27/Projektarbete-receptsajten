@@ -1,38 +1,33 @@
-/<template>
+/*Lollo*/
+
+<script>
+export default {
+  name: 'SearchBar',
+
+  data() {
+    return {
+      searchText: ''
+    }
+  },
+  methods: {
+    search() {
+      console.log('Söker efter:', this.searchText)
+      // recepten
+    }
+  }
+}
+</script>
+<template>
   <div class="search-bar">
     <input
       type="text"
       v-model="searchText"
       placeholder="Sök recept..."
+      @keyup.enter="search"
     />
-
-    <select v-model="selectedCategory">
-      <option value="">Alla kategorier</option>
-      <option v-for="cat in categories" :key="cat">{{ cat }}</option>
-    </select>
-
     <button @click="search">Sök</button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'SearchBar',
-  data() {
-    return {
-      searchText: '',
-      selectedCategory: '',
-      categories: ['Förrätt', 'Varmrätt', 'Dessert', 'Drinkar']
-    }
-  },
-  methods: {
-    search() {
-      console.log('Söker efter:', this.searchText, 'i kategori:', this.selectedCategory)
-      
-    }
-  }
-}
-</script>
 
 <style scoped>
 .search-bar {
@@ -40,15 +35,15 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: gold
+  color:#b39108;
 }
 
-input, select {
+input {
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
   border: 2px solid #582f62;
   background-color: var(--light-purple);
-  color: gold;
+  color: #b39108;
 }
 
 button {
@@ -57,12 +52,19 @@ button {
   background-color: var(--dark-purple);
   border: none;
   border-radius: 8px;
-  color: gold;
+  color: #b39108;
   cursor: pointer;
   font-weight: bold;
-  font-family: 'montserrat', sans-serif;
 }
-
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  button {
+    width: 100%;
+  }
+}
 
 button:hover {
   opacity: 0.9;
