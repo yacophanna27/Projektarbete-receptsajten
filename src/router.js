@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from './components/HomePage.vue';
-import RecipePage from './components/RecipePage.vue';
+import HomeView from './Views/HomeView.vue';
+import RecipeView from './Views/RecipeView.vue';
 
 export default createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: HomePage},
-        { path: '/recipe/:id', name: 'RecipePage', component: RecipePage, props: true },
+        { path: '/', component: HomeView},
+        { path: '/recipe/:id', name: 'RecipeView', component: RecipeView, props: true },
     ]
 });

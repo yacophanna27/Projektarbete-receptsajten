@@ -1,10 +1,10 @@
 <script>
-import RecipeCard from './RecipeCard.vue';
+import RecipeCard from '../components/RecipeCard.vue';
 import { fetchRecipes } from '../fetchRecipes.js';
-import Categories from './Categories.vue';
+import Categories from '../components/Categories.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'HomeView',
   components: { RecipeCard, Categories },
   data() {
     return {
@@ -14,10 +14,10 @@ export default {
   },
   computed: {
     filteredRecipes() {
-      if (this.selectedCategory === 'all'){
+      if (this.selectedCategory === 'all') {
         return this.recipes;
       } else {
-        return this.recipes.filter (r => r.category === this.selectedCategory);
+        return this.recipes.filter(r => r.category === this.selectedCategory);
       };
     }
   },
@@ -36,12 +36,7 @@ export default {
     </div>
 
     <div class="home-page">
-      <RecipeCard
-        v-for="(recipe, index) in filteredRecipes"
-        :key="recipe.id"
-        :recipe="recipe"
-        :index="index"
-      />
+      <RecipeCard v-for="(recipe, index) in filteredRecipes" :key="recipe.id" :recipe="recipe" :index="index" />
     </div>
   </div>
 </template>
