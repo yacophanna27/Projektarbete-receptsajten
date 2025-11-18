@@ -2,9 +2,15 @@
 <script>
 import SearchBar from './SearchBar.vue'
 export default {
-   components: { SearchBar }
+   components: { SearchBar },
+   emits: ['search'],
     
-}
+   methods: {
+    onSearch(value) {
+      this.$emit('search', value)
+    }
+   }
+};
 </script>
 
 <template>
@@ -15,7 +21,7 @@ export default {
               <!--  <li><a href="#">Home</a></li>
                 <li><a href="#">Search</a></li> -->
             </ul>
-            <SearchBar />
+          <SearchBar @search="onSearch" />
         </nav>
     </header>
 </template>

@@ -3,20 +3,21 @@
 <script>
 export default {
   name: 'SearchBar',
+  emits: ['search'],
 
   data() {
-    return {
-      searchText: ''
-    }
+    return {searchText: ''};
   },
+
   methods: {
     search() {
-      console.log('Söker efter:', this.searchText)
-      // recepten
+      this.$emit('search',this.searchText)
+     
     }
   }
-}
+};
 </script>
+
 <template>
   <div class="search-bar">
     <input
@@ -36,37 +37,39 @@ export default {
   align-items: center;
   gap: 0.5rem;
   color:#b39108;
-}
-
-input {
+}input {
   padding: 0.4rem 0.6rem;
-  border-radius: 8px;
+  border-radius: 2rem;
   border: 2px solid #582f62;
   background-color: var(--light-purple);
   color: #b39108;
-}
-
-button {
+  width: 22rem;
+  height: 2.5rem;  outline: none;
+}button {
+  position: absolute;
+  right: 2.5rem;
+  top: 6.3%;
+  transform: translateY(-50%);
   font-family: 'montserrat', sans-serif;
-  padding: 0.4rem 0.8rem;
   background-color: var(--dark-purple);
   border: none;
   border-radius: 8px;
   color: #b39108;
   cursor: pointer;
   font-weight: bold;
-}
-@media (max-width: 600px) {
+}@media (max-width: 600px) {
   .search-bar {
-    flex-direction: column;
-    align-items: stretch;
+    gap: 1rem;
+  }  input {
+    width: 11rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }  button {
+    position: absolute;
+    right: 2rem;
+    top: 4.9%;
   }
-  button {
-    width: 100%;
-  }
-}
-
-button:hover {
-  opacity: 0.9;
 }
 </style>
+
+

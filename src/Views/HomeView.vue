@@ -1,26 +1,44 @@
 <script>
 import RecipeCard from '../components/RecipeCard.vue';
-import { fetchRecipes } from '../fetchRecipes.js';
 import Categories from '../components/Categories.vue';
+import { fetchRecipes } from '../fetchRecipes.js';
 
 export default {
   name: 'HomeView',
   components: { RecipeCard, Categories },
+
+  props: {
+    searchText: { type: String, default: '' }
+  },
+
   data() {
     return {
       recipes: fetchRecipes(),
       selectedCategory: 'all'
     };
   },
+
   computed: {
     filteredRecipes() {
-      if (this.selectedCategory === 'all') {
-        return this.recipes;
-      } else {
-        return this.recipes.filter(r => r.category === this.selectedCategory);
-      };
+      let result = this.recipes;
+
+      // Kategorifilter
+      if (this.selectedCategory !== 'all') {
+        result = result.filter(r => r.category === this.selectedCategory);
+      }
+
+      // Sökfilter
+      if (this.searchText && this.searchText.trim() !== '') {
+        const s = this.searchText.toLowerCase();
+        result = result.filter(r =>
+          r.title.toLowerCase().includes(s)
+        );
+      }
+
+      return result;
     }
   },
+
   methods: {
     onCategorySelection(value) {
       this.selectedCategory = value;
@@ -28,6 +46,7 @@ export default {
   }
 };
 </script>
+
 
 <template>
   <div class="home-page-root">
