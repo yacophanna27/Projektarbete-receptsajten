@@ -1,6 +1,8 @@
 <script>
+import DropDownMenu from './DropDownMenu.vue';
 export default {
-  name: 'Categories',
+  name: 'Categories', 
+  components: { DropDownMenu },
   props: {
     modelValue: {
       type: String,
@@ -23,6 +25,7 @@ export default {
     modelValue(newVal) {
       this.localActive = newVal;
     }
+
   },
   methods: {
     selectCategory(value) {
@@ -30,6 +33,11 @@ export default {
       this.$emit('update:modelValue', value);
       this.$emit('category-selected', value);
     },
+
+    onDropdownSelect(value) {
+      this.selectCategory(value);
+    },
+    
     isActive(value) {
       return this.localActive === value;
     }
@@ -44,6 +52,7 @@ export default {
       {{ category.label }}
     </li>
   </ul>
+  <DropDownMenu label="Categories" :value="categories" @item-selected="onDropdownSelect" />
 </template>
 
 
@@ -77,6 +86,7 @@ export default {
   color: white;
   cursor: pointer;
   width:fit-content;
+  transition:  0.3s ease;
 
  
  
