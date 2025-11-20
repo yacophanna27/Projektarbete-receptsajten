@@ -1,13 +1,23 @@
 <template>
     <div class="rating">
-        <!-- Stora stjärnan visas alltid -->
-        <div class="big-star">
+        <!-- Stora stjärnan visas bara i interaktivt läge -->
+        <div v-if="!readOnly" class="big-star">
             <i class="fas fa-star" :style="{ fontSize: `${1 + rating * 0.1}em` }"></i>
             <p class="selected-rating">{{ rating || '' }}</p>
         </div>
 
-        <!-- När ej skickat: visa rubrik, stjärnor, feedback och knapp -->
-        <div v-if="!submitted">
+        <!-- Visa bara stjärnor för readOnly läge -->
+        <div v-if="readOnly" class="readonly-stars">
+            <ul class="stars">
+                <li v-for="starNumber in 5" :key="starNumber" class="star"
+                    :class="{ selected: starNumber <= rating }">
+                    <i class="fas fa-star"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- När ej skickat: visa rubrik, stjärnor, feedback och knapp (döljs om readOnly) -->
+        <div v-if="!submitted && !readOnly">
             <h3>Vad tyckte du om det här receptet?</h3>
             <ul class="stars">
                 <li v-for="starNumber in 5" :key="starNumber" class="star"
@@ -22,16 +32,32 @@
             <button v-if="rating" type="button" @click="submitRating">Skicka betyg</button>
         </div>
 
-        <!-- Efter submit: visa tack-text men behåll stora stjärnan och rubriken -->
-        <div v-else class="thank-you">
+        <!-- Efter submit: visa tack-text men behåll stora stjärnan och rubriken (bara om inte readOnly) -->
+        <div v-else-if="!readOnly" class="thank-you">
             <p>Tack för ditt betyg!</p>
         </div>
     </div>
 </template>
 
 <script>
+import { updateRecipeRating } from '../fetchRecipes.js';
+
 export default {
     name: 'Ratingstars',
+    props: {
+        initialRating: {
+            type: Number,
+            default: 0
+        },
+        readOnly: {
+            type: Boolean,
+            default: false
+        },
+        recipeId: {
+            type: [String, Number],
+            default: null
+        }
+    },
     data() {
         return {
             // Sparar det valda betyget som ett antal (0 när inget valt)
@@ -44,6 +70,15 @@ export default {
             submitted: false
         };
     },
+    mounted() {
+        // Sätt initialt rating direkt från prop
+        this.rating = this.initialRating || 0;
+    },
+    watch: {
+        initialRating(newVal) {
+            this.rating = newVal || 0;
+        }
+    },
     methods: {
         // Sätter hover-värde för att visa temporär highlight
         hoverStars(ratingValue) {
@@ -55,7 +90,7 @@ export default {
             this.hoverRating = 0;
         },
 
-        // Användaren klickar en stjärna -> spara betyg och uppdatera feedback
+        // Användaren klickar på en stjärna -> spara betyg och uppdatera feedback
         selectRating(ratingValue) {
             this.rating = ratingValue;
             this.feedbackMessage = this.getFeedbackMessage(ratingValue);
@@ -73,10 +108,10 @@ export default {
             }
         },
 
-        // Skickar betyget till localStorage och visar tack-text vid framgång
+        // Skickar betyget till localStorage och visar tack-text om det fungerat
         async submitRating() {
             try {
-                // Läs in befintliga betyg från localStorage (om några)
+                // Läs in befintliga betyg från localStorage (om det finns några)
                 const existingRatings = JSON.parse(localStorage.getItem('ratings') || '[]');
 
                 // Lägg till det nya betyget med tidsstämpel
@@ -91,12 +126,20 @@ export default {
                 // Simulera kort väntetid (så användaren inte kan klicka igen)
                 await new Promise(resolve => setTimeout(resolve, 250));
 
-                // Visa tack-text och göm stjärnor/feedback
+                // Visa tack-text, göm stjärnor och feedbacktexten
                 this.submitted = true;
                 this.feedbackMessage = '';
+
+                // Uppdatera receptdata om recipeId är tillgängligt
+                if (this.recipeId !== null) {
+                    updateRecipeRating(parseInt(this.recipeId), this.rating);
+                }
+
+                // Emittera det nya betyget till föräldrakomponenten
+                this.$emit('rating-updated', this.rating);
             } catch (error) {
-                // Hantera fel vid localStorage (t.ex. i privata lägen där storage kan vara otillgängligt)
-                this.feedbackMessage = 'Kunde inte spara betyget lokalt.';
+                // Hantera fel vid localStorage
+                this.feedbackMessage = 'Kunde inte spara betyget.';
             }
         }
     }
@@ -123,8 +166,9 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1em;
+    border-radius: 1.5rem;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    border: 1em solid #f5f0f8;
 }
 
 .big-star {
@@ -215,5 +259,26 @@ h3 {
     font-weight: bold;
     color: #666;
     text-align: center;
+}
+
+.readonly-stars {
+    padding: 0;
+    margin: 0;
+}
+
+.readonly-stars .stars {
+    margin: 0;
+}
+
+.readonly-stars .star {
+    margin: 0 2px;
+    padding: 0;
+    cursor: default;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.readonly-stars .star:hover {
+    transform: none;
 }
 </style>

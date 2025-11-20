@@ -1,16 +1,17 @@
-/*Jennifer*/
-
 <script>
+import Ratingstars from './Ratingstars.vue';
+
 export default {
   props: ['recipe', 'index'],
+  components: {
+    Ratingstars
+  },
   data() {
     return {
-      // Define any component-specific data properties here
     };
   },
   methods: {
     handleButtonClick() {
-      // Logic to handle button click
     }
   }
 }
@@ -30,7 +31,7 @@ export default {
         <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }}</p>
         <p><i class="bi bi-person"></i> {{ recipe.servings }} portioner</p>
         <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredienser</p>
-        <p>{{ recipe.rating }}</p>
+        <Ratingstars :initial-rating="recipe.rating" :read-only="true" />
       </div>
 
       <router-link :to="`/recipe/${index}`" class="view-button">
@@ -142,5 +143,18 @@ export default {
 .view-button:hover {
   background-color: #d4b5dd;
   border: 1px solid #fff;
+}
+
+/* Anpassa Ratingstars för RecipeCard */
+.details :deep(.rating) { /*Deep är specifikt för Vue för att komma åt barn-komponenten*/
+  background: transparent; /*Tar bort lila lådan*/
+  box-shadow: none; /*Tar bort skuggan runt lådan*/
+  padding: 0.5rem; /*Lite snyggare avstånd */
+  max-width: none; /*Så komponenten tar full bredd*/
+  border: none;
+}
+
+.details :deep(.readonly-stars .star) {
+  font-size: 20px; /* Gör stjärnorna lite större än texten */
 }
 </style>

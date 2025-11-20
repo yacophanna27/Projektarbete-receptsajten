@@ -1,7 +1,7 @@
 <script>
 import RecipeCard from '../components/RecipeCard.vue';
-import { fetchRecipes } from '../fetchRecipes.js';
 import Categories from '../components/Categories.vue';
+import { fetchRecipes } from '../fetchRecipes.js';
 
 export default {
   name: 'HomeView',
@@ -18,7 +18,7 @@ export default {
         return this.recipes;
       } else {
         return this.recipes.filter(r => r.category === this.selectedCategory);
-      };
+      }
     }
   },
   methods: {
