@@ -1,17 +1,31 @@
 <script>
 import { fetchRecipes } from '../fetchRecipes.js';
+import Ratingstars from '../components/Ratingstars.vue';
+
 export default {
   props: [ 'id' ],
   data() {
     return {
-        recipe: null
+      recipe: null
     };
-  },mounted() {
+  },
+  mounted() {
     const recipes = fetchRecipes();
     const i = parseInt(this.id);
     this.recipe = recipes[i];
+  },
+  methods: {
+    handleRatingUpdate(newRating) {
+      // Uppdatera receptets betyg direkt i komponenten
+      console.log('Nytt betyg för receptet:', newRating);
+      if (this.recipe) {
+        this.recipe.rating = newRating;
+      }
+    }
+  },
+  components: { 
+    Ratingstars
   }
-    
 }
 
 </script>
@@ -27,6 +41,7 @@ export default {
             <li v-for="item in recipe.ingredients" :key="item">{{ item }}</li>
         </ul>
     </div>
+    <Ratingstars :initial-rating="recipe?.rating" :recipe-id="id" @rating-updated="handleRatingUpdate" />
 </template>
 
 <style scoped>
