@@ -1,14 +1,18 @@
 <script>
 import RecipeCard from '../components/RecipeCard.vue';
-import Categories from '../components/Categories.vue';
 import { fetchRecipes } from '../fetchRecipes.js';
+import Categories from '../components/Categories.vue';
 
 export default {
   name: 'HomeView',
   components: { RecipeCard, Categories },
 
+ 
   props: {
-    searchText: { type: String, default: '' }
+    searchText: {
+      type: String,
+      default: ''
+    }
   },
 
   data() {
@@ -22,16 +26,19 @@ export default {
     filteredRecipes() {
       let result = this.recipes;
 
-      // Kategorifilter
+    
       if (this.selectedCategory !== 'all') {
-        result = result.filter(r => r.category === this.selectedCategory);
+        result = result.filter(r =>
+          r.category.toLowerCase() === this.selectedCategory.toLowerCase()
+        );
       }
 
-      // Sökfilter
+      //  Filtrerar per sökning
       if (this.searchText && this.searchText.trim() !== '') {
-        const s = this.searchText.toLowerCase();
+        const searchLower = this.searchText.toLowerCase();
+
         result = result.filter(r =>
-          r.title.toLowerCase().includes(s)
+          r.title.toLowerCase().includes(searchLower)
         );
       }
 
@@ -40,6 +47,7 @@ export default {
   },
 
   methods: {
+    
     onCategorySelection(value) {
       this.selectedCategory = value;
     }
@@ -47,16 +55,26 @@ export default {
 };
 </script>
 
-
 <template>
   <div class="home-page-root">
+
     <div class="category-bar">
-      <Categories @category-selected="onCategorySelection" />
+      <Categories
+        :modelValue="selectedCategory"
+        @category-selected="onCategorySelection"
+      />
     </div>
 
     <div class="home-page">
-      <RecipeCard v-for="(recipe, index) in filteredRecipes" :key="recipe.id" :recipe="recipe" :index="index" />
+      <RecipeCard
+        v-for="(recipe, index) in filteredRecipes"
+        :key="recipe.id"
+        :recipe="recipe"
+        :index="index"
+        :searchText="searchText"
+      />
     </div>
+
   </div>
 </template>
 

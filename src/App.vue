@@ -10,10 +10,11 @@ export default {
     Header,
     Footer,
   },
+
   data() {
     return {
       searchText: ''
-    };
+    }
   },
 
   methods: {
@@ -21,13 +22,13 @@ export default {
       this.searchText = value;
     }
   }
-};
+}
 </script>
 
 <template>
-  <NavBar @search="updateSearch"/>
+  <NavBar @search="updateSearch" />
   <Header v-if="$route.path === '/'" />
-  <router-view :search-text="searchText"/>
+  <router-view :search-text="searchText" />
   <Footer />
 
 </template>

@@ -41,8 +41,6 @@ export default {
   justify-content: flex-end;
   list-style: none;
   margin-right: 1.5rem;
-
-
 }
 
 .navmenu li a {
