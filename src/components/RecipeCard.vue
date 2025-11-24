@@ -78,6 +78,8 @@ export default {
   cursor: pointer;
   opacity: 0.9;
   transition: opacity 0.2s;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .recipe-card img:hover {
@@ -108,6 +110,8 @@ export default {
   border-radius: 5px;
   padding: 1rem 0;
   min-height: 200px;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
 }
 
 .recipe-card .quickview h1 {
