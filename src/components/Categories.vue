@@ -52,7 +52,7 @@ export default {
       {{ category.label }}
     </li>
   </ul>
-  <DropDownMenu label="Categories" :value="categories" @item-selected="onDropdownSelect" />
+  <DropDownMenu :value="categories" @item-selected="onDropdownSelect" />
 </template>
 
 
