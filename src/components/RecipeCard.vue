@@ -49,6 +49,7 @@ export default {
 
 .recipe-card {
   width: 300px;
+  height: 640px;
   min-width: 280px;
   display: inline-flex;
   flex-direction: column;
