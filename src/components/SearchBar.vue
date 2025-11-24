@@ -21,7 +21,7 @@ export default {
 <template>
   <div class="search-wrapper">
     <i class="fa fa-search search-icon"></i>
-    <input type="text" v-model="searchText" placeholder=" Sök " @input="$emit('search', searchText)" />
+    <input type="text" v-model="searchText" placeholder=" Search " @input="$emit('search', searchText)" />
 
     <button @click="$emit('search', searchText)"> </button>
   </div>
