@@ -6,22 +6,48 @@ import { fetchRecipes } from '../fetchRecipes.js';
 export default {
   name: 'HomeView',
   components: { RecipeCard, Categories },
+
+ 
+  props: {
+    searchText: {
+      type: String,
+      default: ''
+    }
+  },
+
   data() {
     return {
       recipes: fetchRecipes(),
       selectedCategory: 'all'
     };
   },
+
   computed: {
     filteredRecipes() {
-      if (this.selectedCategory === 'all') {
-        return this.recipes;
-      } else {
-        return this.recipes.filter(r => r.category === this.selectedCategory);
+      let result = this.recipes;
+
+    
+      if (this.selectedCategory !== 'all') {
+        result = result.filter(r =>
+          r.category.toLowerCase() === this.selectedCategory.toLowerCase()
+        );
       }
+
+      //  Filtrerar per sökning
+      if (this.searchText && this.searchText.trim() !== '') {
+        const searchLower = this.searchText.toLowerCase();
+
+        result = result.filter(r =>
+          r.title.toLowerCase().includes(searchLower)
+        );
+      }
+
+      return result;
     }
   },
+
   methods: {
+    
     onCategorySelection(value) {
       this.selectedCategory = value;
     }
@@ -31,13 +57,24 @@ export default {
 
 <template>
   <div class="home-page-root">
+
     <div class="category-bar">
-      <Categories @category-selected="onCategorySelection" />
+      <Categories
+        :modelValue="selectedCategory"
+        @category-selected="onCategorySelection"
+      />
     </div>
 
     <div class="home-page">
-      <RecipeCard v-for="(recipe, index) in filteredRecipes" :key="recipe.id" :recipe="recipe" :index="index" />
+      <RecipeCard
+        v-for="(recipe, index) in filteredRecipes"
+        :key="recipe.id"
+        :recipe="recipe"
+        :index="index"
+        :searchText="searchText"
+      />
     </div>
+
   </div>
 </template>
 
