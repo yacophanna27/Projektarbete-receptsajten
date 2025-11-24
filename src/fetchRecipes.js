@@ -5,7 +5,27 @@ export function fetchRecipes() {
       title: 'Hummersoppa',
       cooking_time: '60 minuter',
       servings: 8,
-      ingredients: Array(19),
+      ingredients: [
+    "2 humrar",
+    "1 gul lök",
+    "2 morötter",
+    "3 dl grädde",
+    "1 liter vatten",
+    "1 fiskbuljongtärning",
+    "Salt och peppar"
+    ],
+      instructions: [
+    "Koka upp en stor kastrull med lättsaltat vatten. Lägg försiktigt ner humrarna och låt dem koka enligt anvisningarna, vanligtvis cirka 8-10 minuter beroende på storlek.",
+    "Ta upp humrarna och låt dem svalna något. Plocka sedan ut allt hummerkött: klor, stjärt och eventuellt kött i kroppen. Ställ åt sidan och spara även skalen, de ger fantastisk smak till soppan.",
+    "Skala och hacka den gula löken grovt. Skala morötterna och skär dem i mindre bitar.",
+    "Smält en klick smör i en stor kastrull. Fräs lök och morötter på medelvärme i några minuter tills de blir mjuka och får lite färg.",
+    "Lägg i hummerskalen i kastrullen och rör runt så att de blandas med grönsakerna. Det här steget hjälper till att få fram ännu mer smak i buljongen.",
+    "Häll över vattnet och lägg i fiskbuljongtärningen. Låt soppan sjuda under lock i cirka 20 minuter så att smakerna utvecklas.",
+    "Ta bort hummerskalen ur soppan. Använd en stavmixer eller blender och mixa soppan helt slät tills konsistensen blir krämig och utan bitar.",
+    "Häll i grädden och rör om. Låt soppan värmas upp igen på låg värme. Smaka av med salt och peppar och justera kryddningen efter eget tycke.",
+    "Fördela det plockade hummerköttet i skålarna. Häll den varma soppan över och toppa gärna med en liten klick grädde eller färska örter om du vill.",
+    "Servera direkt medan soppan är rykande varm."
+      ],
       category: 'main course',
       rating: '★★★☆☆',
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'

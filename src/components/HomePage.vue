@@ -37,10 +37,10 @@ export default {
 
     <div class="home-page">
       <RecipeCard
-        v-for="(recipe, index) in filteredRecipes"
+        v-for="(recipe, i) in filteredRecipes"
         :key="recipe.id"
         :recipe="recipe"
-        :index="index"
+        :index="i"
       />
     </div>
   </div>
