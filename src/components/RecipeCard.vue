@@ -28,16 +28,15 @@ export default {
     <div class="quickview">
       <h1>{{ recipe.title }}</h1>
       <div class="details">
-        <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }}</p>
-        <p><i class="bi bi-person"></i> {{ recipe.servings }} portioner</p>
-        <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredienser</p>
+        <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }} minutes</p>
+        <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredients</p>
         <Ratingstars :initial-rating="recipe.rating" :read-only="true" />
       </div>
 
       <!-- Inte ändrat nåt i din kod, bara lagt till category i pathen och valt category med hjälp 
       av js filen (recipe.category) -->
       <router-link :to="`/recipe/${id}`" class="view-button">
-        Visa recept
+        Show Recipe
       </router-link>
     </div>
   </section>
@@ -51,7 +50,7 @@ export default {
 
 .recipe-card {
   width: 300px;
-  height: 640px;
+  height: 580px;
   min-width: 280px;
   display: inline-flex;
   flex-direction: column;
@@ -61,6 +60,13 @@ export default {
   text-align: center;
   margin: 1.5rem;
   background-color: #f5f0f8;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .image-container {
@@ -78,9 +84,6 @@ export default {
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  cursor: pointer;
-  opacity: 0.9;
-  transition: opacity 0.2s;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -109,7 +112,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
   border-radius: 5px;
   padding: 1rem 0;
   min-height: 200px;
@@ -131,6 +133,10 @@ export default {
 .details p {
   font-size: 1.2rem;
   margin: 0.7rem;
+}
+
+.bi.bi-clock, .bi.bi-basket3 {
+  color:#c69c6d;
 }
 
 .view-button {
