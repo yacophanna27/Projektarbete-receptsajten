@@ -18,7 +18,7 @@
 
         <!-- När ej skickat: visa rubrik, stjärnor, feedback och knapp (döljs om readOnly) -->
         <div v-if="!submitted && !readOnly">
-            <h3>Vad tyckte du om det här receptet?</h3>
+            <h3>What did you think of this recipe?</h3>
             <ul class="stars">
                 <li v-for="starNumber in 5" :key="starNumber" class="star"
                     :class="{ selected: starNumber <= (hoverRating || rating) }" @mouseenter="hoverStars(starNumber)"
@@ -29,12 +29,12 @@
             <p class="feedback-message" v-if="rating" :style="{ visibility: 'visible', opacity: '1' }">
                 {{ feedbackMessage }}
             </p>
-            <button v-if="rating" type="button" @click="submitRating">Skicka betyg</button>
+            <button v-if="rating" type="button" @click="submitRating">Submit Rating</button>
         </div>
 
         <!-- Efter submit: visa tack-text men behåll stora stjärnan och rubriken (bara om inte readOnly) -->
         <div v-else-if="!readOnly" class="thank-you">
-            <p>Tack för ditt betyg!</p>
+            <p>Thank you for your rating!</p>
         </div>
     </div>
 </template>
@@ -99,11 +99,11 @@ export default {
         // Returnerar feedback-text baserat på betyg
         getFeedbackMessage(ratingValue) {
             switch (String(ratingValue)) {
-                case '1': return 'Kommer inte laga igen!';
-                case '2': return 'Ganska gott..';
-                case '3': return 'Mumsigt, kan förbättras.';
-                case '4': return 'Riktigt gott!';
-                case '5': return 'Bästa jag ätit!';
+                case '1': return 'Will not make again.';
+                case '2': return 'Pretty good..';
+                case '3': return 'Tasty, could be improved.';
+                case '4': return 'Really good!';
+                case '5': return 'Best I\'ve ever had!';
                 default: return '';
             }
         },
