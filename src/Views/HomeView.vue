@@ -1,6 +1,6 @@
 <script>
 import RecipeCard from '../components/RecipeCard.vue';
-import Categories from '../components/Categories.vue';
+import Categories from './CategoriesView.vue';
 import { fetchRecipes } from '../fetchRecipes.js';
 
 export default {
@@ -12,13 +12,18 @@ export default {
     searchText: {
       type: String,
       default: ''
+    },
+    // lagt till props för category så routning funkar för category
+    category: {
+      type: String,
+      default: 'all'
     }
   },
 
   data() {
     return {
       recipes: fetchRecipes(),
-      selectedCategory: 'all'
+      selectedCategory: this.category || 'all'
     };
   },
 
@@ -56,6 +61,7 @@ export default {
 </script>
 
 <template>
+
   <div class="home-page-root">
 
     <div class="category-bar">
@@ -67,10 +73,10 @@ export default {
 
     <div class="home-page">
       <RecipeCard
-        v-for="(recipe, index) in filteredRecipes"
+        v-for="(recipe, id) in filteredRecipes"
         :key="recipe.id"
         :recipe="recipe"
-        :index="index"
+        :id="recipe.id"
         :searchText="searchText"
       />
     </div>

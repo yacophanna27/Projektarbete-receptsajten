@@ -1,8 +1,9 @@
 <script>
-import DropDownMenu from './DropDownMenu.vue';
+import DropDownMenu from '../components/DropDownMenu.vue';
+import Header from '../components/Header.vue';
 export default {
   name: 'Categories', 
-  components: { DropDownMenu },
+  components: { DropDownMenu, Header},
   props: {
     modelValue: {
       type: String,
@@ -14,13 +15,20 @@ export default {
       categories: [
         { label: 'All', value: 'all' },
         { label: 'Starters', value: 'starter' },
-        { label: 'Main Courses', value: 'main course' },
+        { label: 'Mains', value: 'main course' },
         { label: 'Desserts', value: 'dessert' },
         { label: 'Drinks', value: 'drink' }
       ],
-      localActive: this.modelValue || 'all'
+      localActive: this.modelValue || 'all',
+     
     };
   },
+
+  emits: [
+      'update:modelValue',
+      'category-selected'
+    ],
+
   watch: {
     modelValue(newVal) {
       this.localActive = newVal;
@@ -30,6 +38,10 @@ export default {
   methods: {
     selectCategory(value) {
       this.localActive = value;
+
+      // Navigations router till categories
+      this.$router.push(`/category/${value}`)
+      
       this.$emit('update:modelValue', value);
       this.$emit('category-selected', value);
     },
@@ -46,6 +58,7 @@ export default {
 </script>
 
 <template>
+  <Header />
   <ul class=" categories">
     <li v-for="category in categories" :key="category.value" :class="{ active: isActive(category.value) }"
       @click="selectCategory(category.value)" role="button" tabindex="0">

@@ -9,13 +9,14 @@ export default {
         recipe: null, // The recipe object to display
         newName: '', // Name of the user submitting a comment
         newComment: '', // Content of the user's comment
-        newRating: 0 // Rating given by the user
+        newRating: 0,// Rating given by the user
+        testingId: this.$route.params.id
     };
   },
   mounted() {
     const recipes = fetchRecipes();
-    const i = parseInt(this.id);
-    this.recipe = recipes[i];
+    const i = parseInt(this.$route.params.id);
+    this.recipe = recipes.find(recipe => recipe.id === i);
   },
   methods: {
     handleRatingUpdate(newRating) {
@@ -34,6 +35,7 @@ export default {
 </script>
 
 <template>
+  <p> {{ $route.params.id }} </p>
 <div class="recipe-card-wrapper">  <!-- The background frame --> 
   <div class="recipe-page-content" v-if="recipe"> <!-- Main content area -->
     <div class="card-container"> <!-- Grid container -->

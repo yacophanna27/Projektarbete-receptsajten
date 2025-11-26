@@ -27,8 +27,8 @@ export default {
 
 <template>
   <NavBar @search="updateSearch" />
-  <Header v-if="$route.path === '/'" />
   <router-view :search-text="searchText" />
+ <!-- La till Header i categoriesView istället -->
   <Footer />
 
 </template>

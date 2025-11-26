@@ -2,7 +2,7 @@
 import Ratingstars from './Ratingstars.vue';
 
 export default {
-  props: ['recipe', 'index'],
+  props: ['recipe', 'id'],
   components: {
     Ratingstars
   },
@@ -34,7 +34,9 @@ export default {
         <Ratingstars :initial-rating="recipe.rating" :read-only="true" />
       </div>
 
-      <router-link :to="`/recipe/${index}`" class="view-button">
+      <!-- Inte ändrat nåt i din kod, bara lagt till category i pathen och valt category med hjälp 
+      av js filen (recipe.category) -->
+      <router-link :to="`/recipe/${id}`" class="view-button">
         Visa recept
       </router-link>
     </div>
