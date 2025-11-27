@@ -82,7 +82,7 @@ export default {
       </div>
         
         <div class="ingredients-block">  <!-- Ingredients section -->
-        <h2>Ingredients</h2>
+        <h2>Ingredientser</h2>
         <ul class="ingredients-list"> 
             <li v-for="item in recipe.ingredients"
             :key="item">
@@ -94,7 +94,7 @@ export default {
   </div>
 
   <div class="instructions-block">  <!-- Instructions section -->
-      <h2>Instructions</h2>
+      <h2>Instructioner</h2>
       <ol class="instructions-list">
         <li v-for="step in recipe.instructions"
         :key="step">
