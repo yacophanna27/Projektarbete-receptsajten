@@ -63,8 +63,8 @@ const recipes = [
     "Nyårsafton/festtillfället: Fördela hummer, lök och sockerärter i varma djupa tallrikar. Värm soppan under omrörning och häll över hummerköttet.",
     "Servera direkt medan soppan är rykande varm."
       ],
-      categories: 'mains',
-      ratings: 3,
+      category: 'mains',
+      rating: 3,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
     },
     {
@@ -244,8 +244,8 @@ const recipes = [
         "Ryggbiff: Krydda köttet med salt och peppar. Stek i omgångar i het panna i olja och smör, 1–2 minuter per sida. Lägg köttet på ett ugnsgaller med plåt under. Sätt in i ugnen, se Innertemperatur för blodigt, medium och välstekt. Låt köttet vila ca 2 minuter innan servering.",
         "Skiva köttet och servera med rotselleripurén, vitlöksskyn och toppa med svartkålen."
       ],
-      categories: 'mains',
-      ratings: 5,
+      category: 'mains',
+      rating: 5,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
     },
     {
@@ -327,8 +327,8 @@ const recipes = [
         "Värm räkorna försiktigt i smöret de ska inte koka, då blir de sega. Smaksätt med salt, peppar och några droppar citronsaft. Rör ner dillen i smöret.",
         "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
       ],
-      categories: 'mains',
-      ratings: 3,
+      category: 'mains',
+      rating: 3,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
     },
     {
@@ -645,8 +645,8 @@ const recipes = [
         "Sänk ugnsvärmen till 100°C. Ställ in tallrikarna i ugnen så att de blir varma.",
         "Vid servering: Ta ut tallrikarna. Skär köttet i skivor. Lägg på grönsaker, selleripuré, kött och duxelle. Skeda över lite av såsen och droppa över spenatoljan. Bjud resten av skyn vid sidan av."
       ],
-      categories: 'mains',
-      ratings: 4,
+      category: 'mains',
+      rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
     },
     {
@@ -708,8 +708,8 @@ const recipes = [
         "Stek gnocchin i smör och olja i samma panna tills de får lite färg. Blanda ner svampen och krydda med salt och peppar.",
         "Till servering: Fördela ricottan på tallrikar. Toppa med gnocchifräset och det brynta smöret. Strö över parmesan.",
       ],
-      categories: 'mains',
-      ratings: 3,
+      category: 'mains',
+      rating: 3,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
     },
     {
@@ -795,7 +795,7 @@ const recipes = [
         "Hacka persiljan grovt. Strö persiljan över musslorna.",
         "Till servering: Servera bouillabaissen i varma djupa tallrikar med musslorna, aioli och krutonger eller surdegsbröd."
       ],
-      categories: 'mains',
+      category: 'mains',
       rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
     },
@@ -963,8 +963,8 @@ const recipes = [
         "Spenat: Fräs spenaten i smör i en stor stekpanna tills den mjuknar. Smaka av med salt.",
         "Plocka ur musslorna ur skalen. Värm såsen och tillsätt gräslök. Servera torsken med såsen, spenaten och musslorna.",
       ],
-      categories: 'mains',
-      ratings: 5,
+      category: 'mains',
+      rating: 5,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
     },
     {
@@ -1116,8 +1116,8 @@ const recipes = [
         "Sätt in i mitten av ugnen 15-20 minuter.",
         "Skär köttet i skivor. Servera med rödbetor, chevrekräm och blåbärsbalsamico. Garnera gärna med färska örter."
       ],
-      categories: 'mains',
-      ratings: 3,
+      category: 'mains',
+      rating: 3,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
     },
     {
