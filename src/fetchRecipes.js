@@ -68,13 +68,66 @@ const recipes = [
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
     },
     {
-      title: 'Toast skagen',
-      cooking_time: '30',
-      ingredients: Array(9),
-      category: 'starter',
-      rating: 4,
-      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
-    },
+    title: 'Toast skagen',
+    description: "Klassisk, magiskt god och snabblagad toast Skagen som serveras på smörstekt toast. Skagenröran gör du enkelt med räkor, majonnäs och dill.Servera med en klick löjrom och citronklyftor.",
+    cooking_time: '30 minuter',
+    ingredients: [
+      {
+        "name": "räkor i lake",
+        "amount": 1,
+        "unit": "förpackning"
+      },
+      {
+        "name": "dill",
+        "amount": 1,
+        "unit": "kruka"
+      },
+      {
+        "name": "citron",
+        "amount": 1,
+        "unit": "st"
+      },
+      {
+        "name": "salt",
+        "amount": 1,
+        "unit": "krm"
+      },
+      {
+        "name": "peppar",
+        "amount": 1,
+        "unit": "krm"
+      },
+      {
+        "name": "formfranska",
+        "amount": 3,
+        "unit": "skivor"
+      },
+      {
+        "name": "smör",
+        "amount": 2,
+        "unit": "msk"
+      },
+      {
+        "name": "löjrom",
+        "amount": 80,
+        "unit": "gram"
+      },
+     ],
+
+    instructions: [
+      "Låt räkorna rinna av i en sil.",
+      "Hacka dillen (spar några vippor till serveringen). Blanda dillen med majonnäsen.",
+      "Smaka av med citronsaft från halva citronen (för 4 port) samt salt och peppar. Skär resten av citronen i klyftor till serveringen.",
+      "Pressa ur ytterligare lag ur räkorna och blanda dem med majonnäsen.",
+      "Dela brödskivorna på snedden och stek bröden gyllenbruna i smöret i en stekpanna.",
+      "Servera skagenröran på bröden med löjrommen, citronklyftor och toppa med lite extra dill och nymalen svartpeppar.",
+    ],
+    category: 'starters',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
+  },
+
+
     {
       title: 'Pannacotta',
       description: "Klassiskt grundrecept på pannacotta, som är en underbart god efterrätt med lyxig känsla. Pannacottan, italienarnas klassiska efterrätt, får här en fin vaniljsmak från vaniljstången som kokas med grädden och den serveras allra helst med färska bär.",
@@ -248,22 +301,124 @@ const recipes = [
       rating: 5,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
     },
+
+      {
+    title: 'Toast med fikon och ricotta',
+    description: "Festliga snittar! Rostad surdegsbaguette med krämig ricottaost toppas med klyftor av fikon och pinjenötter. Ringla över honung innan servering och bjudningen kan börja.",
+    cooking_time: '15 minuter',
+    ingredients: [
+      {
+        "name": "surdegsbaugette",
+        "amount": 0.5,
+        "unit": "st"
+      },
+      {
+        "name": "fikon",
+        "amount": 4,
+        "unit": "st"
+      },
+      {
+        "name": "ricottaost",
+        "amount": 1,
+        "unit": "förpackning"
+      },
+      {
+        "name": "pinjenötter",
+        "amount": 0.5,
+        "unit": "dl"
+      },
+      {
+        "name": "flytande honung",
+        "amount": 2,
+        "unit": "msk"
+      },
+      {
+        "name": "flingsalt",
+        "amount": 1,
+        "unit": "nypa"
+      },
+      {
+        "name": "svartpeppar",
+        "amount": 1,
+        "unit": "tsk"
+      },
+    ],
+    instructions: [
+      "Skiva baguetten i tunna skivor. Rosta i en torr stekpanna. Skär fikonen i klyftor.",
+      "Bred ricotta på brödskivorna. Toppa med fikon och pinjenötter. Ringla över honung och strö över salt och peppar.",
+    ],
+    category: 'starters',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
+  },
+
+
     {
-      title: 'Toast med fikon och ricotta',
-      cooking_time: '15',
-      ingredients: Array(7),
-      category: 'starter',
-      rating: 3,
-      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
-    },
-    {
-      title: 'Rentartar med brynt sojasmör',
-      cooking_time: '45',
-      ingredients: Array(11),
-      category: 'starter',
-      rating: 4,
-      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
-    },
+    title: 'Rentartar med brynt sojasmör',
+    description: "Viltkött gillar svamp lite extra mycket. Här i en lyxig tartar på ytterfilé av ren. Pepparrot och brynt sojasmör förhöjer smaken. Avsluta med att råriva champinjoner och strö över – ett enkelt sätt att få fram doften av en höstig skogspromenad. Ljuvligt som förrätt!",
+    cooking_time: '45 minuter',
+    ingredients: [
+      {
+        "name": "renytterfilé",
+        "amount": 200,
+        "unit": "gram"
+      },
+      {
+        "name": "ljust surdegsbröd",
+        "amount": 2,
+        "unit": "skivor"
+      },
+      {
+        "name": "rapsolja",
+        "amount": 1,
+        "unit": "msk"
+      },
+      {
+        "name": "japansk soja",
+        "amount": 2,
+        "unit": "msk"
+      },
+      {
+        "name": "gula steklökar",
+        "amount": 5,
+        "unit": "st"
+      },
+      {
+        "name": "skogschampinjoner",
+        "amount": 100,
+        "unit": "gram"
+      },
+      {
+        "name": "små äggulor",
+        "amount": 8,
+        "unit": "st"
+      },
+      {
+        "name": "riven pepparrot",
+        "amount": 1,
+        "unit": "dl"
+      },
+      {
+        "name": "krasse",
+        "amount": 1,
+        "unit": ""
+      },
+    ],
+    instructions: [
+      "Putsa renköttet fritt från senor och hinnor. Skär det i små tärningar. Förvara övertäckt i kyl.",
+      "Skär brödet i tärningar. Stek runt om i oljan och 1 msk av smöret (för 8 port) i en stekpanna tills de är gyllene. Ta upp och låt rinna av på hushållspapper.",
+      "Hetta upp resterande smör i en liten kastrull. Ta från värmen när det börjar bli lätt brynt och doftar nötigt.",
+      "Sila smöret genom en finmaskig sil och blanda med sojan.",
+      "Skala och skiva löken tunt, gärna med mandolin. Ansa och riv champinjonerna grovt.",
+      "Forma renfiléhacket till 8 lika stora bollar (för 8 port). Lägg på ett fat. Gör en liten urgröpning i varje boll och häll försiktigt i en äggula",
+      "Fördela den skivade löken, brödtärningarna, svamp och pepparrot över. Klipp krassen och strö över.",
+      "Avsluta med att värma sojasmöret och ringla över tartaren. Strö över lite flingsalt."
+    ],
+    category: 'starters',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
+  },
+
     {
       title: 'Torskrygg med räkor och dillsmör',
       description: 'Torskrygg i ugn med len potatiscréme och räkor, perfekt till nyår och andra festliga tillfällen. Här kombinerar du rimmad torskrygg med en créme gjord på mandelpotatis. Toppa med lätt smörstekta räkor smaksatta med citron och dill.',
@@ -1229,7 +1384,7 @@ const recipes = [
       category: 'drink',
       rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
-    }
+    },
   {
     title: 'Getostbollar med krispigt baconsmul',
     description: "Ett aptitretande och festligt tilltugg som är enkelt att göra: ostbollar med getost och färskost som rullas i ett smul av krispigt stekt bacon och hackade nötter. Perfekt till glöggfest eller adventsmingel!",
