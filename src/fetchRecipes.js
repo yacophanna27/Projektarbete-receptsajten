@@ -1230,6 +1230,199 @@ const recipes = [
       rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
     }
+  {
+    title: 'Getostbollar med krispigt baconsmul',
+    description: "Ett aptitretande och festligt tilltugg som är enkelt att göra: ostbollar med getost och färskost som rullas i ett smul av krispigt stekt bacon och hackade nötter. Perfekt till glöggfest eller adventsmingel!",
+    cooking_time: '30 minuter',
+    ingredients: [
+      {
+        "name": "skivat bacon",
+        "amount": 1,
+        "unit": "förpackning",
+      },
+      {
+        "name": "getost",
+        "amount": 200,
+        "unit": "gram",
+      },
+      {
+        "name": "hackad färsk timjan",
+        "amount": 1,
+        "unit": "msk",
+      },
+      {
+        "name": "finhackade rostade hasselnötter",
+        "amount": 1,
+        "unit": "dl",
+      },
+    ],
+    
+    instructions:
+      [
+        "Strimla baconet och stek knaprigt. Låt rinna av på hushållspapper.",
+        "Smula getosten och blanda med färskosten till en slät smet. Rulla smeten till bollar. Ställ bollarna i kylen.",
+        "Smula baconet och finhacka timjan och blanda ihop med nötterna.",
+        "Rulla bollarna i smulet."
+      ],
+
+    category: 'starters',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
+  },
+
+  {
+    title: 'Clementinbubbel med rosmarin',
+    description: "",
+    cooking_time: '35 minuter',
+    ingredients: Array(6),
+    category: 'drink',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
+  },
+  {
+    title: 'Räkcrostini med koriandermajo',
+    cooking_time: '20 minuter',
+    ingredients: Array(10),
+    category: 'starter',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
+  },
+  {
+    title: 'Frozen key-lime pie',
+    cooking_time: '45 minuter',
+    ingredients: Array(10),
+    category: 'dessert',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg'
+  },
+  {
+    title: 'Salt kolapannacotta med citrus',
+    cooking_time: '50 minuter',
+    ingredients: Array(9),
+    category: 'dessert',
+    rating: 5,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg'
+  },
+  {
+    title: 'Oxfilé och svampduxelle',
+    cooking_time: '80 minuter',
+    ingredients: Array(23),
+    category: 'main course',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
+  },
+  {
+    title: 'Gnocchi med ricotta och svamp',
+    cooking_time: '65 minuter',
+    ingredients: Array(17),
+    category: 'main course',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
+  },
+  {
+    title: 'Limoncello spritz',
+    cooking_time: '15 minuter',
+    ingredients: Array(5),
+    category: 'drink',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
+  },
+  {
+    title: 'Hummer, forellrom och citronsmetana',
+    cooking_time: '25 minuter',
+    ingredients: Array(8),
+    category: 'starter',
+    rating: 5,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
+  },
+  {
+    title: 'Bouillabaisse',
+    cooking_time: '90 minuter',
+    ingredients: Array(28),
+    category: 'main course',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
+  },
+  {
+    title: 'Baked alaska med svarta vinbär',
+    cooking_time: '70 minuter',
+    ingredients: Array(17),
+    category: 'dessert',
+    rating: 5,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
+  },
+  {
+    title: 'Lingon spritz med grapefrukt',
+    cooking_time: '50 minuter',
+    ingredients: Array(8),
+    category: 'drink',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
+  },
+  {
+    title: 'Apelsinsallad med lufttorkad skinka',
+    cooking_time: '15 minuter',
+    ingredients: Array(9),
+    category: 'starter',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
+  },
+  {
+    title: 'Rimmad torsk med champagnesås',
+    cooking_time: '55 minuter',
+    ingredients: Array(18),
+    category: 'main course',
+    rating: 5,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
+  },
+  {
+    title: 'Inkokta klementiner med pistageglass',
+    cooking_time: '40 minuter',
+    ingredients: Array(10),
+    category: 'dessert',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
+  },
+  {
+    title: 'Cosmopolitan',
+    cooking_time: '20 minuter',
+    ingredients: Array(6),
+    category: 'drink',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
+  },
+  {
+    title: 'Gratinerade havskräftor',
+    cooking_time: '25 minuter',
+    ingredients: Array(12),
+    category: 'starter',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
+  },
+  {
+    title: 'Renytterfilé med chili och chevrekräm',
+    cooking_time: '75 minuter',
+    ingredients: Array(12),
+    category: 'main course',
+    rating: 3,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
+  },
+  {
+    title: 'Kladdkaka med italiensk maräng',
+    cooking_time: '40 minuter',
+    ingredients: Array(18),
+    category: 'dessert',
+    rating: 5,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
+  },
+  {
+    title: 'Aperitivo',
+    cooking_time: '15 minuter',
+    ingredients: Array(6),
+    category: 'drink',
+    rating: 4,
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
+  }
 ];
 
 export function fetchRecipes() {
@@ -1243,3 +1436,4 @@ export function updateRecipeRating(recipeIndex, newRating) {
     console.log(`Uppdaterade betyg för recept ${recipeIndex} till:`, newRating);
   }
 }
+
