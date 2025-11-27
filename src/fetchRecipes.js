@@ -570,27 +570,161 @@ const recipes = [
       rating: 3,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
     },
+
     {
       title: 'Krämig hallonmimosa',
-      cooking_time: '10',
-      ingredients: Array(4),
-      category: 'drink',
+      description: "Krämig hallonmimosa. Drinken är frisk och fruktig, och blir härligt uppfriskande med mousserande vin.",
+      cooking_time: '60',
+      ingredients: [
+         {
+          "name": "frysta hallon",
+          "amount": 200,
+          "unit": "gram"
+        },
+        {
+          "name": "strösocker",
+          "amount": 2,
+          "unit": "dl"
+        },
+        {
+          "name": "matlagningsgrädde",
+          "amount": 2.5,
+          "unit": "dl"
+        },
+        {
+          "name": "torrt mousserande vin",
+          "amount": 75,
+          "unit": "cl"
+        },
+      ],
+      instructions: [
+      "Värm hallon och socker i en kastrull tills sockret löst sig och hallonen är smälta. Passera hallonen genom en finmaskig sil och låt svalna.",
+      "Blanda hallonpurén med grädden och frys ca 5 timmar. Rör då och då.",
+      "Lägg en kula av hallongrädden i varje glas och häll över det mousserande vinet, servera genast.",
+      ],
+      category: 'drinks',
       rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
     },
+
     {
       title: 'Thai Basil med kokosskum',
+      description:"Här bjuder vi på en aromatisk och fräsch drink med asiatisk twist! Basilika, lime och gin skapar en smakrik cocktail med spännande karaktär. Toppa med ett läckert kokosskum.",
       cooking_time: '25',
-      ingredients: Array(10),
-      category: 'drink',
+      ingredients: [
+         {
+          "name": "kokosmjölk",
+          "amount": 5,
+          "unit": "dl"
+        },
+          {
+          "name": "strösocker",
+          "amount": 100,
+          "unit": "gram"
+        },
+          {
+          "name": "sockerlag",
+          "amount": 3,
+          "unit": "cl"
+        },
+        {
+          "name": "thaibasilika",
+          "amount": 10,
+          "unit": "blad"
+        },
+        {
+          "name": "gin",
+          "amount": 5,
+          "unit": "cl"
+        },
+        {
+          "name": "citronjuice",
+          "amount": 3,
+          "unit": "cl"
+        },
+        {
+          "name": "isbit",
+          "amount": 1,
+          "unit": "st"
+        },
+      ],
+      instructions: [
+        "Kokosskum: Värm kokosmjölk och socker tills sockret har smält. Låt svalna helt i kylskåp.",
+        "Ställ sifonen (som rymmer 5 dl) i kylen, så att den blir kall.",
+        "Drink: Mixa Sockerlag med thaibasilika. Sila av.",
+        "Fyll sifonen med kokosmjölken.",
+        "Skaka sockerlag, gin och citronjuice kalla.",
+        "Sila upp över en stor isbit i ett lågt glas och toppa med kokosskum från sifonen.",
+        "Garnera eventuellt med thaibasilika.",
+      ],
+      category: 'drinks',
       rating: 4,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
     },
+
     {
       title: 'Negroni med sötsyrlig twist',
+      description: "Negroni sour är en variant på den klassiska cocktailen negroni med en sötsyrlig twist och ett fluffigt skum av äggvita. Den är inspirerad av både negroni och klassiska sour-drinkar som whiskey sour. ",
       cooking_time: '35',
-      ingredients: Array(6),
-      category: 'drink',
+      ingredients: [
+        {
+          "name": "strösocker",
+          "amount": 1,
+          "unit": "dl"
+        },
+        {
+          "name": "vatten",
+          "amount": 1,
+          "unit": "dl"
+        },
+        {
+          "name": "gin",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "campari",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "röd sör vermouth",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "apelsin",
+          "amount": 1,
+          "unit": "st"
+        },
+        {
+          "name": "färskpressad citronjuice",
+          "amount": 18,
+          "unit": "cl"
+        },
+        {
+          "name": "sockerlag(från ovan)",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "stora äggvitor",
+          "amount": 2,
+          "unit": "st"
+        },
+        {
+          "name": "isbit",
+          "amount": 6,
+          "unit": "st"
+        },
+
+      ],
+      instructions: [
+        "Sockerlag: Koka upp socker och vatten. Låt svalna och ställ i kylen.",
+        "Blanda gin, campari och vermouth i en flaska och ställ i kylen. Skär 6 skalbitar från apelsinen (för 6 port) med en skalare utan att få med det vita.",
+        "Häll hälften av spritblandningen i en shaker med hälften av citronjuicen, hälften av sockerlagen och 1 äggvita. Skaka utan is tills äggvitan skummar sig. Tillsätt is och skaka kall. Sila upp i 3 glas. Upprepa med resterande. Toppa drinkarna med apelsinskal.",
+      ],
+      category: 'drinks',
       rating: 5,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
     },
