@@ -470,130 +470,264 @@ const recipes = [
         "unit": "droppar"
       }
     ],
-    instructions: [
-      "Tina torskryggen om fryst används.",
-      "Rimmad torsk: Blanda salt och socker med vattnet och rör om så att det löser sig. Lägg fisken i saltlagen, låt den ligga i lagen 2-3 timmar.",
-      "Sätt ugnen på 125°C.",
-      "Potatiscrème: Skala och koka potatisen mycket försiktigt tills den är mjuk. Häll av vattnet, ställ tillbaka kastrullen på plattan och ånga potatisen torr.",
-      "Riv skalet av en halv citron. Smaksätt potatiscrèmen med salt och peppar och skalet av citronen. Lägg tillbaka i kastrullen och håll potatiscrémen varm på svag värme på spisen.",
-      "Rimmad torsk: Lägg torsken i en ugnssäker form. Sätt in formen mitt i ugnen 25-30 minuter eller tills innertemperaturen på fisken är 56°C.",
-      "Dillsmör: Häll av räkorna i en sil. Ansa, skölj och strimla purjolöken i tunna och små strimlor. Skär dillen fint.",
-      "Smält smöret i en kastrull och koka purjolöken mjuk i smöret.",
-      "Värm räkorna försiktigt i smöret de ska inte koka, då blir de sega. Smaksätt med salt, peppar och några droppar citronsaft. Rör ner dillen i smöret.",
-      "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
-    ],
-    category: 'mains',
-    rating: 3,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
-  },
-  {
-    title: 'Chokladpavlova med körsbär',
-    description: 'Det är något barnsligt gott över marängtårta. Det där frasiga yttre och sega inre i kombination med len grädde. Den här chokladpavlovan går inte av för hackor, i sällskap av amarettogrädde och körsbär kommer ingen vid bordet bli ledsen.',
-    cooking_time: '60',
-    ingredients: [
-      {
-        "name": "äggvitor",
-        "amount": "4",
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "amount": "1",
-        "unit": "krm"
-      },
-      {
-        "name": "socker",
-        "amount": "3 1/2",
-        "unit": "dl"
-      },
-      {
-        "name": "vitvinsvinäger",
-        "amount": "1",
-        "unit": "tsk"
-      },
-      {
-        "name": "kakao",
-        "amount": "2",
-        "unit": "tsk"
-      },
-      {
-        "name": "majsstärkelse",
-        "amount": "1",
-        "unit": "msk"
-      },
-      {
-        "name": "smält mörk choklad (70%)",
-        "amount": "50",
-        "unit": "g"
-      },
-      {
-        "name": "urkärnade körsbär",
-        "amount": "500",
-        "unit": "g"
-      },
-      {
-        "name": "färskpressad citronjuice",
-        "amount": "2",
-        "unit": "msk"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": "3",
-        "unit": "dl"
-      },
-      {
-        "name": "vaniljsocker",
-        "amount": "1",
-        "unit": "msk"
-      },
-      {
-        "name": "amaretto",
-        "amount": "2",
-        "unit": "msk"
-      },
-      {
-        "name": "hyvlad mörk choklad",
-        "amount": "valfri mängd",
-        "unit": ""
-      }
-    ],
-    instructions: [
-      "Sätt ugnen på 225°C.",
-      "Vispa äggvitor och salt till ett vitt skum. Tillsätt sockret, lite i taget, och fortsätt vispa till en fast maräng. Vispa ner vinägern.",
-      "Blanda kakao och majsstärkelse. Rör ner i marängen. Rör försiktigt, men ändå snabbt, ner den smälta chokladen (rör du för länge riskerar smeten att spricka).",
-      "Bred ut marängsmeten till en rund botten, ca 20 cm i diameter, på en bakpappersklädd plåt. Ställ in i mitten av ugnen och sänk värmen till 125°C. Grädda ca 11/2 timme, tills marängen är hård på ytan men fortfarande lite seg i mitten. Stäng av ugnen och låt stå kvar tills ugnen svalnat.",
-      "Körsbär: Blanda körsbär, socker och citronjuice i en kastrull. Låt koka på svag värme ca 10-15 minuter, till en fast kompott. Låt svalna.",
-      "Mandelgrädde: Vispa grädden. Rör ner vaniljsocker och mandellikör.",
-      "Vid servering: Toppa pavlovan med mandelgrädden och körsbären. Garnera med hyvlad mörk choklad."
-    ],
-    category: 'desserts',
-    rating: 3,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
-  },
-  {
-    title: 'Krämig hallonmimosa',
-    cooking_time: '10',
-    ingredients: Array(4),
-    category: 'drink',
-    rating: 4,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
-  },
-  {
-    title: 'Thai Basil med kokosskum',
-    cooking_time: '25',
-    ingredients: Array(10),
-    category: 'drink',
-    rating: 4,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
-  },
-  {
-    title: 'Negroni med sötsyrlig twist',
-    cooking_time: '35',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 5,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
-  },
+      instructions: [
+        "Tina torskryggen om fryst används.",
+        "Rimmad torsk: Blanda salt och socker med vattnet och rör om så att det löser sig. Lägg fisken i saltlagen, låt den ligga i lagen 2-3 timmar.",
+        "Sätt ugnen på 125°C.",
+        "Potatiscrème: Skala och koka potatisen mycket försiktigt tills den är mjuk. Häll av vattnet, ställ tillbaka kastrullen på plattan och ånga potatisen torr.",
+        "Riv skalet av en halv citron. Smaksätt potatiscrèmen med salt och peppar och skalet av citronen. Lägg tillbaka i kastrullen och håll potatiscrémen varm på svag värme på spisen.",
+        "Rimmad torsk: Lägg torsken i en ugnssäker form. Sätt in formen mitt i ugnen 25-30 minuter eller tills innertemperaturen på fisken är 56°C.",
+        "Dillsmör: Häll av räkorna i en sil. Ansa, skölj och strimla purjolöken i tunna och små strimlor. Skär dillen fint.",
+        "Smält smöret i en kastrull och koka purjolöken mjuk i smöret.",
+        "Värm räkorna försiktigt i smöret de ska inte koka, då blir de sega. Smaksätt med salt, peppar och några droppar citronsaft. Rör ner dillen i smöret.",
+        "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
+      ],
+      category: 'mains',
+      rating: 3,
+      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
+    },
+    {
+      title: 'Chokladpavlova med körsbär',
+      description: 'Det är något barnsligt gott över marängtårta. Det där frasiga yttre och sega inre i kombination med len grädde. Den här chokladpavlovan går inte av för hackor, i sällskap av amarettogrädde och körsbär kommer ingen vid bordet bli ledsen.',
+      cooking_time: '60',
+      ingredients: [
+        {
+          "name": "äggvitor",
+          "amount": "4",
+          "unit": "st"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "krm"
+        },
+        {
+          "name": "socker",
+          "amount": "3 1/2",
+          "unit": "dl"
+        },
+        {
+          "name": "vitvinsvinäger",
+          "amount": "1",
+          "unit": "tsk"
+        },
+        {
+          "name": "kakao",
+          "amount": "2",
+          "unit": "tsk"
+        },
+        {
+          "name": "majsstärkelse",
+          "amount": "1",
+          "unit": "msk"
+        },
+        {
+          "name": "smält mörk choklad (70%)",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "urkärnade körsbär",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "färskpressad citronjuice",
+          "amount": "2",
+          "unit": "msk"
+        },
+        {
+          "name": "vispgrädde",
+          "amount": "3",
+          "unit": "dl"
+        },
+        {
+          "name": "vaniljsocker",
+          "amount": "1",
+          "unit": "msk"
+        },
+        {
+          "name": "amaretto",
+          "amount": "2",
+          "unit": "msk"
+        },
+        {
+          "name": "hyvlad mörk choklad",
+          "amount": "valfri mängd",
+          "unit": ""
+        }
+      ],
+      instructions: [
+        "Sätt ugnen på 225°C.",
+        "Vispa äggvitor och salt till ett vitt skum. Tillsätt sockret, lite i taget, och fortsätt vispa till en fast maräng. Vispa ner vinägern.",
+        "Blanda kakao och majsstärkelse. Rör ner i marängen. Rör försiktigt, men ändå snabbt, ner den smälta chokladen (rör du för länge riskerar smeten att spricka).",
+        "Bred ut marängsmeten till en rund botten, ca 20 cm i diameter, på en bakpappersklädd plåt. Ställ in i mitten av ugnen och sänk värmen till 125°C. Grädda ca 11/2 timme, tills marängen är hård på ytan men fortfarande lite seg i mitten. Stäng av ugnen och låt stå kvar tills ugnen svalnat.",
+        "Körsbär: Blanda körsbär, socker och citronjuice i en kastrull. Låt koka på svag värme ca 10-15 minuter, till en fast kompott. Låt svalna.",
+        "Mandelgrädde: Vispa grädden. Rör ner vaniljsocker och mandellikör.",
+        "Vid servering: Toppa pavlovan med mandelgrädden och körsbären. Garnera med hyvlad mörk choklad."
+      ],
+      category: 'desserts',
+      rating: 3,
+      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
+    },
+
+    {
+      title: 'Krämig hallonmimosa',
+      description: "Krämig hallonmimosa. Drinken är frisk och fruktig, och blir härligt uppfriskande med mousserande vin.",
+      cooking_time: '60',
+      ingredients: [
+         {
+          "name": "frysta hallon",
+          "amount": 200,
+          "unit": "gram"
+        },
+        {
+          "name": "strösocker",
+          "amount": 2,
+          "unit": "dl"
+        },
+        {
+          "name": "matlagningsgrädde",
+          "amount": 2.5,
+          "unit": "dl"
+        },
+        {
+          "name": "torrt mousserande vin",
+          "amount": 75,
+          "unit": "cl"
+        },
+      ],
+      instructions: [
+      "Värm hallon och socker i en kastrull tills sockret löst sig och hallonen är smälta. Passera hallonen genom en finmaskig sil och låt svalna.",
+      "Blanda hallonpurén med grädden och frys ca 5 timmar. Rör då och då.",
+      "Lägg en kula av hallongrädden i varje glas och häll över det mousserande vinet, servera genast.",
+      ],
+      category: 'drinks',
+      rating: 4,
+      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
+    },
+
+    {
+      title: 'Thai Basil med kokosskum',
+      description:"Här bjuder vi på en aromatisk och fräsch drink med asiatisk twist! Basilika, lime och gin skapar en smakrik cocktail med spännande karaktär. Toppa med ett läckert kokosskum.",
+      cooking_time: '25',
+      ingredients: [
+         {
+          "name": "kokosmjölk",
+          "amount": 5,
+          "unit": "dl"
+        },
+          {
+          "name": "strösocker",
+          "amount": 100,
+          "unit": "gram"
+        },
+          {
+          "name": "sockerlag",
+          "amount": 3,
+          "unit": "cl"
+        },
+        {
+          "name": "thaibasilika",
+          "amount": 10,
+          "unit": "blad"
+        },
+        {
+          "name": "gin",
+          "amount": 5,
+          "unit": "cl"
+        },
+        {
+          "name": "citronjuice",
+          "amount": 3,
+          "unit": "cl"
+        },
+        {
+          "name": "isbit",
+          "amount": 1,
+          "unit": "st"
+        },
+      ],
+      instructions: [
+        "Kokosskum: Värm kokosmjölk och socker tills sockret har smält. Låt svalna helt i kylskåp.",
+        "Ställ sifonen (som rymmer 5 dl) i kylen, så att den blir kall.",
+        "Drink: Mixa Sockerlag med thaibasilika. Sila av.",
+        "Fyll sifonen med kokosmjölken.",
+        "Skaka sockerlag, gin och citronjuice kalla.",
+        "Sila upp över en stor isbit i ett lågt glas och toppa med kokosskum från sifonen.",
+        "Garnera eventuellt med thaibasilika.",
+      ],
+      category: 'drinks',
+      rating: 4,
+      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
+    },
+
+    {
+      title: 'Negroni med sötsyrlig twist',
+      description: "Negroni sour är en variant på den klassiska cocktailen negroni med en sötsyrlig twist och ett fluffigt skum av äggvita. Den är inspirerad av både negroni och klassiska sour-drinkar som whiskey sour. ",
+      cooking_time: '35',
+      ingredients: [
+        {
+          "name": "strösocker",
+          "amount": 1,
+          "unit": "dl"
+        },
+        {
+          "name": "vatten",
+          "amount": 1,
+          "unit": "dl"
+        },
+        {
+          "name": "gin",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "campari",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "röd sör vermouth",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "apelsin",
+          "amount": 1,
+          "unit": "st"
+        },
+        {
+          "name": "färskpressad citronjuice",
+          "amount": 18,
+          "unit": "cl"
+        },
+        {
+          "name": "sockerlag(från ovan)",
+          "amount": 12,
+          "unit": "cl"
+        },
+        {
+          "name": "stora äggvitor",
+          "amount": 2,
+          "unit": "st"
+        },
+        {
+          "name": "isbit",
+          "amount": 6,
+          "unit": "st"
+        },
+
+      ],
+      instructions: [
+        "Sockerlag: Koka upp socker och vatten. Låt svalna och ställ i kylen.",
+        "Blanda gin, campari och vermouth i en flaska och ställ i kylen. Skär 6 skalbitar från apelsinen (för 6 port) med en skalare utan att få med det vita.",
+        "Häll hälften av spritblandningen i en shaker med hälften av citronjuicen, hälften av sockerlagen och 1 äggvita. Skaka utan is tills äggvitan skummar sig. Tillsätt is och skaka kall. Sila upp i 3 glas. Upprepa med resterande. Toppa drinkarna med apelsinskal.",
+      ],
+      category: 'drinks',
+      rating: 5,
+      image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
+    },
 
   {
     title: 'Getostbollar med krispigt baconsmul',
