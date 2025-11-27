@@ -333,12 +333,16 @@ const recipes = [
         "unit": "dl",
       },
     ],
+    
     instructions:
-      "Strimla baconet och stek knaprigt. Låt rinna av på hushållspapper.",
-    "Smula getosten och blanda med färskosten till en slät smet. Rulla smeten till bollar. Ställ bollarna i kylen.",
-    "Smula baconet och finhacka timjan och blanda ihop med nötterna.",
-    "Rulla bollarna i smulet.",
-    category: 'starter',
+      [
+        "Strimla baconet och stek knaprigt. Låt rinna av på hushållspapper.",
+        "Smula getosten och blanda med färskosten till en slät smet. Rulla smeten till bollar. Ställ bollarna i kylen.",
+        "Smula baconet och finhacka timjan och blanda ihop med nötterna.",
+        "Rulla bollarna i smulet."
+      ],
+
+    category: 'starters',
     rating: 3,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
