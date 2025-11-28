@@ -70,7 +70,7 @@ const recipes = [
   {
     title: 'Toast skagen',
     description: "Klassisk, magiskt god och snabblagad toast Skagen som serveras på smörstekt toast. Skagenröran gör du enkelt med räkor, majonnäs och dill.Servera med en klick löjrom och citronklyftor.",
-    cooking_time: '30 minuter',
+    cooking_time: '30',
     ingredients: [
       {
         "name": "räkor i lake",
@@ -238,7 +238,7 @@ const recipes = [
   {
     title: 'Ryggbiff med rotselleripuré',
     description: 'En klassisk festmåltid när den är som bäst: stekt ryggbiff som serveras med len rotselleripuré. Stek ryggbiffen till perfektion genom att hålla koll på innertemperaturen. Svartkålschips blir ett enkelt men elegant tillbehör.',
-    cooking_time: '70 minuter',
+    cooking_time: '70',
     ingredients: [
       {
         "name": "ryggbiff gärna med fettkappa",
@@ -305,7 +305,7 @@ const recipes = [
   {
     title: 'Toast med fikon och ricotta',
     description: "Festliga snittar! Rostad surdegsbaguette med krämig ricottaost toppas med klyftor av fikon och pinjenötter. Ringla över honung innan servering och bjudningen kan börja.",
-    cooking_time: '15 minuter',
+    cooking_time: '15',
     ingredients: [
       {
         "name": "surdegsbaugette",
@@ -603,7 +603,7 @@ const recipes = [
       "Lägg en kula av hallongrädden i varje glas och häll över det mousserande vinet, servera genast.",
       ],
       category: 'drinks',
-      rating: 4,
+      rating: [],
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
     },
 
@@ -658,7 +658,7 @@ const recipes = [
         "Garnera eventuellt med thaibasilika.",
       ],
       category: 'drinks',
-      rating: 4,
+      rating: [],
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
     },
 
@@ -725,7 +725,7 @@ const recipes = [
         "Häll hälften av spritblandningen i en shaker med hälften av citronjuicen, hälften av sockerlagen och 1 äggvita. Skaka utan is tills äggvitan skummar sig. Tillsätt is och skaka kall. Sila upp i 3 glas. Upprepa med resterande. Toppa drinkarna med apelsinskal.",
       ],
       category: 'drinks',
-      rating: 5,
+      rating: [],
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
     },
 
@@ -737,15 +737,6 @@ const recipes = [
     rating: 3,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
-  {
-    title: 'Clementinbubbel med rosmarin',
-    cooking_time: '35',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 4,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
-  },
-  
   {
     title: 'Frozen key-lime pie',
     description: 'Frisk, krämig och oemotståndligt god! Frozen key lime pie är en härligt syrlig dessert med len limefyllning och knaprig digestivebotten som är perfekt att förbereda i förväg. Toppad med vispad grädde och limeskivor är den dessutom en fröjd för ögat!',
@@ -996,10 +987,35 @@ const recipes = [
   },
   {
     title: 'Limoncello spritz',
+    description: "Limoncello spritz är en svalkande, bubblig och festlig drink inspirerad av Italien där mousserande vin och sodavatten får sällskap av den italienska citronlikören limoncello. Servera din goda limoncello-cocktail med is och citronskivor, gärna i festliga glas på fot. Cin cin!",
     cooking_time: '15',
-    ingredients: Array(5),
-    category: 'drink',
-    rating: 4,
+    ingredients: [
+      {
+        "name": "limoncello",
+        "amount": 3,
+        "unit": "dl"
+      },
+      {
+        "name": "mousserande vin",
+        "amount": 1,
+        "unit": "flaska"
+      },
+      {
+        "name": "sodavatten eller kolsyrat vatten",
+        "amount": 3,
+        "unit": "dl"
+      },
+      {
+        "name": "is",
+      },
+      {
+        "name": "skivad. vatten",
+       
+      }
+    ],
+    instructions: "Blanda limoncello, mousserande vin, sodavatten, is och skivad citron och servera i glas eller häll upp i karaff.",
+    category: 'drinks',
+    rating: [],
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
   },
   
@@ -1163,10 +1179,50 @@ const recipes = [
   },
   {
     title: 'Lingon spritz med grapefrukt',
+    description: "Är du sugen på en läskande, julig fördrink? Då ska du prova denna bubbliga spritz på mousserande vin med smak av lingon, grapefrukt och rosmarin. En juldrink lika uppfriskande som god och enkel!",
     cooking_time: '50',
-    ingredients: Array(8),
-    category: 'drink',
-    rating: 3,
+    ingredients: [
+      {
+        "name": "röda grapefrukt",
+        "amount": "2",
+        "unit": "st"
+      },
+      {
+        "name": "frysta lingon",
+        "amount": "250",
+        "unit": "gram"
+      },
+      {
+        "name": "rosmarinkvistar",
+        "amount": "2",
+        "unit": "st"
+      },
+      {
+        "name": "strösocker",
+        "amount": "1 1/2",
+        "unit": "dl"
+      },
+      {
+        "name": "vatten",
+        "amount": "2",
+        "unit": "dl"
+      },
+      {
+        "name": "is",
+      },
+      {
+        "name": "mousserande vin",
+        "amount": "750",
+        "unit": "ml"
+      },
+    ],
+    instructions: [
+    "Tvätta en grapefrukt noga (för 6 port). Skär bort skalet och se till att få med så lite som möjligt av det vita. Koka upp grapefruktskal, lingon, rosmarin, socker och vatten och låt koka 2 till 3 minuter. Sila och låt svalna.",
+    "Pressa juicen ur båda grapefrukterna och fördela i 6 glas med lingonsockerlagen, för 6 port.",
+    "Till servering: Fyll på med is. Häll på mousserande vin och toppa med rosmarin.",
+    ],
+    category: 'drinks',
+    rating: [],
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
   },
   
@@ -1308,10 +1364,46 @@ const recipes = [
   },
   {
     title: 'Cosmopolitan',
+    description: "Cosmo, som Cosmopolitan också kallas, är en stilren och älskad klassiker med fräsch smak av tranbär och lime! Denna rosa cocktail är både elegant och lätt att älska – perfekt för festliga tillfällen.",
     cooking_time: '20',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 3,
+    ingredients:[
+       {
+        "name": "vodka",
+        "amount": "3",
+        "unit": "cl"
+      },
+       {
+        "name": "cointreau",
+        "amount": "2",
+        "unit": "cl"
+      },
+       {
+        "name": "tranbärsjuice",
+        "amount": "3",
+        "unit": "cl"
+      },
+       {
+        "name": "färsk limesaft",
+        "amount": "1",
+        "unit": "cl"
+      },
+       {
+        "name": "is",
+        "amount": "",
+        "unit": ""
+      },
+       {
+        "name": "apelsinskal",
+        "amount": "",
+        "unit": ""
+      },
+    ],
+    instructions: [
+      "Häll upp alla ingredienser i en shaker och skaka med isbitar.",
+      "Sila ner drinken i ett martiniglas och pressa apelsinskalet så att skalets olja droppar ner i drinken. Servera genast."
+    ],
+    category: 'drinks',
+    rating: [],
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
   },
   {
@@ -1548,10 +1640,37 @@ const recipes = [
   },
   {
     title: 'Aperitivo',
+    description: "Den här alkoholfria drinken med blodgrapejuice, svartvinbärssaft och rosmarin passar perfekt att servera till minglet eller som fördrink tillsammans med småplock som ost och chark.",
     cooking_time: '15',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 4,
+    ingredients: [
+      {
+        "name": "blodgrapefruktsjuice",
+        "amount": "8",
+        "unit": "cl"
+      },
+       {
+        "name": "koncentrerad svartvinbärssaft",
+        "amount": "2",
+        "unit": "cl"
+      },
+      {
+        "name": "sanbitter",
+        "amount": "10",
+        "unit": "cl"
+      },
+      {
+        "name": "sodavatten eller rosmarinssodavatten",
+        "amount": "12",
+        "unit": "cl"
+      },
+      
+    ],
+    instructions: [
+    "Blanda alla ingredienser utom sodavatten och häll i ett glas. Fyll på med is och toppa med sodavatten eller rosmarinsodavatten.",
+    "Till garnering: Garnera med skivad blodgrape och rosmarin."
+    ],
+    category: 'drinks',
+    rating: [],
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
   },
   {
@@ -1596,11 +1715,46 @@ const recipes = [
 
   {
     title: 'Clementinbubbel med rosmarin',
-    description: "",
-    cooking_time: '35 minuter',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 4,
+    description: "En läskande bubbeldrink med clementin och rosmarin som är både törstsläckande och himmelskt god! Servera denna festliga drink på glöggmingel, fest eller självaste nyårsafton.",
+    cooking_time: '35',
+    ingredients: [
+      {
+        "name": "rosmarin",
+        "amount": 2,
+        "unit": "kvistar"
+      },
+      {
+        "name": "strösocker",
+        "amount": 3,
+        "unit": "msk"
+      },
+      {
+        "name": "färskpressad clementinjuice",
+        "amount": 4,
+        "unit": "dl"
+      },
+      {
+        "name": "tonic water",
+        "amount": 4,
+        "unit": "dl"
+      },
+      {
+        "name": "mousserande vin",
+        "amount": 1,
+        "unit": "flaska"
+      },
+      {
+        "name": "",
+        "amount": 1,
+        "unit": ""
+      }
+    ],
+    instructions: [
+      "Mortla rosmarin och socker. Blanda med juicen och låt stå och dra ca 30 minuter.",
+      "Sila juicen. Fördela juice och tonic water i glasen. Toppa med mousserande vin. Garnera med rosmarinkvistar."
+    ],
+    category: 'drinks',
+    rating: [],
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
   },
   {
@@ -1683,7 +1837,7 @@ const recipes = [
   },
   {
     title: 'Oxfilé och svampduxelle',
-    cooking_time: '80 minuter',
+    cooking_time: '80',
     ingredients: Array(23),
     category: 'main course',
     rating: 4,
@@ -1696,14 +1850,6 @@ const recipes = [
     category: 'main course',
     rating: 3,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
-  },
-  {
-    title: 'Limoncello spritz',
-    cooking_time: '15 minuter',
-    ingredients: Array(5),
-    category: 'drink',
-    rating: 4,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
   },
   {
     title: 'Hummer, forellrom och citronsmetana',
@@ -1779,14 +1925,6 @@ const recipes = [
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
   },
   {
-    title: 'Lingon spritz med grapefrukt',
-    cooking_time: '50 minuter',
-    ingredients: Array(8),
-    category: 'drink',
-    rating: 3,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
-  },
-  {
     title: 'Apelsinsallad med lufttorkad skinka',
     description:"Den mångsidiga apelsinen kan spela huvudrollen i såväl salta som söta rätter. Här tar citrusfrukten plats i en vacker, vintersallad med smulad getost, lingon och lufttorkad skinka. God som både förrätt, tillbehör eller på buffébordet.",
     cooking_time: '15 minuter',
@@ -1857,14 +1995,6 @@ const recipes = [
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
   },
   {
-    title: 'Cosmopolitan',
-    cooking_time: '20 minuter',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 3,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
-  },
-  {
     title: 'Gratinerade havskräftor',
     cooking_time: '25 minuter',
     ingredients: Array(12),
@@ -1888,14 +2018,6 @@ const recipes = [
     rating: 5,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
   },
-  {
-    title: 'Aperitivo',
-    cooking_time: '15 minuter',
-    ingredients: Array(6),
-    category: 'drink',
-    rating: 4,
-    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
-  }
 ];
 
 export function fetchRecipes() {

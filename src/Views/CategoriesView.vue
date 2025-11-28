@@ -14,10 +14,10 @@ export default {
     return {
       categories: [
         { label: 'All', value: 'all' },
-        { label: 'Starters', value: 'starter' },
-        { label: 'Mains', value: 'main course' },
-        { label: 'Desserts', value: 'dessert' },
-        { label: 'Drinks', value: 'drink' }
+        { label: 'Starters', value: 'starters' },
+        { label: 'Mains', value: 'mains' },
+        { label: 'Desserts', value: 'desserts' },
+        { label: 'Drinks', value: 'drinks' }
       ],
       localActive: this.modelValue || 'all',
      
