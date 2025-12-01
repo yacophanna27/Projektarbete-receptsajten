@@ -26,27 +26,30 @@ export async function saveNewRecipe(newRecipe, existingRecipesInApi) {
     console.log(`Recipe with title "${newRecipe.title}" already exists.`);
     return false;
   }
-  console.log(newRecipe)
-  fetch(
-    "https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newRecipe),
-    }
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+  
+  console.log(newRecipe);
+  
+  try {
+    const response = await fetch(
+      "https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newRecipe),
       }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("New recipe saved:", newRecipe);
-    })
-    .catch((error) => {
-      console.error("Error saving new recipe:", error);
-    });
+    );
+    
+    if (!response.ok) {
+      throw new Error(`Network response was not ok`);
+    }
+    
+    const data = await response.json();
+    console.log("New recipe saved:", data);
+    return data; // Returnera den sparade datan
+  } catch (error) {
+    console.error("Error saving new recipe:", error);
+    throw error; // Kasta vidare felet så att anropande kod kan hantera det
+  }
 }
