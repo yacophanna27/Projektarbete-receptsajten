@@ -60,7 +60,6 @@ export default {
   text-align: center;
   margin: 1.5rem;
   background-color: #f5f0f8;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
