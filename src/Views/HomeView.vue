@@ -53,8 +53,8 @@ export default {
 
   methods: {
     
-    onCategorySelection(value) {
-      this.selectedCategory = value;
+    onCategorySelection(value) { //  hanterar barnkomponenten (categoriesView) 
+      this.selectedCategory = value; // selectedCategory tilldelades i data ovan ^
     }
   }
 };
@@ -65,8 +65,10 @@ export default {
   <div class="home-page-root">
 
     <div class="category-bar">
+      <!-- binds mot categories via modelValue, selectedCategory 
+       uppdatderas när category-selected emmiteras i CategoriesView -->
       <Categories
-        :modelValue="selectedCategory"
+        :modelValue="selectedCategory" 
         @category-selected="onCategorySelection"
       />
     </div>

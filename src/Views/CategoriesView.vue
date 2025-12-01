@@ -1,14 +1,15 @@
 <script>
 import DropDownMenu from '../components/DropDownMenu.vue';
 import Header from '../components/Header.vue';
+
 export default {
   name: 'Categories', 
   components: { DropDownMenu, Header},
   props: {
-    modelValue: {
+    modelValue: { // den binds till selectedCategory i template i HomeView
       type: String,
       default: 'all'
-    }
+    },
   },
   data() {
     return {
@@ -19,7 +20,7 @@ export default {
         { label: 'Desserts', value: 'desserts' },
         { label: 'Drinks', value: 'drinks' }
       ],
-      localActive: this.modelValue || 'all',
+      localActive: this.modelValue || 'all', //visar aktiv kategori, kopplat till modelValue
      
     };
   },
@@ -29,7 +30,8 @@ export default {
       'category-selected'
     ],
 
-  watch: {
+  watch: { //vakar över ändring utanför komponenten tex via 
+  // routning 
     modelValue(newVal) {
       this.localActive = newVal;
     }
@@ -42,16 +44,16 @@ export default {
       // Navigations router till categories
       this.$router.push(`/category/${value}`)
       
-      this.$emit('update:modelValue', value);
-      this.$emit('category-selected', value);
+      this.$emit('update:modelValue', value); // uppdaterar v-model i HomeView
+      this.$emit('category-selected', value); // skickar till HomeView att kategori har valts
     },
 
-    onDropdownSelect(value) {
+    onDropdownSelect(value) { // metod som hanterar DropDownMenu komponenten 
       this.selectCategory(value);
     },
     
     isActive(value) {
-      return this.localActive === value;
+      return this.localActive === value; // returnerar aktiv kategori
     }
   },
 }
@@ -60,12 +62,17 @@ export default {
 <template>
   <Header />
   <ul class=" categories">
-    <li v-for="category in categories" :key="category.value" :class="{ active: isActive(category.value) }"
+
+    <!-- loopar genom genom kategorierna och skapar li för varje kategori, 
+    class binder dynamiskt mot css klassen (active) och funktionen som anropas i den används
+    för styla endast vald kategori och inte alla -->
+    <li v-for="category in categories" :key="category.value" :class="{ active: isActive(category.value) }" 
       @click="selectCategory(category.value)" role="button" tabindex="0">
       {{ category.label }}
     </li>
   </ul>
-  <DropDownMenu :value="categories" @item-selected="onDropdownSelect" />
+  <!-- items kommer från dropdownmenu som är en prop och binds mot value. knappen är för att öppna menyn -->
+  <DropDownMenu :items="categories" @item-selected="onDropdownSelect" />
 </template>
 
 
