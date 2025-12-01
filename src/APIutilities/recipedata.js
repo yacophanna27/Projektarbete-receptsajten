@@ -63,7 +63,7 @@ export const recipes = [
       "Servera direkt medan soppan är rykande varm."
     ],
     category: 'mains',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
   },
   {
@@ -122,7 +122,7 @@ export const recipes = [
       "Servera skagenröran på bröden med löjrommen, citronklyftor och toppa med lite extra dill och nymalen svartpeppar.",
     ],
     category: 'starters',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
   },
 
@@ -168,7 +168,7 @@ export const recipes = [
       "Till servering: Dekorera med färska bär och servera."
     ],
     category: 'desserts',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243738/cf_259/pannacotta.jpg'
   },
   {
@@ -231,7 +231,7 @@ export const recipes = [
       "Pudra över kakao vid servering och servera gärna med hallon.",
     ],
     category: 'desserts',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_218797/cf_259/tiramisu.jpg'
   },
   {
@@ -297,7 +297,7 @@ export const recipes = [
       "Skiva köttet och servera med rotselleripurén, vitlöksskyn och toppa med svartkålen."
     ],
     category: 'mains',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
   },
 
@@ -347,7 +347,7 @@ export const recipes = [
       "Bred ricotta på brödskivorna. Toppa med fikon och pinjenötter. Ringla över honung och strö över salt och peppar.",
     ],
     category: 'starters',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
   },
 
@@ -414,7 +414,7 @@ export const recipes = [
       "Avsluta med att värma sojasmöret och ringla över tartaren. Strö över lite flingsalt."
     ],
     category: 'starters',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
   },
 
@@ -482,7 +482,7 @@ export const recipes = [
         "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
       ],
       category: 'mains',
-      rating: 3,
+      rating: 0,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
     },
     {
@@ -566,7 +566,7 @@ export const recipes = [
         "Vid servering: Toppa pavlovan med mandelgrädden och körsbären. Garnera med hyvlad mörk choklad."
       ],
       category: 'desserts',
-      rating: 3,
+      rating: 0,
       image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
     },
 
@@ -783,7 +783,7 @@ export const recipes = [
       "Vispa grädden fluffig. Toppa pajen med grädde, limeskal och limeskivor."
     ],
     category: 'desserts',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg'
   },
   {
@@ -840,7 +840,7 @@ export const recipes = [
       "Vid servering: Vispa chokladmoussen fluffig. Toppa pannacottan med moussen, clementiner, skurna i hinnfria klyftor, hallon och krossade chokladcookies."
     ],
     category: 'desserts',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg'
   },
   {
@@ -909,7 +909,7 @@ export const recipes = [
       "Vid servering: Ta ut tallrikarna. Skär köttet i skivor. Lägg på grönsaker, selleripuré, kött och duxelle. Skeda över lite av såsen och droppa över spenatoljan. Bjud resten av skyn vid sidan av."
     ],
     category: 'mains',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
   },
   {
@@ -972,7 +972,7 @@ export const recipes = [
       "Till servering: Fördela ricottan på tallrikar. Toppa med gnocchifräset och det brynta smöret. Strö över parmesan.",
     ],
     category: 'mains',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
   },
   {
@@ -1077,7 +1077,7 @@ export const recipes = [
       "Till servering: Servera bouillabaissen i varma djupa tallrikar med musslorna, aioli och krutonger eller surdegsbröd."
     ],
     category: 'mains',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
   },
   {
@@ -1164,7 +1164,7 @@ export const recipes = [
       "Montering: Pensla sockerlagen på sockerkakan. Bred ut sylten på glassens botten när den fortfarande ligger kvar i skålen. Lägg på sockerkakan, den kan behöva anpassas genom att skära av lite av kanten. Stjälp upp glassen på ett tårtfat. Bred på marängen och bränn av med brännare."
     ],
     category: 'desserts',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
   },
   {
@@ -1278,7 +1278,7 @@ export const recipes = [
       "Plocka ur musslorna ur skalen. Värm såsen och tillsätt gräslök. Servera torsken med såsen, spenaten och musslorna.",
     ],
     category: 'mains',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
   },
   {
@@ -1349,7 +1349,7 @@ export const recipes = [
       "Lägg upp klementinklyftorna och servera dem med glassen."
     ],
     category: 'desserts',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
   },
   {
@@ -1457,7 +1457,7 @@ export const recipes = [
       "Gratinera kräftorna i övre delen av ugnen ca 5 minuter, eller tills smöret fått fin färg. Toppa med resterande persilja och parmesan.",
     ],
     category: 'starters',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
   },
   {
@@ -1523,7 +1523,7 @@ export const recipes = [
       "Skär köttet i skivor. Servera med rödbetor, chevrekräm och blåbärsbalsamico. Garnera gärna med färska örter."
     ],
     category: 'mains',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
   },
   {
@@ -1625,7 +1625,7 @@ export const recipes = [
       "Till garnering: Toppa kladdkakan med lingon och fikon."
     ],
     category: 'desserts',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
   },
   {
@@ -1699,7 +1699,7 @@ export const recipes = [
       ],
 
     category: 'starters',
-    rating: 3,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
 
@@ -1804,7 +1804,7 @@ export const recipes = [
     "Fördela på ca 20 crostini. Toppa med sesamfrön och chiliflakes.",
     ],
     category: 'starters',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
   },
   {
@@ -1860,7 +1860,7 @@ export const recipes = [
       "Lägg smetana i botten på tallrikarna, toppa med hummer, rom, lök, plockad dill och klippt krasse.",
     ],
     category: 'starters',
-    rating: 5,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
   },
   {
@@ -1914,7 +1914,7 @@ export const recipes = [
       "Till servering: Servera gärna med bröd.",
     ],
     category: 'starters',
-    rating: 4,
+    rating: 0,
     image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
   },
 ];
