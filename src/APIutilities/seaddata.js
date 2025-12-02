@@ -8,7 +8,6 @@ console.log("All Recipes:", allRecipes);
 
 for (const recipe of recipes) {
     const response = await saveNewRecipe(recipe, allRecipes);
-    break;
 }
 
 

@@ -1,28 +1,28 @@
 export const recipes = [
   {
-    title: 'Hummersoppa',
-    description: 'Hummersoppa är en soppa som passar utmärk vid festliga tillfällen med lyxiga humrar i huvudrollen. Den krämiga soppan med saffran, konjak, fond och grädde som några smaksättare lyfter humrarna till en högklassig nivå.',
-    timeInMins: 60,
-    ingredients: [
+    "title": 'Hummersoppa',
+    "description": 'Hummersoppa är en soppa som passar utmärk vid festliga tillfällen med lyxiga humrar i huvudrollen. Den krämiga soppan med saffran, konjak, fond och grädde som några smaksättare lyfter humrarna till en högklassig nivå.',
+    "timeInMins": 60,
+    "ingredients": [
       {
         "name": "humrar",
         "amount": 3,
-        "unit": "stycken"
+        "unit": "st"
       },
       {
         "name": "gul lök",
         "amount": 1,
-        "unit": "styck"
+        "unit": "st"
       },
       {
-        "name": "vitlöksklyftor",
+        "name": "vitlöksklyfta",
         "amount": 1,
-        "unit": "styck"
+        "unit": "st"
       },
       {
-        "name": "liten morot",
+        "name": "morot",
         "amount": 1,
-        "unit": "styck"
+        "unit": "st"
       },
       {
         "name": "grädde",
@@ -37,7 +37,7 @@ export const recipes = [
       {
         "name": "fiskbuljongtärning",
         "amount": 1,
-        "unit": "styck"
+        "unit": "st"
       },
       {
         "name": "salt",
@@ -50,7 +50,7 @@ export const recipes = [
         "unit": "msk"
       }
     ],
-    instructions: [
+    "instructions": [
       "Dagen före festen: Dela och plocka köttet ur humrarna. Krossa skalen grovt. Skala och grovhacka morot, lök, vitlök och selleri.",
       "Hetta upp olja i en kastrull och bryn skal- och grönsakshacket.",
       "Tillsätt saffran och tomatpuré. Fräs i ytterligare någon minut.",
@@ -62,15 +62,15 @@ export const recipes = [
       "Nyårsafton/festtillfället: Fördela hummer, lök och sockerärter i varma djupa tallrikar. Värm soppan under omrörning och häll över hummerköttet.",
       "Servera direkt medan soppan är rykande varm."
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_250503/cf_259/hummersoppa.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_250503/cf_259/hummersoppa.jpg'
   },
   {
-    title: 'Toast skagen',
-    description: "Klassisk, magiskt god och snabblagad toast Skagen som serveras på smörstekt toast. Skagenröran gör du enkelt med räkor, majonnäs och dill.Servera med en klick löjrom och citronklyftor.",
-    timeInMins: 30,
-    ingredients: [
+    "title": 'Toast skagen',
+    "description": "Klassisk, magiskt god och snabblagad toast Skagen som serveras på smörstekt toast. Skagenröran gör du enkelt med räkor, majonnäs och dill.Servera med en klick löjrom och citronklyftor.",
+    "timeInMins": 30,
+    "ingredients": [
       {
         "name": "räkor i lake",
         "amount": 1,
@@ -113,7 +113,7 @@ export const recipes = [
       },
     ],
 
-    instructions: [
+    "instructions": [
       "Låt räkorna rinna av i en sil.",
       "Hacka dillen (spar några vippor till serveringen). Blanda dillen med majonnäsen.",
       "Smaka av med citronsaft från halva citronen (för 4 port) samt salt och peppar. Skär resten av citronen i klyftor till serveringen.",
@@ -121,44 +121,44 @@ export const recipes = [
       "Dela brödskivorna på snedden och stek bröden gyllenbruna i smöret i en stekpanna.",
       "Servera skagenröran på bröden med löjrommen, citronklyftor och toppa med lite extra dill och nymalen svartpeppar.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_229530/cf_259/toast_skagen.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_229530/cf_259/toast_skagen.jpg'
   },
 
 
   {
-    title: 'Pannacotta',
-    description: "Klassiskt grundrecept på pannacotta, som är en underbart god efterrätt med lyxig känsla. Pannacottan, italienarnas klassiska efterrätt, får här en fin vaniljsmak från vaniljstången som kokas med grädden och den serveras allra helst med färska bär.",
-    timeInMins: 20,
-    ingredients: [
+    "title": 'Pannacotta',
+    "description": "Klassiskt grundrecept på pannacotta, som är en underbart god efterrätt med lyxig känsla. Pannacottan, italienarnas klassiska efterrätt, får här en fin vaniljsmak från vaniljstången som kokas med grädden och den serveras allra helst med färska bär.",
+    "timeInMins": 20,
+    "ingredients": [
       {
         "name": "gelatinblad",
-        "amount": "2",
+        "amount": 2,
         "unit": "st",
       },
       {
         "name": "grädde",
-        "amount": "5",
+        "amount": 5,
         "unit": "dl",
       },
       {
         "name": "vaniljstång",
-        "amount": "1",
+        "amount": 1,
         "unit": "st",
       },
       {
         "name": "socker",
-        "amount": "1/2",
+        "amount": 0.5,
         "unit": "dl",
       },
       {
         "name": "färska bär",
-        "amount": "valfri mängd",
-        "unit": "",
+        "amount": 20,
+        "unit": "st",
       }
     ],
-    instructions: [
+    "instructions": [
       "Lägg gelatinbladen i kallt vatten.",
       "Häll grädden i en kastrull. Dela vaniljstången på längden och skrapa ur fröna. Lägg fröna och stången i grädden tillsammans med sockret.",
       "Koka upp grädden och koka den sakta i ca 2 minuter. Vispa så att vaniljfröna blandar sig med grädden. Ta upp vaniljstången.",
@@ -167,62 +167,62 @@ export const recipes = [
       "Sätt formarna i kylen, minst 5 timmar.",
       "Till servering: Dekorera med färska bär och servera."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_243738/cf_259/pannacotta.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_243738/cf_259/pannacotta.jpg'
   },
   {
-    title: 'Tiramisu',
-    description: 'Gör din egen lyxiga tiramisu med detta härliga recept! Häll ner len mascarpone- och äggsmet i en form där botten är täckt av smakliga, espressodoppade och spetsade savoiardikex. Ställ in i kylen över natten och servera tiramisun pudrad med kakao och färska hallon.',
-    timeInMins: 45,
-    ingredients: [
+    "title": 'Tiramisu',
+    "description": 'Gör din egen lyxiga tiramisu med detta härliga recept! Häll ner len mascarpone- och äggsmet i en form där botten är täckt av smakliga, espressodoppade och spetsade savoiardikex. Ställ in i kylen över natten och servera tiramisun pudrad med kakao och färska hallon.',
+    "timeInMins": 45,
+    "ingredients": [
       {
         "name": "äggulor",
-        "amount": "5",
+        "amount": 5,
         "unit": "st"
       },
       {
         "name": "mascarpone",
-        "amount": "2",
+        "amount": 2,
         "unit": "burkar"
       },
       {
         "name": "äggvitor",
-        "amount": "5",
+        "amount": 5,
         "unit": "st"
       },
       {
         "name": "socker",
-        "amount": "1 1/2",
+        "amount": 1.5,
         "unit": "dl"
       },
       {
         "name": "kallt kaffe",
-        "amount": "1 3/4",
+        "amount": 1.75,
         "unit": "dl"
       },
       {
         "name": "amaretto eller konjak",
-        "amount": "1/2",
+        "amount": 0.5,
         "unit": "dl"
       },
       {
         "name": "savoiardikex",
-        "amount": "1",
+        "amount": 1,
         "unit": "förp"
       },
       {
         "name": "kakao",
-        "amount": "1",
+        "amount": 1,
         "unit": "msk"
       },
       {
         "name": "färska hallon",
-        "amount": "valfri mängd",
-        "unit": ""
+        "amount": 10,
+        "unit": "st"
       }
     ],
-    instructions: [
+    "instructions": [
       "Vispa ihop äggulor och mascarpone till en slät smet.",
       "Vispa äggvitorna fluffiga med elvisp. Tillsätt sockret lite i taget och fortsätt vispa tills smeten är fast och blank.",
       "Vänd ner äggvitevispet i äggsmeten med hjälp av en slickepott.",
@@ -230,15 +230,15 @@ export const recipes = [
       "Häll äggsmeten över kexen och ställ i kylen minst 5 timmar, gärna över natten.",
       "Pudra över kakao vid servering och servera gärna med hallon.",
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_218797/cf_259/tiramisu.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_218797/cf_259/tiramisu.jpg'
   },
   {
-    title: 'Ryggbiff med rotselleripuré',
-    description: 'En klassisk festmåltid när den är som bäst: stekt ryggbiff som serveras med len rotselleripuré. Stek ryggbiffen till perfektion genom att hålla koll på innertemperaturen. Svartkålschips blir ett enkelt men elegant tillbehör.',
-    timeInMins: 70,
-    ingredients: [
+    "title": 'Ryggbiff med rotselleripuré',
+    "description": 'En klassisk festmåltid när den är som bäst: stekt ryggbiff som serveras med len rotselleripuré. Stek ryggbiffen till perfektion genom att hålla koll på innertemperaturen. Svartkålschips blir ett enkelt men elegant tillbehör.',
+    "timeInMins": 70,
+    "ingredients": [
       {
         "name": "ryggbiff gärna med fettkappa",
         "amount": 8,
@@ -285,7 +285,7 @@ export const recipes = [
         "unit": "msk"
       }
     ],
-    instructions: [
+    "instructions": [
       "Sätt ugnen på 175°C.",
       "Rotselleripuré: Skala och skär rotsellerin i mindre bitar och lägg i en ugnsform. Lägg vitlöksklyftorna (med skal) till vitlöksskyn i en ugnsform. Rosta rotsellerin och vitlöken i ugnen ca 30 minuter tills rotsellerin är mjuk.",
       "Mixa rotsellerin i en blender med vinäger och olivolja. Späd med vatten till lagom konsistens. Smaka av med salt.",
@@ -296,16 +296,16 @@ export const recipes = [
       "Ryggbiff: Krydda köttet med salt och peppar. Stek i omgångar i het panna i olja och smör, 1–2 minuter per sida. Lägg köttet på ett ugnsgaller med plåt under. Sätt in i ugnen, se Innertemperatur för blodigt, medium och välstekt. Låt köttet vila ca 2 minuter innan servering.",
       "Skiva köttet och servera med rotselleripurén, vitlöksskyn och toppa med svartkålen."
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
   },
 
   {
-    title: 'Toast med fikon och ricotta',
-    description: "Festliga snittar! Rostad surdegsbaguette med krämig ricottaost toppas med klyftor av fikon och pinjenötter. Ringla över honung innan servering och bjudningen kan börja.",
-    timeInMins: 15,
-    ingredients: [
+    "title": 'Toast med fikon och ricotta',
+    "description": "Festliga snittar! Rostad surdegsbaguette med krämig ricottaost toppas med klyftor av fikon och pinjenötter. Ringla över honung innan servering och bjudningen kan börja.",
+    "timeInMins": 15,
+    "ingredients": [
       {
         "name": "surdegsbaugette",
         "amount": 0.5,
@@ -342,21 +342,21 @@ export const recipes = [
         "unit": "tsk"
       },
     ],
-    instructions: [
+    "instructions": [
       "Skiva baguetten i tunna skivor. Rosta i en torr stekpanna. Skär fikonen i klyftor.",
       "Bred ricotta på brödskivorna. Toppa med fikon och pinjenötter. Ringla över honung och strö över salt och peppar.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
   },
 
 
   {
-    title: 'Rentartar med brynt sojasmör',
-    description: "Viltkött gillar svamp lite extra mycket. Här i en lyxig tartar på ytterfilé av ren. Pepparrot och brynt sojasmör förhöjer smaken. Avsluta med att råriva champinjoner och strö över – ett enkelt sätt att få fram doften av en höstig skogspromenad. Ljuvligt som förrätt!",
-    timeInMins: 45,
-    ingredients: [
+    "title": 'Rentartar med brynt sojasmör',
+    "description": "Viltkött gillar svamp lite extra mycket. Här i en lyxig tartar på ytterfilé av ren. Pepparrot och brynt sojasmör förhöjer smaken. Avsluta med att råriva champinjoner och strö över – ett enkelt sätt att få fram doften av en höstig skogspromenad. Ljuvligt som förrätt!",
+    "timeInMins": 45,
+    "ingredients": [
       {
         "name": "renytterfilé",
         "amount": 200,
@@ -403,7 +403,7 @@ export const recipes = [
         "unit": ""
       },
     ],
-    instructions: [
+    "instructions": [
       "Putsa renköttet fritt från senor och hinnor. Skär det i små tärningar. Förvara övertäckt i kyl.",
       "Skär brödet i tärningar. Stek runt om i oljan och 1 msk av smöret (för 8 port) i en stekpanna tills de är gyllene. Ta upp och låt rinna av på hushållspapper.",
       "Hetta upp resterande smör i en liten kastrull. Ta från värmen när det börjar bli lätt brynt och doftar nötigt.",
@@ -413,16 +413,16 @@ export const recipes = [
       "Fördela den skivade löken, brödtärningarna, svamp och pepparrot över. Klipp krassen och strö över.",
       "Avsluta med att värma sojasmöret och ringla över tartaren. Strö över lite flingsalt."
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
   },
 
   {
-    title: 'Torskrygg med räkor och dillsmör',
-    description: 'Torskrygg i ugn med len potatiscréme och räkor, perfekt till nyår och andra festliga tillfällen. Här kombinerar du rimmad torskrygg med en créme gjord på mandelpotatis. Toppa med lätt smörstekta räkor smaksatta med citron och dill.',
-    timeInMins: 50,
-    ingredients: [
+    "title": 'Torskrygg med räkor och dillsmör',
+    "description": 'Torskrygg i ugn med len potatiscréme och räkor, perfekt till nyår och andra festliga tillfällen. Här kombinerar du rimmad torskrygg med en créme gjord på mandelpotatis. Toppa med lätt smörstekta räkor smaksatta med citron och dill.',
+    "timeInMins": 50,
+    "ingredients": [
       {
         "name": "torskryggfilé",
         "amount": 4,
@@ -469,7 +469,7 @@ export const recipes = [
         "unit": "droppar"
       }
     ],
-      instructions: [
+    "instructions": [
         "Tina torskryggen om fryst används.",
         "Rimmad torsk: Blanda salt och socker med vattnet och rör om så att det löser sig. Lägg fisken i saltlagen, låt den ligga i lagen 2-3 timmar.",
         "Sätt ugnen på 125°C.",
@@ -481,82 +481,82 @@ export const recipes = [
         "Värm räkorna försiktigt i smöret de ska inte koka, då blir de sega. Smaksätt med salt, peppar och några droppar citronsaft. Rör ner dillen i smöret.",
         "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
       ],
-      categories: ['mains'],
-      ratingss: [],
-      imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
     },
     {
-      title: 'Chokladpavlova med körsbär',
-      description: 'Det är något barnsligt gott över marängtårta. Det där frasiga yttre och sega inre i kombination med len grädde. Den här chokladpavlovan går inte av för hackor, i sällskap av amarettogrädde och körsbär kommer ingen vid bordet bli ledsen.',
-      timeInMins: 60,
-      ingredients: [
+    "title": 'Chokladpavlova med körsbär',
+    "description": 'Det är något barnsligt gott över marängtårta. Det där frasiga yttre och sega inre i kombination med len grädde. Den här chokladpavlovan går inte av för hackor, i sällskap av amarettogrädde och körsbär kommer ingen vid bordet bli ledsen.',
+    "timeInMins": 60,
+    "ingredients": [
         {
           "name": "äggvitor",
-          "amount": "4",
+          "amount": 4,
           "unit": "st"
         },
         {
           "name": "salt",
-          "amount": "1",
+          "amount": 1,
           "unit": "krm"
         },
         {
           "name": "socker",
-          "amount": "3 1/2",
+          "amount": 3.5,
           "unit": "dl"
         },
         {
           "name": "vitvinsvinäger",
-          "amount": "1",
+          "amount": 1,
           "unit": "tsk"
         },
         {
           "name": "kakao",
-          "amount": "2",
+          "amount": 2,
           "unit": "tsk"
         },
         {
           "name": "majsstärkelse",
-          "amount": "1",
+          "amount": 1,
           "unit": "msk"
         },
         {
           "name": "smält mörk choklad (70%)",
-          "amount": "50",
+          "amount": 50,
           "unit": "g"
         },
         {
           "name": "urkärnade körsbär",
-          "amount": "500",
+          "amount": 500,
           "unit": "g"
         },
         {
           "name": "färskpressad citronjuice",
-          "amount": "2",
+          "amount": 2,
           "unit": "msk"
         },
         {
           "name": "vispgrädde",
-          "amount": "3",
+          "amount": 3,
           "unit": "dl"
         },
         {
           "name": "vaniljsocker",
-          "amount": "1",
+          "amount": 1,
           "unit": "msk"
         },
         {
           "name": "amaretto",
-          "amount": "2",
+          "amount": 2,
           "unit": "msk"
         },
         {
           "name": "hyvlad mörk choklad",
-          "amount": "valfri mängd",
-          "unit": ""
+          "amount": 10,
+          "unit": "g"
         }
       ],
-      instructions: [
+    "instructions": [
         "Sätt ugnen på 225°C.",
         "Vispa äggvitor och salt till ett vitt skum. Tillsätt sockret, lite i taget, och fortsätt vispa till en fast maräng. Vispa ner vinägern.",
         "Blanda kakao och majsstärkelse. Rör ner i marängen. Rör försiktigt, men ändå snabbt, ner den smälta chokladen (rör du för länge riskerar smeten att spricka).",
@@ -565,16 +565,16 @@ export const recipes = [
         "Mandelgrädde: Vispa grädden. Rör ner vaniljsocker och mandellikör.",
         "Vid servering: Toppa pavlovan med mandelgrädden och körsbären. Garnera med hyvlad mörk choklad."
       ],
-      categories: ['desserts'],
-      ratings: [],
-      imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
     },
 
     {
-      title: 'Krämig hallonmimosa',
-      description: "Krämig hallonmimosa. Drinken är frisk och fruktig, och blir härligt uppfriskande med mousserande vin.",
-      timeInMins: 60,
-      ingredients: [
+    "title": 'Krämig hallonmimosa',
+    "description": "Krämig hallonmimosa. Drinken är frisk och fruktig, och blir härligt uppfriskande med mousserande vin.",
+    "timeInMins": 60,
+    "ingredients": [
          {
           "name": "frysta hallon",
           "amount": 200,
@@ -596,21 +596,21 @@ export const recipes = [
           "unit": "cl"
         },
       ],
-      instructions: [
+    "instructions": [
       "Värm hallon och socker i en kastrull tills sockret löst sig och hallonen är smälta. Passera hallonen genom en finmaskig sil och låt svalna.",
       "Blanda hallonpurén med grädden och frys ca 5 timmar. Rör då och då.",
       "Lägg en kula av hallongrädden i varje glas och häll över det mousserande vinet, servera genast.",
       ],
-      categories: ['drinks'],
-      ratings: [],
-      imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
     },
 
     {
-      title: 'Thai Basil med kokosskum',
-      description:"Här bjuder vi på en aromatisk och fräsch drink med asiatisk twist! Basilika, lime och gin skapar en smakrik cocktail med spännande karaktär. Toppa med ett läckert kokosskum.",
-      timeInMins: 25,
-      ingredients: [
+    "title": 'Thai Basil med kokosskum',
+    "description":"Här bjuder vi på en aromatisk och fräsch drink med asiatisk twist! Basilika, lime och gin skapar en smakrik cocktail med spännande karaktär. Toppa med ett läckert kokosskum.",
+    "timeInMins": 25,
+    "ingredients": [
          {
           "name": "kokosmjölk",
           "amount": 5,
@@ -647,7 +647,7 @@ export const recipes = [
           "unit": "st"
         },
       ],
-      instructions: [
+    "instructions": [
         "Kokosskum: Värm kokosmjölk och socker tills sockret har smält. Låt svalna helt i kylskåp.",
         "Ställ sifonen (som rymmer 5 dl) i kylen, så att den blir kall.",
         "Drink: Mixa Sockerlag med thaibasilika. Sila av.",
@@ -656,16 +656,16 @@ export const recipes = [
         "Sila upp över en stor isbit i ett lågt glas och toppa med kokosskum från sifonen.",
         "Garnera eventuellt med thaibasilika.",
       ],
-      categories: ['drinks'],
-      ratings: [],
-      imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
     },
 
     {
-      title: 'Negroni med sötsyrlig twist',
-      description: "Negroni sour är en variant på den klassiska cocktailen negroni med en sötsyrlig twist och ett fluffigt skum av äggvita. Den är inspirerad av både negroni och klassiska sour-drinkar som whiskey sour. ",
-      timeInMins: 35,
-      ingredients: [
+    "title": 'Negroni med sötsyrlig twist',
+    "description": "Negroni sour är en variant på den klassiska cocktailen negroni med en sötsyrlig twist och ett fluffigt skum av äggvita. Den är inspirerad av både negroni och klassiska sour-drinkar som whiskey sour. ",
+    "timeInMins": 35,
+    "ingredients": [
         {
           "name": "strösocker",
           "amount": 1,
@@ -718,62 +718,62 @@ export const recipes = [
         },
 
       ],
-      instructions: [
+    "instructions": [
         "Sockerlag: Koka upp socker och vatten. Låt svalna och ställ i kylen.",
         "Blanda gin, campari och vermouth i en flaska och ställ i kylen. Skär 6 skalbitar från apelsinen (för 6 port) med en skalare utan att få med det vita.",
         "Häll hälften av spritblandningen i en shaker med hälften av citronjuicen, hälften av sockerlagen och 1 äggvita. Skaka utan is tills äggvitan skummar sig. Tillsätt is och skaka kall. Sila upp i 3 glas. Upprepa med resterande. Toppa drinkarna med apelsinskal.",
       ],
-      categories: ['drinks'],
-      ratings: [],
-      imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
     },
   {
-    title: 'Frozen key-lime pie',
-    description: 'Frisk, krämig och oemotståndligt god! Frozen key lime pie är en härligt syrlig dessert med len limefyllning och knaprig digestivebotten som är perfekt att förbereda i förväg. Toppad med vispad grädde och limeskivor är den dessutom en fröjd för ögat!',
-    timeInMins: 45,
-    ingredients: [
+    "title": 'Frozen key-lime pie',
+    "description": 'Frisk, krämig och oemotståndligt god! Frozen key lime pie är en härligt syrlig dessert med len limefyllning och knaprig digestivebotten som är perfekt att förbereda i förväg. Toppad med vispad grädde och limeskivor är den dessutom en fröjd för ögat!',
+    "timeInMins": 45,
+    "ingredients": [
       {
         "name": "smör",
-        "amount": "100",
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "digestivekex",
-        "amount": "200",
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "socker",
-        "amount": "4",
+        "amount": 4,
         "unit": "msk"
       },
       {
         "name": "salt",
-        "amount": "1",
+        "amount": 1,
         "unit": "krm"
       },
       {
         "name": "lime",
-        "amount": "6",
+        "amount": 6,
         "unit": "st"
       },
       {
         "name": "kondenserad mjölk",
-        "amount": "400",
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "vaniljsocker",
-        "amount": "1",
+        "amount": 1,
         "unit": "msk"
       },
       {
         "name": "vispgrädde",
-        "amount": "5",
+        "amount": 5,
         "unit": "dl"
       }
     ],
-    instructions: [
+    "instructions": [
       "Sätt ugnen på 175°C.",
       "Botten: Smält smöret. Mixa kexen till ett fint smul i matberedare eller för hand i en mortel.",
       "Blanda smul med smält smör, socker och salt. Tryck ut i botten och upp på sidorna i en pajform ca 24 cm i diameter (för 8 port). Grädda pajbotten i mitten av ugnen ca 15 minuter och låt svalna helt i rumstemperatur.",
@@ -782,38 +782,38 @@ export const recipes = [
       "Topping: Ta ut pajen 20 till 30 minuter innan servering.",
       "Vispa grädden fluffig. Toppa pajen med grädde, limeskal och limeskivor."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg'
   },
   {
-    title: 'Salt kolapannacotta med citrus',
-    description: 'Denna ljuvligt lyxiga dessert har allt och lite till. Söt och salt kolapannacotta, len chokladmousse med en bitter touch och syrliga clementiner. Smula över några chokladcookies på toppen för gott crunch.',
-    timeInMins: 50,
-    ingredients: [
+    "title": 'Salt kolapannacotta med citrus',
+    "description": 'Denna ljuvligt lyxiga dessert har allt och lite till. Söt och salt kolapannacotta, len chokladmousse med en bitter touch och syrliga clementiner. Smula över några chokladcookies på toppen för gott crunch.',
+    "timeInMins": 50,
+    "ingredients": [
       {
         "name": "gelatinblad",
-        "amount": "2",
+        "amount": 2,
         "unit": "st"
       },
       {
         "name": "vispgrädde",
-        "amount": "7",
+        "amount": 7,
         "unit": "dl"
       },
       {
         "name": "dulce de leche",
-        "amount": "1",
+        "amount": 1,
         "unit": "burk"
       },
       {
         "name": "flingsalt",
-        "amount": "1/2",
+        "amount": 0.5,
         "unit": "tsk"
       },
       {
         "name": "hackad mörk bakchoklad (55%)",
-        "amount": "100",
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -832,22 +832,22 @@ export const recipes = [
         "unit": "st"
       }
     ],
-    instructions: [
+    "instructions": [
       "Lägg gelatinblad i kallt vatten enligt anvisningen på förpackningen.",
       "Pannacotta: Koka upp vispgrädde i en kastrull, ta från värmen. Vispa genast ner dulce de leche. Krama ur gelatinbladen och tillsätt dem under fortsatt vispning. Rör ner flingsalt.",
       "Häll smeten i 8 glas (för 8 port). Ställ i kylen minst 4 timmar.",
       "Chokladmousse: Värm vispgrädde (koka ej). Ta från värmen och rör ner hackad choklad, eller chokladknappar. Låt svalna helt i kylen.",
       "Vid servering: Vispa chokladmoussen fluffig. Toppa pannacottan med moussen, clementiner, skurna i hinnfria klyftor, hallon och krossade chokladcookies."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg'
   },
   {
-    title: 'Oxfilé och svampduxelle',
-    description: 'Ingen nyårsmiddag eller nyårsmeny är komplett utan oxfilé. Få en smakstark fullträff till huvudrätt med detta oxfilérecept där du enkelt förbereder alla moment. Den krämiga svampduxellen får en lyxig touch av madeira, och en pigg spenatolja fulländar det möra köttet.',
-    timeInMins: 80,
-    ingredients: [
+    "title": 'Oxfilé och svampduxelle',
+    "description": 'Ingen nyårsmiddag eller nyårsmeny är komplett utan oxfilé. Få en smakstark fullträff till huvudrätt med detta oxfilérecept där du enkelt förbereder alla moment. Den krämiga svampduxellen får en lyxig touch av madeira, och en pigg spenatolja fulländar det möra köttet.',
+    "timeInMins": 80,
+    "ingredients": [
       {
         "name": "oxfilé",
         "amount": 1,
@@ -894,7 +894,7 @@ export const recipes = [
         "unit": "g"
       }
     ],
-    instructions: [
+    "instructions": [
       "Putsa köttet. Salta och peppra runt om.",
       "Hetta upp en stor stekpanna och bryn köttet runt om i olja och smör tills det får färg. Ta upp köttet och kyl snabbt. Förvara övertäckt i kylen.",
       "Rotselleripuré: Skala och skär rotsellerin i små tärningar. Lägg sellerin i en kastrull. Tillsätt grädden. Koka upp och låt koka under lock på svag värme tills rotsellerin är helt mjuk, ca 15 minuter.",
@@ -908,15 +908,15 @@ export const recipes = [
       "Sänk ugnsvärmen till 100°C. Ställ in tallrikarna i ugnen så att de blir varma.",
       "Vid servering: Ta ut tallrikarna. Skär köttet i skivor. Lägg på grönsaker, selleripuré, kött och duxelle. Skeda över lite av såsen och droppa över spenatoljan. Bjud resten av skyn vid sidan av."
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
   },
   {
-    title: 'Gnocchi med ricotta och svamp',
-    description: 'Hemmagjord gnocchi är enkelt, om än lite pilligt, men framförallt väldigt gott! Här har gnocchis huvudingrediens potatis även fått sällskap av rotselleri och serveras med krämig ricotta, stekt svamp och brynt smör med salvia.',
-    timeInMins: 65,
-    ingredients: [
+    "title": 'Gnocchi med ricotta och svamp',
+    "description": 'Hemmagjord gnocchi är enkelt, om än lite pilligt, men framförallt väldigt gott! Här har gnocchis huvudingrediens potatis även fått sällskap av rotselleri och serveras med krämig ricotta, stekt svamp och brynt smör med salvia.',
+    "timeInMins": 65,
+    "ingredients": [
       {
         "name": "fast potatis",
         "amount": 400,
@@ -963,7 +963,7 @@ export const recipes = [
         "unit": "dl"
       }
     ],
-    instructions: [
+    "instructions": [
       "Rotsellerignocchi: Skala potatis och rotselleri och skär i bitar. Koka mjuka i saltat vatten. Häll av och låt svalna lite. Pressa genom potatispress i en bunke. Blanda med ägg, salt och parmesan till ett mos. Arbeta in mjölet, lite i taget, till en smidig deg. Rulla degen till 2 cm tjocka rullar på mjölad bänk. Skär i ca 2–3 cm stora bitar. Tryck till lätt med gaffel och lägg på mjölat underlag.",
       "Koka upp rikligt med saltat vatten i en stor kastrull. Koka gnocchin i omgångar ca 5 minuter, de är klara när de flyter upp till ytan. Ta upp med hålslev och låt rinna av på en ren kökshandduk. Blanda med olja så de inte klibbar ihop.",
       "Bryn smöret. Rör ner salvian och låt fräsa 1 minut. Ta från värmen och rör ner nötterna.",
@@ -971,15 +971,15 @@ export const recipes = [
       "Stek gnocchin i smör och olja i samma panna tills de får lite färg. Blanda ner svampen och krydda med salt och peppar.",
       "Till servering: Fördela ricottan på tallrikar. Toppa med gnocchifräset och det brynta smöret. Strö över parmesan.",
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
   },
   {
-    title: 'Limoncello spritz',
-    description: "Limoncello spritz är en svalkande, bubblig och festlig drink inspirerad av Italien där mousserande vin och sodavatten får sällskap av den italienska citronlikören limoncello. Servera din goda limoncello-cocktail med is och citronskivor, gärna i festliga glas på fot. Cin cin!",
-    timeInMins: 15,
-    ingredients: [
+    "title": 'Limoncello spritz',
+    "description": "Limoncello spritz är en svalkande, bubblig och festlig drink inspirerad av Italien där mousserande vin och sodavatten får sällskap av den italienska citronlikören limoncello. Servera din goda limoncello-cocktail med is och citronskivor, gärna i festliga glas på fot. Cin cin!",
+    "timeInMins": 15,
+    "ingredients": [
       {
         "name": "limoncello",
         "amount": 3,
@@ -997,32 +997,34 @@ export const recipes = [
       },
       {
         "name": "is",
+        "amount": 6,
+        "unit": "st"
       },
       {
-        "name": "skivad. vatten",
-       
+        "name": "skivad citron",
+        "amount": 5,
+        "unit": "st"
       }
     ],
-    instructions: "Blanda limoncello, mousserande vin, sodavatten, is och skivad citron och servera i glas eller häll upp i karaff.",
-    categories: ['drinks'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
+    "instructions": "Blanda limoncello, mousserande vin, sodavatten, is och skivad citron och servera i glas eller häll upp i karaff.",
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
   },
-  
   {
-    title: 'Bouillabaisse',
-    description: 'Sydfransk klassisk bouillabaisse, en fisk- och skaldjursgryta som vi här lagar på egen skaldjursfond så blir den extra mustig och god. Räkor, blåmusslor och gärna både vit fisk och lax ger fiskgrytan gott innehåll. Den smakrika grytan serveras gärna med aioli och ett gott bröd.',
-    timeInMins: 90,
-    ingredients: [
+    "title": 'Bouillabaisse',
+    "description": 'Sydfransk klassisk bouillabaisse, en fisk- och skaldjursgryta som vi här lagar på egen skaldjursfond så blir den extra mustig och god. Räkor, blåmusslor och gärna både vit fisk och lax ger fiskgrytan gott innehåll. Den smakrika grytan serveras gärna med aioli och ett gott bröd.',
+    "timeInMins": 90,
+    "ingredients": [
       {
         "name": "gula lökar",
         "amount": 2,
-        "unit": "styck"
+        "unit": "st"
       },
       {
         "name": "morötter",
         "amount": 2,
-        "unit": "styck"
+        "unit": "st"
       },
       {
         "name": "olivolja",
@@ -1060,7 +1062,7 @@ export const recipes = [
         "unit": "kruka"
       }
     ],
-    instructions: [
+    "instructions": [
       "Fisk och skaldjur till bouillabaissen: Tina räkorna (om frysta används). Lägg dem på hushållspapper för att torka.",
       "Skaldjursfond: Skala lök och morötter. Skär dem fint. Skala och krossa vitlöksklyftorna. Fräs grönsakerna i olivoljan i en gryta tillsammans med kryddorna.",
       "Tillsätt tomatpuré och låt den fräsa med i någon minut.",
@@ -1076,15 +1078,15 @@ export const recipes = [
       "Hacka persiljan grovt. Strö persiljan över musslorna.",
       "Till servering: Servera bouillabaissen i varma djupa tallrikar med musslorna, aioli och krutonger eller surdegsbröd."
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
   },
   {
-    title: 'Baked alaska med svarta vinbär',
-    description: 'Festligare än så här blir det ej! Baked alaska är det engelska namnet för den franska desserten glace au four. I denna variant görs en ljuvlig svartvinbärsglass som täcks av ett rejält lager maräng. Dina gäster kommer få dåndimpen på grund av något så gott och tjusigt.',
-    timeInMins: 70,
-    ingredients: [
+    "title": 'Baked alaska med svarta vinbär',
+    "description": 'Festligare än så här blir det ej! Baked alaska är det engelska namnet för den franska desserten glace au four. I denna variant görs en ljuvlig svartvinbärsglass som täcks av ett rejält lager maräng. Dina gäster kommer få dåndimpen på grund av något så gott och tjusigt.',
+    "timeInMins": 70,
+    "ingredients": [
       {
         "name": "vispgrädde",
         "amount": 5,
@@ -1117,7 +1119,7 @@ export const recipes = [
       },
       {
         "name": "vetemjöl",
-        "amount": 1/2,
+        "amount": 0.5,
         "unit": "dl"
       },
       {
@@ -1146,7 +1148,7 @@ export const recipes = [
         "unit": "dl"
       }
     ],
-    instructions: [
+    "instructions": [
       "Tina svarta vinbären till glassen.",
       "Svartvinbärsglass: Lättvispa grädden.",
       "Mixa svarta vinbären med kondenserad mjölk till så slätt som möjligt gärna i en kannmixer. Vänd ner grädden och rör till en jämn smet. Häll smeten i en skål klädd med plastfilm, som rymmer 1,5 l och är max 22 cm i diameter i överkant. Ställ in i frysen minst 6 timmar. ",
@@ -1163,15 +1165,15 @@ export const recipes = [
       "Sockerlag: Koka ihop sprit, socker och vatten under omrörning tills sockret löst sig. Låt svalna helt.",
       "Montering: Pensla sockerlagen på sockerkakan. Bred ut sylten på glassens botten när den fortfarande ligger kvar i skålen. Lägg på sockerkakan, den kan behöva anpassas genom att skära av lite av kanten. Stjälp upp glassen på ett tårtfat. Bred på marängen och bränn av med brännare."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
   },
   {
-    title: 'Lingon spritz med grapefrukt',
-    description: "Är du sugen på en läskande, julig fördrink? Då ska du prova denna bubbliga spritz på mousserande vin med smak av lingon, grapefrukt och rosmarin. En juldrink lika uppfriskande som god och enkel!",
-    timeInMins: 50,
-    ingredients: [
+    "title": 'Lingon spritz med grapefrukt',
+    "description": "Är du sugen på en läskande, julig fördrink? Då ska du prova denna bubbliga spritz på mousserande vin med smak av lingon, grapefrukt och rosmarin. En juldrink lika uppfriskande som god och enkel!",
+    "timeInMins": 50,
+    "ingredients": [
       {
         "name": "röda grapefrukt",
         "amount": 2,
@@ -1208,21 +1210,21 @@ export const recipes = [
         "unit": "ml"
       },
     ],
-    instructions: [
+    "instructions": [
     "Tvätta en grapefrukt noga (för 6 port). Skär bort skalet och se till att få med så lite som möjligt av det vita. Koka upp grapefruktskal, lingon, rosmarin, socker och vatten och låt koka 2 till 3 minuter. Sila och låt svalna.",
     "Pressa juicen ur båda grapefrukterna och fördela i 6 glas med lingonsockerlagen, för 6 port.",
     "Till servering: Fyll på med is. Häll på mousserande vin och toppa med rosmarin.",
     ],
-    categories: ['drinks'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
   },
   
   {
-    title: 'Rimmad torsk med champagnesås',
-    description: 'Ugnsbakad, rimmad torsk som serveras tillsammans med blåmusslor, smörstekt spenat och en len champagnesås är en festrätt av rang som passar utmärkt på nyårsfirandet eller middagsbjudningen.',
-    timeInMins: 55,
-    ingredients: [
+    "title": 'Rimmad torsk med champagnesås',
+    "description": 'Ugnsbakad, rimmad torsk som serveras tillsammans med blåmusslor, smörstekt spenat och en len champagnesås är en festrätt av rang som passar utmärkt på nyårsfirandet eller middagsbjudningen.',
+    "timeInMins": 55,
+    "ingredients": [
       {
         "name": "schalottenlökar",
         "amount": 3,
@@ -1250,7 +1252,7 @@ export const recipes = [
       },
       {
         "name": "finskuren gräslök",
-        "amount": 1 / 2,
+        "amount": 0.5,
         "unit": "dl"
       },
       {
@@ -1269,7 +1271,7 @@ export const recipes = [
         "unit": "dl"
       }
     ],
-    instructions: [
+    "instructions": [
       "Champagnesås: Skala och finhacka löken. Bryn smöret i en kastrull, ta från värmen och tillsätt löken. Ställ tillbaka på låg värme och låt löken fräsa lite. Tillsätt timjan, lagerblad och champagne och koka tills hälften återstår. Tillsätt grädde och koka ihop några minuter. Rör ner citronjuice och smaka av med salt. Lyft upp timjan och lagerblad. Mixa såsen med stavmixer och sila.",
       "Sätt ugnen på 150°C.",
       "Torsk: Skär torsken i 6 bitar (för 6 port). Krydda runtom med salt och låt stå i rumstemperatur 30 minuter.",
@@ -1279,15 +1281,15 @@ export const recipes = [
       "Spenat: Fräs spenaten i smör i en stor stekpanna tills den mjuknar. Smaka av med salt.",
       "Plocka ur musslorna ur skalen. Värm såsen och tillsätt gräslök. Servera torsken med såsen, spenaten och musslorna.",
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
   },
   {
-    title: 'Inkokta klementiner med pistageglass',
-    description: 'Inkokta klementiner i lag som smaksätts av kardemumma det blir supergott. Att göra egen glass är också både kul och gott. Här smaksätts glassen av pistagenötter, dadlar och lite citron. Börja dock i tid, klementinerna smakar bäst efter 12 timmar i lagen och glassen bör vara i frysen minst 6 timmar.',
-    timeInMins: 40,
-    ingredients: [
+    "title": 'Inkokta klementiner med pistageglass',
+    "description": "Inkokta klementiner i lag som smaksätts av kardemumma det blir supergott. Att göra egen glass är också både kul och gott. Här smaksätts glassen av pistagenötter, dadlar och lite citron. Börja dock i tid, klementinerna smakar bäst efter 12 timmar i lagen och glassen bör vara i frysen minst 6 timmar.",
+    "timeInMins": 40,
+    "ingredients": [
       {
         "name": "clementiner",
         "amount": 12,
@@ -1339,7 +1341,7 @@ export const recipes = [
         "unit": "krm"
       }
     ],
-    instructions: [
+    "instructions": [
       "Skala klementinerna och ta bort så mycket av de vita hinnorna som det går. Dela klementinerna i klyftor och picka klyftorna med en gaffel, så att det går hål på skinnet.",
       "Koka upp socker, vatten och kardemumma i en kastrull.",
       "Lägg klementinklyftorna i den varma lagen och låt det svalna. Låt klementinerna marinera i ca 12 timmar i kylen.",
@@ -1350,15 +1352,15 @@ export const recipes = [
       "Ta ut glassen från frysen ca 10 minuter före servering.",
       "Lägg upp klementinklyftorna och servera dem med glassen."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
   },
   {
-    title: 'Cosmopolitan',
-    description: "Cosmo, som Cosmopolitan också kallas, är en stilren och älskad klassiker med fräsch smak av tranbär och lime! Denna rosa cocktail är både elegant och lätt att älska – perfekt för festliga tillfällen.",
-    timeInMins: 20,
-    ingredients:[
+    "title": 'Cosmopolitan',
+    "description": "Cosmo, som Cosmopolitan också kallas, är en stilren och älskad klassiker med fräsch smak av tranbär och lime! Denna rosa cocktail är både elegant och lätt att älska – perfekt för festliga tillfällen.",
+    "timeInMins": 20,
+    "ingredients":[
        {
         "name": "vodka",
         "amount": 3,
@@ -1390,19 +1392,19 @@ export const recipes = [
         "unit": "tsk"
       },
     ],
-    instructions: [
+    "instructions": [
       "Häll upp alla ingredienser i en shaker och skaka med isbitar.",
       "Sila ner drinken i ett martiniglas och pressa apelsinskalet så att skalets olja droppar ner i drinken. Servera genast."
     ],
-    categories: ['drinks'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
   },
   {
-    title: 'Gratinerade havskräftor',
-    description:"Gratinera dina havskräftor med parmesan, persilja och citron och du kommer kunna servera supergoda kräftor. Servera gärna de gratinerade havskräftorna med citronklyftor, lite sallad och ett gott bröd.",
-    timeInMins: 25,
-    ingredients: [
+    "title": 'Gratinerade havskräftor',
+    "description": "Gratinera dina havskräftor med parmesan, persilja och citron och du kommer kunna servera supergoda kräftor. Servera gärna de gratinerade havskräftorna med citronklyftor, lite sallad och ett gott bröd.",
+    "timeInMins": 25,
+    "ingredients": [
        {
         "name": "persilja",
         "amount": 1,
@@ -1450,7 +1452,7 @@ export const recipes = [
       },
 
     ],
-    instructions: [
+    "instructions": [
       "Sätt ugnen på 250°C. Övervärme.",
       "Hacka persiljan. Tvätta citronen och riv det yttersta av skalet. Skala och riv vitlöken. Riv parmesanosten fint på ett rivjärn.",
       "Blanda smöret med hälften av persiljan, citronskal, 1 tsk citronsaft, vitlök, 1 1/2 dl av parmesanen (för 4 port), panko och peppar. Lägg smöret i en engångsspritspåse.",
@@ -1458,15 +1460,15 @@ export const recipes = [
       "Spritsa smöret på kräfthalvorna.",
       "Gratinera kräftorna i övre delen av ugnen ca 5 minuter, eller tills smöret fått fin färg. Toppa med resterande persilja och parmesan.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
   },
   {
-    title: 'Renytterfilé med chili och chevrekräm',
-    description: 'Renytterfilé kryddad med chili är överraskande gott. Servera filén med ugnsrostade rödbetor och en krämig röra på chevre. Toppa med en sötsyrlig balsamico gjord på blåbär.',
-    timeInMins: 75,
-    ingredients: [
+    "title": 'Renytterfilé med chili och chevrekräm',
+    "description": 'Renytterfilé kryddad med chili är överraskande gott. Servera filén med ugnsrostade rödbetor och en krämig röra på chevre. Toppa med en sötsyrlig balsamico gjord på blåbär.',
+    "timeInMins": 75,
+    "ingredients": [
       {
         "name": "renytterfilé eller hjortytterfilé",
         "amount": 500,
@@ -1513,7 +1515,7 @@ export const recipes = [
         "unit": "g"
       }
     ],
-    instructions: [
+    "instructions": [
       "Putsa köttet noggrant. Skär i fyra lika stora bitar (för 4 portioner). Lägg i en ugnsfast form och pensla med hälften av oljan.",
       "Blanda chilipeppar med hälften av saltet och svartpeppar i en skål. Gnid in köttet runt om med kryddorna. Låt vila ca 20 minuter i rumstemperatur.",
       "Sätt ugnen på 125°C.",
@@ -1524,15 +1526,15 @@ export const recipes = [
       "Sätt in i mitten av ugnen 15-20 minuter.",
       "Skär köttet i skivor. Servera med rödbetor, chevrekräm och blåbärsbalsamico. Garnera gärna med färska örter."
     ],
-    categories: ['mains'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
+    "categories": ['mains'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
   },
   {
-    title: 'Kladdkaka med italiensk maräng',
-    description: 'Håll i dig nu för säsongens godaste julkladdkaka kommer här! Klassiskt kladdig med vit choklad i såväl smet som ganache och med ljuvlig italiensk maräng på toppen. Godare är så här blir det knappast.',
-    timeInMins: 40,
-    ingredients: [
+    "title": 'Kladdkaka med italiensk maräng',
+    "description": 'Håll i dig nu för säsongens godaste julkladdkaka kommer här! Klassiskt kladdig med vit choklad i såväl smet som ganache och med ljuvlig italiensk maräng på toppen. Godare är så här blir det knappast.',
+    "timeInMins": 40,
+    "ingredients": [
       {
         "name": "vit choklad",
         "amount": 125,
@@ -1560,12 +1562,12 @@ export const recipes = [
       },
       {
         "name": "salt",
-        "amount": 1/2,
+        "amount": 0.5,
         "unit": "tsk"
       },
       {
         "name": "bakpulver",
-        "amount": 1/2,
+        "amount": 1.5,
         "unit": "tsk"
       },
       {
@@ -1614,7 +1616,7 @@ export const recipes = [
         "unit": "st"
       }
     ],
-    instructions: [
+    "instructions": [
       "Ganache: Grovhacka chokladen och lägg den i en skål. Koka upp grädden, häll den över chokladen och rör till en slät smet. Rör i smöret. Låt svalna helt.",
       "Sätt ugnen på 175°C.",
       "Kaka: Klipp ut en bit bakplåtspapper och lägg i botten en springform (ca 22 cm i diameter), så blir det lättare att flytta över kakan till ett tårtfat. Smörj och bröda formen.",
@@ -1626,15 +1628,15 @@ export const recipes = [
       "Häll sedan det varma sockret i en fin stråle ner i äggvitan och vispa kraftigt under tiden. Fortsätt vispa till marängen är hård och kall. Fyll en eller flera spritspåsar med marängen och använd gärna olika tyllar (spritsmunstycken). Spritsa toppar på kakan och bränn gärna marängen med en gasolbrännare.",
       "Till garnering: Toppa kladdkakan med lingon och fikon."
     ],
-    categories: ['desserts'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
+    "categories": ['desserts'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
   },
   {
-    title: 'Aperitivo',
-    description: "Den här alkoholfria drinken med blodgrapejuice, svartvinbärssaft och rosmarin passar perfekt att servera till minglet eller som fördrink tillsammans med småplock som ost och chark.",
-    timeInMins: 15,
-    ingredients: [
+    "title": 'Aperitivo',
+    "description": "Den här alkoholfria drinken med blodgrapejuice, svartvinbärssaft och rosmarin passar perfekt att servera till minglet eller som fördrink tillsammans med småplock som ost och chark.",
+    "timeInMins": 15,
+    "ingredients": [
       {
         "name": "blodgrapefruktsjuice",
         "amount": 8,
@@ -1657,19 +1659,19 @@ export const recipes = [
       },
       
     ],
-    instructions: [
+    "instructions": [
     "Blanda alla ingredienser utom sodavatten och häll i ett glas. Fyll på med is och toppa med sodavatten eller rosmarinsodavatten.",
     "Till garnering: Garnera med skivad blodgrape och rosmarin."
     ],
-    categories: ['drinks'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_179512/cf_259/aperitivo.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_179512/cf_259/aperitivo.jpg'
   },
   {
-    title: 'Getostbollar med krispigt baconsmul',
-    description: "Ett aptitretande och festligt tilltugg som är enkelt att göra: ostbollar med getost och färskost som rullas i ett smul av krispigt stekt bacon och hackade nötter. Perfekt till glöggfest eller adventsmingel!",
-    timeInMins: 30,
-    ingredients: [
+    "title": 'Getostbollar med krispigt baconsmul',
+    "description": "Ett aptitretande och festligt tilltugg som är enkelt att göra: ostbollar med getost och färskost som rullas i ett smul av krispigt stekt bacon och hackade nötter. Perfekt till glöggfest eller adventsmingel!",
+    "timeInMins": 30,
+    "ingredients": [
       {
         "name": "skivat bacon",
         "amount": 1,
@@ -1692,7 +1694,7 @@ export const recipes = [
       },
     ],
 
-    instructions:
+    "instructions":
       [
         "Strimla baconet och stek knaprigt. Låt rinna av på hushållspapper.",
         "Smula getosten och blanda med färskosten till en slät smet. Rulla smeten till bollar. Ställ bollarna i kylen.",
@@ -1700,16 +1702,16 @@ export const recipes = [
         "Rulla bollarna i smulet."
       ],
 
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
 
   {
-    title: 'Clementinbubbel med rosmarin',
-    description: "En läskande bubbeldrink med clementin och rosmarin som är både törstsläckande och himmelskt god! Servera denna festliga drink på glöggmingel, fest eller självaste nyårsafton.",
-    timeInMins: 35,
-    ingredients: [
+    "title": 'Clementinbubbel med rosmarin',
+    "description": "En läskande bubbeldrink med clementin och rosmarin som är både törstsläckande och himmelskt god! Servera denna festliga drink på glöggmingel, fest eller självaste nyårsafton.",
+    "timeInMins": 35,
+    "ingredients": [
       {
         "name": "rosmarin",
         "amount": 2,
@@ -1734,26 +1736,21 @@ export const recipes = [
         "name": "mousserande vin",
         "amount": 1,
         "unit": "flaska"
-      },
-      {
-        "name": "",
-        "amount": 1,
-        "unit": ""
       }
     ],
-    instructions: [
+    "instructions": [
       "Mortla rosmarin och socker. Blanda med juicen och låt stå och dra ca 30 minuter.",
       "Sila juicen. Fördela juice och tonic water i glasen. Toppa med mousserande vin. Garnera med rosmarinkvistar."
     ],
-    categories: ['drinks'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
+    "categories": ['drinks'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
   },
   {
-    title: 'Räkcrostini med koriandermajo',
-    description: "Gör en asiatisk snitt till fördrinken. Blanda räkor med krämig majonnäs, syrligt limeskal och smakrik koriander. Toppa med chiliflakes för lite extra sting. Oemotståndligt gott.",
-    timeInMins: 20,
-    ingredients: [
+    "title": 'Räkcrostini med koriandermajo',
+    "description": "Gör en asiatisk snitt till fördrinken. Blanda räkor med krämig majonnäs, syrligt limeskal och smakrik koriander. Toppa med chiliflakes för lite extra sting. Oemotståndligt gott.",
+    "timeInMins": 20,
+    "ingredients": [
       {
         "name": "majonnäs",
         "amount": 1,
@@ -1800,20 +1797,20 @@ export const recipes = [
         "unit": "tsk"
       },
     ],
-    instructions: [
+    "instructions": [
     "Mixa majonnäs och koriander slätt. Krydda med salt och peppar.",
     "Hacka räkor grovt. Blanda med majonnäsen, limeskal och chiliflakes.",
     "Fördela på ca 20 crostini. Toppa med sesamfrön och chiliflakes.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
   },
   {
-    title: 'Hummer, forellrom och citronsmetana',
-    description:"Bjud på en lyxig förrätt med hummer till nyår! Här serveras kall hummer tillsammans med smetana, lök, rom, dill och krasse. En förrätt som är enkel att förbereda i förskott och laga till många. Perfekt förrätt till nyårsafton.",
-    timeInMins: 30,
-    ingredients: [
+    "title": 'Hummer, forellrom och citronsmetana',
+    "description": "Bjud på en lyxig förrätt med hummer till nyår! Här serveras kall hummer tillsammans med smetana, lök, rom, dill och krasse. En förrätt som är enkel att förbereda i förskott och laga till många. Perfekt förrätt till nyårsafton.",
+    "timeInMins": 30,
+    "ingredients": [
       {
         "name": "kokta humrar",
         "amount": 2,
@@ -1855,21 +1852,21 @@ export const recipes = [
         "unit": "ask"
       },
     ],
-    instructions: [
+    "instructions": [
       "Skala hummern och skär köttet i mindre bitar. Lägg i kylen.",
       "Blanda smetana, salt och citronjuice.",
       "Finhacka löken och lägg i kallt vatten ca 5 minuter så den blir lite mildare, låt torka på hushållspapper.",
       "Lägg smetana i botten på tallrikarna, toppa med hummer, rom, lök, plockad dill och klippt krasse.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
   },
   {
-    title: 'Apelsinsallad med lufttorkad skinka',
-    description:"Den mångsidiga apelsinen kan spela huvudrollen i såväl salta som söta rätter. Här tar citrusfrukten plats i en vacker, vintersallad med smulad getost, lingon och lufttorkad skinka. God som både förrätt, tillbehör eller på buffébordet.",
-    timeInMins: 15,
-    ingredients: [
+    "title": 'Apelsinsallad med lufttorkad skinka',
+    "description": "Den mångsidiga apelsinen kan spela huvudrollen i såväl salta som söta rätter. Här tar citrusfrukten plats i en vacker, vintersallad med smulad getost, lingon och lufttorkad skinka. God som både förrätt, tillbehör eller på buffébordet.",
+    "timeInMins": 15,
+    "ingredients": [
       {
         "name": "apelsiner",
         "amount": 4,
@@ -1911,12 +1908,12 @@ export const recipes = [
         "unit": "nypa"
       },
     ],
-    instructions: [
+    "instructions": [
       "Skala apelsinerna med kniv och skär i skivor. Lägg på ett fat och toppa med smulad chèvre, lingon, mandel och skinka. Ringla över olja och strö över flingsalt och peppar.",
       "Till servering: Servera gärna med bröd.",
     ],
-    categories: ['starters'],
-    ratings: [],
-    imageUrl: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
+    "categories": ['starters'],
+    "ratings": [],
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
   },
 ];
