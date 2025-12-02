@@ -64,7 +64,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_250503/cf_259/hummersoppa.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
   },
   {
     "title": 'Toast skagen',
@@ -123,7 +123,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_229530/cf_259/toast_skagen.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
   },
 
 
@@ -169,7 +169,7 @@ export const recipes = [
     ],
     "categories": ['desserts'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_243738/cf_259/pannacotta.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243738/cf_259/pannacotta.jpg'
   },
   {
     "title": 'Tiramisu',
@@ -232,7 +232,7 @@ export const recipes = [
     ],
     "categories": ['desserts'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_218797/cf_259/tiramisu.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_218797/cf_259/tiramisu.jpg'
   },
   {
     "title": 'Ryggbiff med rotselleripuré',
@@ -298,7 +298,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
   },
 
   {
@@ -348,7 +348,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
   },
 
 
@@ -415,7 +415,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
   },
 
   {
@@ -483,7 +483,7 @@ export const recipes = [
       ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
     },
     {
     "title": 'Chokladpavlova med körsbär',
@@ -567,7 +567,7 @@ export const recipes = [
       ],
     "categories": ['desserts'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
     },
 
     {
@@ -603,7 +603,7 @@ export const recipes = [
       ],
     "categories": ['drinks'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
     },
 
     {
@@ -910,7 +910,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
   },
   {
     "title": 'Gnocchi med ricotta och svamp',
@@ -973,7 +973,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
   },
   {
     "title": 'Limoncello spritz',
@@ -1082,7 +1082,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
   },
   {
     "title": 'Baked alaska med svarta vinbär',
@@ -1219,7 +1219,7 @@ export const recipes = [
     ],
     "categories": ['drinks'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
   },
   
   {
@@ -1285,7 +1285,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
   },
   {
     "title": 'Inkokta klementiner med pistageglass',
@@ -1356,7 +1356,7 @@ export const recipes = [
     ],
     "categories": ['desserts'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
   },
   {
     "title": 'Cosmopolitan',
@@ -1464,7 +1464,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
   },
   {
     "title": 'Renytterfilé med chili och chevrekräm',
@@ -1530,7 +1530,7 @@ export const recipes = [
     ],
     "categories": ['mains'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
   },
   {
     "title": 'Kladdkaka med italiensk maräng',
@@ -1632,7 +1632,7 @@ export const recipes = [
     ],
     "categories": ['desserts'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
   },
   {
     "title": 'Aperitivo',
@@ -1705,7 +1705,7 @@ export const recipes = [
 
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
 
   {
@@ -1745,7 +1745,7 @@ export const recipes = [
     ],
     "categories": ['drinks'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
   },
   {
     "title": 'Räkcrostini med koriandermajo',
@@ -1805,7 +1805,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
   },
   {
     "title": 'Hummer, forellrom och citronsmetana',
@@ -1861,7 +1861,7 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
   },
   {
     "title": 'Apelsinsallad med lufttorkad skinka',
