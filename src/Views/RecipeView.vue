@@ -1,5 +1,5 @@
 <script>
-import { fetchRecipes } from '../fetchRecipes.js';
+import { getAllRecipes } from '../APIutilities/apihelpers.js';
 import Ratingstars from '../components/Ratingstars.vue';
 
 export default {
@@ -14,7 +14,7 @@ export default {
     };
   },
   mounted() {
-    const recipes = fetchRecipes();
+    const recipes = getAllRecipes();
     const i = parseInt(this.$route.params.id);
     this.recipe = recipes.find(recipe => recipe.id === i);
   },
@@ -43,7 +43,7 @@ export default {
    
     <div class="recipe-image-box"> <!-- Left part of the page -->
       <img 
-      :src="recipe.image"
+      :src="recipe.imageUrl"
       :alt="recipe.title"
       class="recipe-image" />
     </div>
@@ -67,12 +67,7 @@ export default {
       <div class="recipe-details"> <!-- Recipe details with icons -->
         <div class="time-icon">
           <i class="bi bi-clock"></i>
-          <span>{{ recipe.cooking_time }}</span>
-        </div>
-
-        <div class="portion-icon">
-          <i class="bi bi-person"></i>
-          <span>{{ recipe.servings }} portioner</span>
+          <span>{{ recipe.timeInMins }}</span>
         </div>
 
         <div class="ingredient-icon">

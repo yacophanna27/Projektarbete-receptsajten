@@ -1,7 +1,7 @@
 <script>
 import RecipeCard from '../components/RecipeCard.vue';
 import Categories from './CategoriesView.vue';
-import { fetchRecipes } from '../fetchRecipes.js';
+import { getAllRecipes } from '../APIutilities/apihelpers.js';
 
 export default {
   name: 'HomeView',
@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      recipes: fetchRecipes(),
+      recipes: getAllRecipes(),
       selectedCategory: this.category || 'all'
     };
   },

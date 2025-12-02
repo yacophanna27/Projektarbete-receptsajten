@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { updateRecipeRating } from '../fetchRecipes.js';
+// import { updateRecipeRating } from '../fetchRecipes.js';
 
 export default {
     name: 'Ratingstars',

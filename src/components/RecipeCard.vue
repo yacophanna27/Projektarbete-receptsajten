@@ -22,13 +22,13 @@ export default {
     <div class="image-container">
       <img :src="recipe.image" :alt="recipe.title" />
       <div class="category-badge">
-        {{ recipe.category }}
+        {{ recipe.categories }}
       </div>
     </div>
     <div class="quickview">
       <h1>{{ recipe.title }}</h1>
       <div class="details">
-        <p><i class="bi bi-clock"></i> {{ recipe.cooking_time }} minutes</p>
+        <p><i class="bi bi-clock"></i> {{ recipe.timeInMins }} minutes</p>
         <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredients</p>
         <Ratingstars :initial-rating="recipe.rating" :read-only="true" />
       </div>
