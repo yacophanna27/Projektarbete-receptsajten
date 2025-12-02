@@ -1667,7 +1667,7 @@ export const recipes = [
     ],
     "categories": ['drinks'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_179512/cf_259/aperitivo.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
   },
   {
     "title": 'Getostbollar med krispigt baconsmul',
@@ -1915,6 +1915,6 @@ export const recipes = [
     ],
     "categories": ['starters'],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imageUrlvaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
+    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
   },
 ];

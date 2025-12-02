@@ -10,8 +10,19 @@ export async function getAllRecipes() {
   }
 }
 
-export function getRecipeById(id) {
-    throw new Error('Function not implemented.');
+export async function getRecipeById(id) {
+    try {
+        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}`);
+        if (!response.ok) {
+            throw new Error(`Recipe with ID ${id} not found`);
+        }
+        const data = await response.json();
+        console.log('Fetched Recipe:', data);
+        return data;
+    } catch (error) {
+        console.error('Error fetching recipe:', error);
+        throw error;
+    }
 }
 
 export function recipeExists(title, recipes) {

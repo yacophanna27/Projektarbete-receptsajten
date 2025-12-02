@@ -12,7 +12,14 @@ export default {
   },
   methods: {
     handleButtonClick() {
-    }
+    },
+    getAverageRating(ratings) {
+      if (!ratings || ratings.length === 0) {
+        return 0;
+      }
+      const sum = ratings.reduce((acc, rating) => acc + rating.rating, 0);
+      return sum / ratings.length;
+    },
   }
 }
 </script>
@@ -20,17 +27,17 @@ export default {
 <template>
   <section class="recipe-card">
     <div class="image-container">
-      <img :src="recipe.image" :alt="recipe.title" />
+      <img :src="recipe.imageUrl" :alt="recipe.title" />
       <div class="category-badge">
-        {{ recipe.categories }}
+        {{ recipe.categories && recipe.categories.join(', ') }}
       </div>
     </div>
     <div class="quickview">
       <h1>{{ recipe.title }}</h1>
-      <div class="details">
+      <div class="details" v-if="recipe">
         <p><i class="bi bi-clock"></i> {{ recipe.timeInMins }} minutes</p>
-        <p><i class="bi bi-basket3"></i> {{ recipe.ingredients.length }} ingredients</p>
-        <Ratingstars :initial-rating="recipe.rating" :read-only="true" />
+        <p><i class="bi bi-basket3"></i> {{ recipe.ingredients ? recipe.ingredients.length : 0 }} ingredients</p>
+        <Ratingstars :initial-rating="getAverageRating(recipe.ratings)" :read-only="true" />
       </div>
 
       <!-- Inte ändrat nåt i din kod, bara lagt till category i pathen och valt category med hjälp 
@@ -135,7 +142,7 @@ export default {
 }
 
 .bi.bi-clock, .bi.bi-basket3 {
-  color:#c69c6d;
+  color: #c69c6d;
 }
 
 .view-button {

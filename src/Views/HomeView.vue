@@ -7,7 +7,7 @@ export default {
   name: 'HomeView',
   components: { RecipeCard, Categories },
 
- 
+
   props: {
     searchText: {
       type: String,
@@ -22,19 +22,35 @@ export default {
 
   data() {
     return {
-      recipes: getAllRecipes(),
-      selectedCategory: this.category || 'all'
+      recipes: [],
+      selectedCategory: this.categories || 'all',
+      loading: false,
+      error: null
     };
+  },
+
+  async created() { // hämtar från apihelpers.js
+    this.loading = true;
+    try {
+      this.recipes = await getAllRecipes();
+      console.log('Loaded recipes in HomeView:', this.recipes.length);
+    } catch (error) {
+      console.error('Error loading recipes:', error);
+      this.error = error.toString();
+    } finally {
+      this.loading = false;
+    }
   },
 
   computed: {
     filteredRecipes() {
       let result = this.recipes;
 
-    
       if (this.selectedCategory !== 'all') {
-        result = result.filter(r =>
-          r.category.toLowerCase() === this.selectedCategory.toLowerCase()
+        result = result.filter(recipe =>
+          recipe.categories && recipe.categories.some(category =>
+            category.toLowerCase() === this.selectedCategory.toLowerCase()
+          )
         );
       }
 
@@ -67,20 +83,13 @@ export default {
     <div class="category-bar">
       <!-- binds mot categories via modelValue, selectedCategory 
        uppdatderas när category-selected emmiteras i CategoriesView -->
-      <Categories
-        :modelValue="selectedCategory" 
-        @category-selected="onCategorySelection"
-      />
+      <Categories :modelValue="selectedCategory" @category-selected="onCategorySelection" />
     </div>
 
     <div class="home-page">
-      <RecipeCard
-        v-for="(recipe, id) in filteredRecipes"
-        :key="recipe.id"
-        :recipe="recipe"
-        :id="recipe.id"
-        :searchText="searchText"
-      />
+      <div v-if="loading" class="loading">Loading recipes...</div>
+      <div v-else-if="error" class="error">{{ error }}</div>
+      <RecipeCard v-else v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe" :id="recipe.id" :searchText="searchText" />
     </div>
 
   </div>
@@ -93,5 +102,19 @@ export default {
   justify-content: center;
   min-height: 100vh;
   margin-top: 2rem;
+}
+.loading, .error {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.loading {
+  color: #666;
 }
 </style>
