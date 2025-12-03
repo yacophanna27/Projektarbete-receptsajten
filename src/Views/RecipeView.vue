@@ -1,5 +1,5 @@
 <script>
-import { getAllRecipes } from '../APIutilities/apihelpers.js';
+import { getAllRecipes, getRecipeById } from '../APIutilities/apihelpers.js';
 import Ratingstars from '../components/Ratingstars.vue';
 
 export default {
@@ -10,15 +10,42 @@ export default {
         newName: '', // Name of the user submitting a comment
         newComment: '', // Content of the user's comment
         newRating: 0,// Rating given by the user
-        testingId: this.$route.params.id
+        loading: true,
+        error: null
     };
   },
-  mounted() {
-    const recipes = getAllRecipes();
-    const i = parseInt(this.$route.params.id);
-    this.recipe = recipes.find(recipe => recipe.id === i);
+  async mounted() {
+    await this.loadRecipe();
   },
   methods: {
+    async loadRecipe() {
+      try {
+        this.loading = true;
+        this.error = null;
+        
+        const recipeId = this.$route.params.id; // Använd ID som sträng (UUID)
+        
+        // Försök först att hämta specifikt recept via ID
+        try {
+          this.recipe = await getRecipeById(recipeId);
+        } catch (error) {
+          // Om getRecipeById misslyckas, fallback till att söka i alla recept
+          const recipes = await getAllRecipes();
+          this.recipe = recipes.find(recipe => recipe.id === recipeId);
+          
+          if (!this.recipe) {
+            throw new Error(`Recipe with ID ${recipeId} not found`);
+          }
+        }
+        
+      } catch (error) {
+        console.error('Error loading recipe:', error);
+        this.error = error.message;
+      } finally {
+        this.loading = false;
+      }
+    },
+    
     handleRatingUpdate(newRating) {
       // Uppdatera receptets betyg direkt i komponenten
       console.log('Nytt betyg för receptet:', newRating);
@@ -35,9 +62,16 @@ export default {
 </script>
 
 <template>
-  <p> {{ $route.params.id }} </p>
-<div class="recipe-card-wrapper">  <!-- The background frame --> 
-  <div class="recipe-page-content" v-if="recipe"> <!-- Main content area -->
+  <div v-if="loading" class="loading-message">
+    <p>Laddar recept...</p>
+  </div>
+  
+  <div v-else-if="error" class="error-message">
+    <p>Fel vid laddning av recept: {{ error }}</p>
+  </div>
+  
+  <div v-else-if="recipe" class="recipe-card-wrapper">  <!-- The background frame --> 
+    <div class="recipe-page-content"> <!-- Main content area -->
     <div class="card-container"> <!-- Grid container -->
 
    
@@ -97,13 +131,34 @@ export default {
         </li>
       </ol>
   </div>
+    </div>
+    
+    <Ratingstars 
+      :initial-rating="recipe.rating || 0" 
+      :recipe-id="recipe.id" 
+      @rating-updated="handleRatingUpdate" 
+    />
   </div>
-</div>
-    <Ratingstars :initial-rating="recipe?.rating" :recipe-id="id" @rating-updated="handleRatingUpdate" />
 </template>
 
 
 <style scoped>
+
+.loading-message, .error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+}
 
 .recipe-card-wrapper {
   border: 9px solid #f9f9fa; /* Thick light border */

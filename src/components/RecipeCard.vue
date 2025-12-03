@@ -42,7 +42,7 @@ export default {
 
       <!-- Inte ändrat nåt i din kod, bara lagt till category i pathen och valt category med hjälp 
       av js filen (recipe.category) -->
-      <router-link :to="`/recipe/${id}`" class="view-button">
+      <router-link :to="`/recipe/${recipe.id}`" class="view-button">
         Show Recipe
       </router-link>
     </div>

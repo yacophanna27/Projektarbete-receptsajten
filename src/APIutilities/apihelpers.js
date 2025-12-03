@@ -64,3 +64,30 @@ export async function saveNewRecipe(newRecipe, existingRecipesInApi) {
     throw error; // Kasta vidare felet så att anropande kod kan hantera det
   }
 }
+
+// Funktion för att uppdatera betyg för ett recept, används i Ratingstars
+export async function updateRecipeRating(recipeId, newRating) {
+  try {
+    const response = await fetch(
+      `https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${recipeId}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ rating: newRating }),
+      }
+    );
+    
+    if (!response.ok) {
+      throw new Error(`Failed to update recipe rating`);
+    }
+    
+    const data = await response.json();
+    console.log("Recipe rating updated:", data);
+    return data;
+  } catch (error) {
+    console.error("Error updating recipe rating:", error);
+    throw error;
+  }
+}

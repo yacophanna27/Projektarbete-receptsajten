@@ -40,7 +40,7 @@
 </template>
 
 <script>
-// import { updateRecipeRating } from '../fetchRecipes.js';
+import { updateRecipeRating } from '../APIutilities/apihelpers.js';
 
 export default {
     name: 'Ratingstars',
@@ -130,9 +130,17 @@ export default {
                 this.submitted = true;
                 this.feedbackMessage = '';
 
-                // Uppdatera receptdata om recipeId är tillgängligt
+                // Uppdatera receptdata via API om recipeId är tillgängligt
                 if (this.recipeId !== null) {
-                    updateRecipeRating(parseInt(this.recipeId), this.rating);
+                    try {
+                        await updateRecipeRating(parseInt(this.recipeId), this.rating);
+                    } catch (error) {
+                        console.error('Failed to update recipe rating:', error);
+                        // Visa felmeddelande till användaren om API-anropet misslyckas
+                        this.feedbackMessage = 'Kunde inte uppdatera betyget i databasen.';
+                        this.submitted = false;
+                        return;
+                    }
                 }
 
                 // Emittera det nya betyget till föräldrakomponenten
