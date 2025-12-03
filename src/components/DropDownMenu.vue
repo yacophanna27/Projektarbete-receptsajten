@@ -12,7 +12,7 @@
             <ul>
                 <li v-for="(item, index) in items" :key="index" @click="selectItem(item)" role="button"
                     tabindex="0">
-                    {{ item.label }}
+                    {{ item }}
 
                 </li>
             </ul>
@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         selectItem(item) {
-            this.$emit('item-selected', item.value); //emiten skickar signal till CategoryView så den kan reagera på eventet
+            this.$emit('item-selected', item); //emiten skickar signal till CategoryView så den kan reagera på eventet
         }
     }
     

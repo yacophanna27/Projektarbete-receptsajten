@@ -1,10 +1,13 @@
 <script>
 import DropDownMenu from '../components/DropDownMenu.vue';
 import Header from '../components/Header.vue';
+import { getAllCategories } from '@/APIutilities/apihelpers.js';
+import RecipeCard from '@/components/RecipeCard.vue';
+import RecipeView from './RecipeView.vue';
 
 export default {
-  name: 'Categories', 
-  components: { DropDownMenu, Header},
+  name: 'Categories',
+  components: { DropDownMenu, Header, RecipeCard, RecipeView},
   props: {
     modelValue: { // den binds till selectedCategory i template i HomeView
       type: String,
@@ -13,50 +16,85 @@ export default {
   },
   data() {
     return {
-      categories: [
-        { label: 'All', value: 'all' },
-        { label: 'Starters', value: 'starters' },
-        { label: 'Mains', value: 'mains' },
-        { label: 'Desserts', value: 'desserts' },
-        { label: 'Drinks', value: 'drinks' }
-      ],
+      menuItems: [],
+
+      categoryData: [],
+      loading: false,
+      error: false,
       localActive: this.modelValue || 'all', //visar aktiv kategori, kopplat till modelValue
-     
+
     };
   },
 
   emits: [
-      'update:modelValue',
-      'category-selected'
-    ],
+    'update:modelValue',
+    'category-selected'
+  ],
 
   watch: { //vakar över ändring utanför komponenten tex via 
-  // routning 
+    // routning 
     modelValue(newVal) {
       this.localActive = newVal;
     }
 
   },
+
+  created() {
+    this.fetchCategories()
+  },
+
+
   methods: {
     selectCategory(value) {
       this.localActive = value;
 
       // Navigations router till categories
       this.$router.push(`/category/${value}`)
-      
+
       this.$emit('update:modelValue', value); // uppdaterar v-model i HomeView
       this.$emit('category-selected', value); // skickar till HomeView att kategori har valts
+    },
+
+    async fetchCategories() {
+      this.error = this.categoryData = null
+      this.loading = true
+
+      try {
+        this.categoryData = await getAllCategories()
+         this.menuItems = this.convertCategoriesToDropdownItems()
+      } catch (err) {
+        this.error = err.toString()
+      } finally {
+        this.loading = false
+      }
     },
 
     onDropdownSelect(value) { // metod som hanterar DropDownMenu komponenten 
       this.selectCategory(value);
     },
-    
+
     isActive(value) {
       return this.localActive === value; // returnerar aktiv kategori
+    },
+
+    convertCategoriesToDropdownItems() {
+      const dropDownItems = [];
+      for (const category of this.categoryData){
+        const dropDownItem = {
+          label: category.name ,
+          value: category.id
+        }; 
+        dropDownItems.push(dropDownItem);
+      
+      }
+      return dropDownItems; 
     }
-  },
+
+  }
+
+
 }
+
 </script>
 
 <template>
@@ -66,13 +104,14 @@ export default {
     <!-- loopar genom genom kategorierna och skapar li för varje kategori, 
     class binder dynamiskt mot css klassen (active) och funktionen som anropas i den används
     för styla endast vald kategori och inte alla -->
-    <li v-for="category in categories" :key="category.value" :class="{ active: isActive(category.value) }" 
+    <li v-for="category in menuItems" :key="category.value" :class="{ active: isActive(category.value) }"
       @click="selectCategory(category.value)" role="button" tabindex="0">
       {{ category.label }}
     </li>
   </ul>
   <!-- items kommer från dropdownmenu som är en prop och binds mot value. knappen är för att öppna menyn -->
-  <DropDownMenu :items="categories" @item-selected="onDropdownSelect" />
+  <DropDownMenu :items="menuItems" @item-selected="onDropdownSelect" />
+  
 </template>
 
 
@@ -105,11 +144,11 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   cursor: pointer;
-  width:fit-content;
-  transition:  0.3s ease;
+  width: fit-content;
+  transition: 0.3s ease;
 
- 
- 
+
+
 }
 
 .categories li.active {
@@ -119,16 +158,17 @@ export default {
   padding: 0.65rem 1.6rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
+
 @media (min-width: 700px) {
   .categories {
-    flex-direction: row ;
+    flex-direction: row;
     gap: 1rem;
     padding: 0.5rem 1.6rem;
-    margin-inline:auto;
+    margin-inline: auto;
     justify-content: center;
     border-radius: 3rem;
-   
-}
+
+  }
 
   .categories li {
     font-size: 1.3rem;
