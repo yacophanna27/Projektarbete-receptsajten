@@ -10,9 +10,9 @@
         -->
         <div class="dropdown-content" v-if="isOpen">
             <ul>
-                <li v-for="(item, index) in items" :key="index" @click="selectItem(item)" role="button"
+                <li v-for="item in items" :key="item.value" @click="selectItem(item.value)" role="button"
                     tabindex="0">
-                    {{ item }}
+                    {{ item.label }}
 
                 </li>
             </ul>

@@ -3,21 +3,23 @@ import DropDownMenu from '../components/DropDownMenu.vue';
 import Header from '../components/Header.vue';
 import { getAllCategories } from '@/APIutilities/apihelpers.js';
 import RecipeCard from '@/components/RecipeCard.vue';
-import RecipeView from './RecipeView.vue';
 
 export default {
   name: 'Categories',
-  components: { DropDownMenu, Header, RecipeCard, RecipeView},
+  components: { DropDownMenu, Header, RecipeCard},
   props: {
     modelValue: { // den binds till selectedCategory i template i HomeView
       type: String,
       default: 'all'
     },
+    recipes: {
+      type: Array,
+      required: true, 
+    }
   },
   data() {
     return {
       menuItems: [],
-
       categoryData: [],
       loading: false,
       error: false,
@@ -40,7 +42,7 @@ export default {
   },
 
   created() {
-    this.fetchCategories()
+    this.fetchCategories() // anropar fetch metoden
   },
 
 
@@ -61,7 +63,7 @@ export default {
 
       try {
         this.categoryData = await getAllCategories()
-         this.menuItems = this.convertCategoriesToDropdownItems()
+        this.menuItems = this.convertCategoriesToDropdownItems()
       } catch (err) {
         this.error = err.toString()
       } finally {
@@ -79,26 +81,39 @@ export default {
 
     convertCategoriesToDropdownItems() {
       const dropDownItems = [];
-      for (const category of this.categoryData){
+      dropDownItems.push({
+        label: "All",
+        value: "all",
+      });
+      for (const category of this.categoryData) {
         const dropDownItem = {
-          label: category.name ,
-          value: category.id
-        }; 
+          label: category.name,
+          value: category.name
+        };
         dropDownItems.push(dropDownItem);
-      
       }
-      return dropDownItems; 
+      return dropDownItems;
+    },
+
+    countRecipes(categoryValue) {
+      if (categoryValue === "all") {
+        return this.recipes.length;
+      }
+
+      return this.recipes.filter(r =>
+        r.categories?.some(c => c.toLowerCase() === categoryValue.toLowerCase())
+      ).length;
     }
 
   }
-
-
 }
 
 </script>
 
 <template>
+
   <Header />
+
   <ul class=" categories">
 
     <!-- loopar genom genom kategorierna och skapar li för varje kategori, 
@@ -106,12 +121,12 @@ export default {
     för styla endast vald kategori och inte alla -->
     <li v-for="category in menuItems" :key="category.value" :class="{ active: isActive(category.value) }"
       @click="selectCategory(category.value)" role="button" tabindex="0">
-      {{ category.label }}
+      {{ category.label }} ({{ countRecipes(category.value) }})
     </li>
   </ul>
   <!-- items kommer från dropdownmenu som är en prop och binds mot value. knappen är för att öppna menyn -->
   <DropDownMenu :items="menuItems" @item-selected="onDropdownSelect" />
-  
+
 </template>
 
 
@@ -125,7 +140,6 @@ export default {
   background-color: rgba(189, 155, 234, 0.3);
   padding: 0.35rem 0.6rem;
   border-radius: 2rem;
-  gap: 1rem;
   width: fit-content;
   max-width: 95%;
 }
@@ -162,7 +176,6 @@ export default {
 @media (min-width: 700px) {
   .categories {
     flex-direction: row;
-    gap: 1rem;
     padding: 0.5rem 1.6rem;
     margin-inline: auto;
     justify-content: center;
@@ -172,9 +185,10 @@ export default {
 
   .categories li {
     font-size: 1.3rem;
-    padding: 0.7rem 1.6rem;
+    padding: 0.8rem 1rem;
     text-align: center;
     font-weight: 550;
+     
    
   }
 

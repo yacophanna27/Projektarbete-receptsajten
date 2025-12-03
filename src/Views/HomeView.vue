@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       recipes: [],
-      selectedCategory: this.categories || 'all',
+      selectedCategory: this.category || 'all',
       loading: false,
       error: null
     };
@@ -83,7 +83,7 @@ export default {
     <div class="category-bar">
       <!-- binds mot categories via modelValue, selectedCategory 
        uppdatderas när category-selected emmiteras i CategoriesView -->
-      <Categories :modelValue="selectedCategory" @category-selected="onCategorySelection" />
+      <Categories :modelValue="selectedCategory" :recipes="recipes" @category-selected="onCategorySelection" />
     </div>
 
     <div class="home-page">
