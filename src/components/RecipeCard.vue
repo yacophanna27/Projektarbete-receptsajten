@@ -1,5 +1,6 @@
 <script>
 import Ratingstars from './Ratingstars.vue';
+import { getAverageRating } from '../APIutilities/apihelpers.js';
 
 export default {
   props: ['recipe', 'id'],
@@ -8,17 +9,23 @@ export default {
   },
   data() {
     return {
+      averageRating: 0 // Det beräknade genomsnittet från API
     };
+  },
+  computed: {
+    displayRating() {
+      // Använd det beräknade genomsnittet eller fallback till receptets rating
+      return this.averageRating || this.recipe.rating || 0;
+    }
+  },
+  async mounted() {
+    // Hämta och beräkna genomsnittligt betyg från API när komponenten laddas
+    if (this.recipe && this.recipe.id) {
+      this.averageRating = await getAverageRating(this.recipe.id, this.recipe.rating);
+    }
   },
   methods: {
     handleButtonClick() {
-    },
-    getAverageRating(ratings) {
-      if (!ratings || ratings.length === 0) {
-        return 0;
-      }
-      const sum = ratings.reduce((acc, rating) => acc + rating.rating, 0);
-      return sum / ratings.length;
     },
   }
 }
@@ -37,7 +44,11 @@ export default {
       <div class="details" v-if="recipe">
         <p><i class="bi bi-clock"></i> {{ recipe.timeInMins }} minutes</p>
         <p><i class="bi bi-basket3"></i> {{ recipe.ingredients ? recipe.ingredients.length : 0 }} ingredients</p>
-        <Ratingstars :initial-rating="getAverageRating(recipe.ratings)" :read-only="true" />
+        <Ratingstars 
+          :key="`card-${recipe.id}-${averageRating}`"
+          :initial-rating="displayRating" 
+          :read-only="true" 
+        />
       </div>
 
       <!-- Inte ändrat nåt i din kod, bara lagt till category i pathen och valt category med hjälp 

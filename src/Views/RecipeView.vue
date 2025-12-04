@@ -1,18 +1,26 @@
 <script>
-import { getAllRecipes, getRecipeById } from '../APIutilities/apihelpers.js';
+import { getAllRecipes, getRecipeById, getAverageRating } from '../APIutilities/apihelpers.js';
 import Ratingstars from '../components/Ratingstars.vue';
 
 export default {
-  props: [ 'id' ],
+  props: ['id'],
   data() {
     return {
-        recipe: null, // The recipe object to display
-        newName: '', // Name of the user submitting a comment
-        newComment: '', // Content of the user's comment
-        newRating: 0,// Rating given by the user
-        loading: true,
-        error: null
+      recipe: null, // The recipe object to display
+      newName: '', // Name of the user submitting a comment
+      newComment: '', // Content of the user's comment
+      newRating: 0,// Rating given by the user
+      loading: true,
+      error: null,
+      averageRating: 0 // Det beräknade genomsnittet från API
     };
+  },
+
+  computed: {
+    currentAverageRating() {
+      // Använd det beräknade genomsnittet eller fallback till receptets rating
+      return this.averageRating || (this.recipe ? this.recipe.rating || 0 : 0);
+    }
   },
   async mounted() {
     await this.loadRecipe();
@@ -22,9 +30,9 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        
+
         const recipeId = this.$route.params.id; // Använd ID som sträng (UUID)
-        
+
         // Försök först att hämta specifikt recept via ID
         try {
           this.recipe = await getRecipeById(recipeId);
@@ -32,12 +40,17 @@ export default {
           // Om getRecipeById misslyckas, fallback till att söka i alla recept
           const recipes = await getAllRecipes();
           this.recipe = recipes.find(recipe => recipe.id === recipeId);
-          
+
           if (!this.recipe) {
             throw new Error(`Recipe with ID ${recipeId} not found`);
           }
         }
-        
+
+        // Hämta och beräkna genomsnittligt betyg från API
+        if (this.recipe) {
+          this.averageRating = await getAverageRating(this.recipe.id, this.recipe.rating);
+        }
+
       } catch (error) {
         console.error('Error loading recipe:', error);
         this.error = error.message;
@@ -45,16 +58,20 @@ export default {
         this.loading = false;
       }
     },
-    
-    handleRatingUpdate(newRating) {
-      // Uppdatera receptets betyg direkt i komponenten
-      console.log('Nytt betyg för receptet:', newRating);
-      if (this.recipe) {
-        this.recipe.rating = newRating;
+
+    async handleRatingUpdate(updatedRecipe) {
+      console.log('Betyg uppdaterat:', updatedRecipe);
+      if (updatedRecipe && this.recipe) {
+        // Uppdatera receptet
+        this.recipe = { ...updatedRecipe };
+
+        // Hämta nytt genomsnitt från API
+        this.averageRating = await getAverageRating(this.recipe.id, this.recipe.rating);
+        console.log('Nytt genomsnittligt betyg:', this.averageRating);
       }
     }
   },
-  components: { 
+  components: {
     Ratingstars
   }
 }
@@ -65,85 +82,73 @@ export default {
   <div v-if="loading" class="loading-message">
     <p>Laddar recept...</p>
   </div>
-  
+
   <div v-else-if="error" class="error-message">
     <p>Fel vid laddning av recept: {{ error }}</p>
   </div>
-  
-  <div v-else-if="recipe" class="recipe-card-wrapper">  <!-- The background frame --> 
+
+  <div v-else-if="recipe" class="recipe-card-wrapper"> <!-- The background frame -->
     <div class="recipe-page-content"> <!-- Main content area -->
-    <div class="card-container"> <!-- Grid container -->
+      <div class="card-container"> <!-- Grid container -->
 
-   
-    <div class="recipe-image-box"> <!-- Left part of the page -->
-      <img 
-      :src="recipe.imageUrl"
-      :alt="recipe.title"
-      class="recipe-image" />
-    </div>
-    
-    <div class="recipe-content"> <!-- Right part of the page -->
-      <div class="title-row"> <!-- Title and rating -->
-      <h1 class="recipe-title">{{ recipe.title }}</h1>
 
-      <div class="rating-stars">
-        <span 
-          v-for="star in 5" 
-          :key="star" 
-          class="star" 
-          :class="{ active: star <= recipe.rating }"
-        >★</span>
-      </div>
-      </div>
-
-      <div class="divider"></div> <!-- Horizontal divider -->
-
-      <div class="recipe-details"> <!-- Recipe details with icons -->
-        <div class="time-icon">
-          <i class="bi bi-clock"></i>
-          <span>{{ recipe.timeInMins }}</span>
+        <div class="recipe-image-box"> <!-- Left part of the page -->
+          <img :src="recipe.imageUrl" :alt="recipe.title" class="recipe-image" />
         </div>
 
-        <div class="ingredient-icon">
-          <i class="bi bi-basket"></i>
-          <span>{{ recipe.ingredients.length }} ingredienser</span> 
-        </div>
-      </div>
-        
-        <div class="ingredients-block">  <!-- Ingredients section -->
-        <h2>Ingredientser</h2>
-        <ul class="ingredients-list"> 
-            <li v-for="item in recipe.ingredients"
-            :key="item">
+        <div class="recipe-content"> <!-- Right part of the page -->
+          <div class="title-row"> <!-- Title and rating -->
+            <h1 class="recipe-title">{{ recipe.title }}</h1>
+          </div>
+
+          <div class="divider"></div> <!-- Horizontal divider -->
+
+          <div class="recipe-details"> <!-- Recipe details with icons -->
+            <div class="rating-stars">
+              <Ratingstars :key="`header-${recipe.id}-${recipe.ratings?.length || 0}`"
+                :initial-rating="currentAverageRating" :read-only="true" />
+              <span class="rating-text">({{ currentAverageRating.toFixed(1) }})</span><!--Visar genomsnittligt betyg som nummer i parantes bredvid stjärnorna, toFixed formaterar nr-->
+            </div>
+
+            <div class="time-icon">
+              <i class="bi bi-clock"></i>
+              <span>{{ recipe.timeInMins }}</span>
+            </div>
+
+            <div class="ingredient-icon">
+              <i class="bi bi-basket"></i>
+              <span>{{ recipe.ingredients.length }} ingredienser</span>
+            </div>
+          </div>
+
+          <div class="ingredients-block"> <!-- Ingredients section -->
+            <h2>Ingredientser</h2>
+            <ul class="ingredients-list">
+              <li v-for="item in recipe.ingredients" :key="item">
                 {{ item }}
-            </li>
-        </ul>
-    </div>
-  </div>
-  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <div class="instructions-block">  <!-- Instructions section -->
-      <h2>Instructioner</h2>
-      <ol class="instructions-list">
-        <li v-for="step in recipe.instructions"
-        :key="step">
-          {{ step }}
-        </li>
-      </ol>
-  </div>
+      <div class="instructions-block"> <!-- Instructions section -->
+        <h2>Instructioner</h2>
+        <ol class="instructions-list">
+          <li v-for="step in recipe.instructions" :key="step">
+            {{ step }}
+          </li>
+        </ol>
+      </div>
     </div>
-    
-    <Ratingstars 
-      :initial-rating="recipe.rating || 0" 
-      :recipe-id="recipe.id" 
-      @rating-updated="handleRatingUpdate" 
-    />
+
+    <Ratingstars :key="`interactive-${recipe.id}`" :initial-rating="currentAverageRating" :recipe-id="recipe.id"
+      @rating-updated="handleRatingUpdate" />
   </div>
 </template>
 
 
 <style scoped>
-
 .loading-message, .error-message {
   text-align: center;
   padding: 40px;
@@ -162,16 +167,16 @@ export default {
 
 .recipe-card-wrapper {
   border: 9px solid #f9f9fa; /* Thick light border */
-  border-radius: 24px;  /* Rounded corners */       
-  padding: 40px;                
-  margin: 40px auto;           
-  max-width: 1400px;             
+  border-radius: 24px;  /* Rounded corners */
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1400px;
   background-color: #f0e6f7;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .recipe-page-content {
-  max-width: 1100px; /* Limit content width so text doesn’t become too wide */ 
+  max-width: 1100px; /* Limit content width so text doesn’t become too wide */
   margin: 40px auto;
   padding: 20px;
   color: #d7d4d4;
@@ -192,7 +197,23 @@ export default {
 }
 
 .rating-stars {
-  margin-bottom: 15px; /* Space below the stars */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recipe-details .rating-stars .rating {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+.rating-text {
+  font-size: 16px;
+  font-style: italic;
 }
 
 .card-container {
@@ -245,7 +266,7 @@ export default {
   width: 600px;
   height: 1px;
   background-color: #ccc;
-  margin: 12px 0 20px 0; 
+  margin: 12px 0 20px 0;
   border-radius: 2px;
 }
 
@@ -304,9 +325,9 @@ h2 {
 }
 
 .ingredients-block {
-  background: #f5f0f8;          
+  background: #f5f0f8;
   padding: 14px 20px 18px;
-  margin-top: 10px;              
+  margin-top: 10px;
   border-radius: 14px;
   box-shadow: 0 2px 6px rgba(156, 156, 156, 0.5);
 }

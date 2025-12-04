@@ -9,8 +9,7 @@
         <!-- Visa bara stjärnor för readOnly läge -->
         <div v-if="readOnly" class="readonly-stars">
             <ul class="stars">
-                <li v-for="starNumber in 5" :key="starNumber" class="star"
-                    :class="{ selected: starNumber <= rating }">
+                <li v-for="starNumber in 5" :key="starNumber" class="star" :class="{ selected: starNumber <= rating }">
                     <i class="fas fa-star"></i>
                 </li>
             </ul>
@@ -40,7 +39,7 @@
 </template>
 
 <script>
-import { updateRecipeRating } from '../APIutilities/apihelpers.js';
+import { addRecipeRating } from '../APIutilities/apihelpers.js';
 
 export default {
     name: 'Ratingstars',
@@ -108,46 +107,36 @@ export default {
             }
         },
 
-        // Skickar betyget till localStorage och visar tack-text om det fungerat
+        // Skickar betyget till API:t och visar tack-text om det fungerat
         async submitRating() {
+            if (!this.recipeId) {
+                console.error('No recipeId provided, cannot submit rating');
+                this.feedbackMessage = 'Kunde inte skicka betyget - inget recept-ID.';
+                return;
+            }
+
             try {
-                // Läs in befintliga betyg från localStorage (om det finns några)
-                const existingRatings = JSON.parse(localStorage.getItem('ratings') || '[]');
+                console.log(`Submitting rating ${this.rating} for recipe ${this.recipeId}`);
+                console.log('Current submitted state:', this.submitted);
 
-                // Lägg till det nya betyget med tidsstämpel
-                existingRatings.push({
-                    rating: this.rating,
-                    date: new Date().toISOString()
-                });
+                // Skicka betyget till API:t
+                const updatedRecipe = await addRecipeRating(this.recipeId, this.rating);
+                console.log('Got updated recipe:', updatedRecipe);
 
-                // Spara tillbaka till localStorage
-                localStorage.setItem('ratings', JSON.stringify(existingRatings));
-
-                // Simulera kort väntetid (så användaren inte kan klicka igen)
-                await new Promise(resolve => setTimeout(resolve, 250));
-
-                // Visa tack-text, göm stjärnor och feedbacktexten
+                // Visa tack-text
                 this.submitted = true;
                 this.feedbackMessage = '';
 
-                // Uppdatera receptdata via API om recipeId är tillgängligt
-                if (this.recipeId !== null) {
-                    try {
-                        await updateRecipeRating(parseInt(this.recipeId), this.rating);
-                    } catch (error) {
-                        console.error('Failed to update recipe rating:', error);
-                        // Visa felmeddelande till användaren om API-anropet misslyckas
-                        this.feedbackMessage = 'Kunde inte uppdatera betyget i databasen.';
-                        this.submitted = false;
-                        return;
-                    }
-                }
+                console.log('Set submitted to true, new state:', this.submitted);
 
-                // Emittera det nya betyget till föräldrakomponenten
-                this.$emit('rating-updated', this.rating);
+                // Emittera det uppdaterade receptet till föräldrakomponenten
+                this.$emit('rating-updated', updatedRecipe);
+
             } catch (error) {
-                // Hantera fel vid localStorage
-                this.feedbackMessage = 'Kunde inte spara betyget.';
+                console.error('Failed to update recipe rating:', error);
+                console.log('Error occurred, submitted stays:', this.submitted);
+                // Visa felmeddelande till användaren om API-anropet misslyckas
+                this.feedbackMessage = 'Kunde inte uppdatera betyget i databasen.';
             }
         }
     }
