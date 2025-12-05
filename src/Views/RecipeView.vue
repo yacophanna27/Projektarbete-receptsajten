@@ -48,12 +48,9 @@ export default {
         }
 
         // checkbox status
-    if (this.recipe.ingredients) {
-      this.recipe.ingredients = this.recipe.ingredients.map(ing => ({
-        ...ing,
-        checked: false  
-      }));
-    }
+        if (this.recipe.ingredients) {
+          this.recipe.ingredients = this.recipe.ingredients.map(ing => ({ ...ing, checked: false }));
+        }
 
         // Hämta och beräkna genomsnittligt betyg från API
         if (this.recipe) {
@@ -90,11 +87,11 @@ export default {
 
 <template>
   <div v-if="loading" class="loading-message">
-    <p>Laddar recept...</p>
+    <p>Loading recipes...</p>
   </div>
 
   <div v-else-if="error" class="error-message">
-    <p>Fel vid laddning av recept: {{ error }}</p>
+    <p>Error loading recipes: {{ error }}</p>
   </div>
 
   <div v-else-if="recipe" class="recipe-card-wrapper"> <!-- The background frame -->
@@ -106,11 +103,11 @@ export default {
           <img :src="recipe.imageUrl" :alt="recipe.title" class="recipe-image" />
     
       <ListComponent
-    title="Instructions"
-    :items="recipe.instructions"
-    listTag="ol"
-    variant="instructions"
-  >
+        title="Instructions"
+        :items="recipe.instructions"
+        listTag="ol"
+        variant="instructions"
+        >
     <template #item="{ item }">
       <li>{{ item }}</li>
     </template>
@@ -133,12 +130,12 @@ export default {
 
             <div class="time-icon">
               <i class="bi bi-clock"></i>
-              <span>{{ recipe.timeInMins }} minuter</span>
+              <span>{{ recipe.timeInMins }} minutes</span>
             </div>
 
         <div class="ingredient-icon">
           <i class="bi bi-basket"></i>
-          <span>{{ recipe.ingredients.length }} ingredienser</span> 
+          <span>{{ recipe.ingredients.length }} ingredients</span> 
         </div>
       </div>
 
@@ -165,11 +162,8 @@ export default {
     </div>
       </div>
     
-    <Ratingstars 
-      :initial-rating="recipe.rating || 0" 
-      :recipe-id="recipe.id" 
-      @rating-updated="handleRatingUpdate" 
-    />
+    <Ratingstars :key="`interactive-${recipe.id}`" :initial-rating="currentAverageRating" :recipe-id="recipe.id"
+      @rating-updated="handleRatingUpdate" />
   </div>
 </template>
 

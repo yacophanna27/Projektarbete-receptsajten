@@ -54,9 +54,8 @@ export default {
 .logoname {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--color-gold);
+  color: rgb(193, 149, 77);
   margin: 1rem;
-
 }
 
 @media (min-width: 768px) {

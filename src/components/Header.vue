@@ -11,16 +11,20 @@ export default {
   <main class="heading">
     <div class="mainText">
      
-      <p>2026 CELEBRATIONS</p>
+      <p><img src="../images/fireworks.png" class="fireworks" alt=""> 2026 CELEBRATIONS <img src="../images/fireworks.png" class="fireworks" alt=""></p>
       
     </div>
     <div class="mainText">
-      <h1> New Year's Eve Recepies </h1>
+      <h1> New Year's Eve Recipes </h1>
     </div>
   </main>
 </template>
 
 <style scoped>
+.fireworks {
+  height: 2.2rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
