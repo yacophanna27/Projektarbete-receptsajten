@@ -6,7 +6,9 @@ import RecipeCard from '@/components/RecipeCard.vue';
 
 export default {
   name: 'Categories',
+
   components: { DropDownMenu, Header, RecipeCard},
+
   props: {
     modelValue: { // den binds till selectedCategory i template i HomeView
       type: String,
@@ -17,6 +19,7 @@ export default {
       required: true, 
     }
   },
+
   data() {
     return {
       menuItems: [],
@@ -42,7 +45,7 @@ export default {
   },
 
   created() {
-    this.fetchCategories() // anropar fetch metoden
+    this.fetchCategories() // anropar fetch funktionen
   },
 
 
@@ -60,7 +63,7 @@ export default {
     async fetchCategories() {
       this.error = this.categoryData = null
       this.loading = true
-
+      
       try {
         this.categoryData = await getAllCategories()
         this.menuItems = this.convertCategoriesToDropdownItems()
@@ -107,7 +110,7 @@ export default {
       }
 
       return this.recipes.filter(r =>
-        r.categories?.some(c => c.toLowerCase() === categoryValue.toLowerCase())
+        r.categories.some(c => c.toLowerCase() === categoryValue.toLowerCase())
       ).length;
     }
 
@@ -204,6 +207,10 @@ export default {
 
   .categories li:hover {
     color:#280548
+  }
+
+  .drop-down-menu {
+    display: none;
   }
 }
 @media (min-width: 1024px){
