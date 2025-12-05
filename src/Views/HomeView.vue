@@ -2,6 +2,7 @@
 import RecipeCard from '../components/RecipeCard.vue';
 import Categories from './CategoriesView.vue';
 import { getAllRecipes } from '../APIutilities/apihelpers.js';
+import FlipCountdown from '@/components/FlipCountdown.vue';
 
 export default {
   name: 'HomeView',

@@ -1,7 +1,8 @@
 <script>
+import FlipCountdown from '../components/FlipCountdown.vue';
 export default {
   name: "Header",
-  components: {
+  components: {FlipCountdown,
 
   }
 }
@@ -17,6 +18,9 @@ export default {
     <div class="mainText">
       <h1> New Year's Eve Recipes </h1>
     </div>
+      <div class="container">
+        <FlipCountdown />
+      </div>
   </main>
 </template>
 
