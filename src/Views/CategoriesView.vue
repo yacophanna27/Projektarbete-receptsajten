@@ -85,7 +85,13 @@ export default {
         label: "All",
         value: "all",
       });
-      for (const category of this.categoryData) {
+
+      // Sortera kategorierna baserat på createdAt
+      const sortedCategories = [...this.categoryData].sort((a, b) => {
+        return new Date(a.createdAt) - new Date(b.createdAt);
+      });
+
+      for (const category of sortedCategories) {
         const dropDownItem = {
           label: category.name,
           value: category.name
@@ -160,9 +166,7 @@ export default {
   cursor: pointer;
   width: fit-content;
   transition: 0.3s ease;
-
-
-
+  text-transform: capitalize;
 }
 
 .categories li.active {
