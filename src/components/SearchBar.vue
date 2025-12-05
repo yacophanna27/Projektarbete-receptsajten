@@ -1,29 +1,61 @@
-/*Lollo*/
-
 <script>
 export default {
   name: 'SearchBar',
   emits: ['search'],
 
+  props: {
+    initialSearchText: {
+      type: String,
+      default: ''
+    }
+  },
+
   data() {
-    return { searchText: '' }
+    return { searchText: this.initialSearchText }
   },
 
   methods: {
     search() {
       this.$emit('search', this.searchText)
-
+    }
+    ,
+    clear() {
+      this.searchText = '';
+      // notify parent that search text was cleared
+      this.$emit('search', this.searchText);
+      this.$emit('update:modelValue', this.searchText);
+    },
+    onKeydown(e) {
+      if (e.key === 'Escape') {
+        this.clear();
+      }
     }
   }
-};
+
+}
 </script>
 
 <template>
   <div class="search-wrapper">
     <i class="fa fa-search search-icon"></i>
-    <input type="text" v-model="searchText" placeholder=" Search " @input="$emit('search', searchText)" />
+    <input
+      type="text"
+      v-model="searchText"
+      placeholder=" Sök recept..."
+      @input="$emit('search', searchText)"
+      @keydown="onKeydown"
+      aria-label="Sök recept"
+    />
 
-    <button @click="$emit('search', searchText)"> </button>
+    <button
+      v-if="searchText"
+      class="clear-btn"
+      type="button"
+      @click="clear"
+      aria-label="Rensa sökning"
+    >
+      ×
+    </button>
   </div>
 </template>
 
@@ -46,9 +78,9 @@ input {
   height: 2.5rem;
   outline: none;
 }
-input :focus {
-  visibility: visible;
-}
+
+/* removed invalid selector 'input :focus' */
+
 button {
   position: absolute;
   right: 2.5rem;
@@ -61,6 +93,29 @@ button {
   color: #b39108;
   cursor: pointer;
   font-weight: bold;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #b39108;
+  font-size: 1.1rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.clear-btn:focus,
+.clear-btn:focus-visible {
+  outline: 2px solid #b39108;
+  outline-offset: 2px;
 }
 
 @media (max-width: 600px) {
@@ -87,7 +142,7 @@ button {
   align-items: center;
 }
 
-.search-wrapper input{
+.search-wrapper input {
   padding-left: 2rem;
 }
 
