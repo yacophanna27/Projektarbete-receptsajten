@@ -170,3 +170,39 @@ export async function getAverageRating(recipeId, fallbackRating = null) {
     return fallbackRating || 0;
   }
 }
+export async function getComments(id) {
+    try {
+        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}/comments`);
+        if (!response.ok) {
+            throw new Error(`Comment with ID ${id} not found`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching Comments:', error);
+        return []; 
+    }
+}
+
+export async function postComment(id, commentData) {
+    try {
+        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}/comments`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(commentData),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Failed to post comment: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("New comment saved:", data);
+        return data;
+    } catch (error) {
+        console.error('Error posting comment:', error);
+        throw error; 
+    }
+}

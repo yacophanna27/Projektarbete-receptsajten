@@ -151,6 +151,7 @@ export default {
   border-radius: 2rem;
   width: fit-content;
   max-width: 95%;
+
 }
 
 .categories li {
@@ -180,7 +181,12 @@ export default {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-@media (min-width: 700px) {
+@media (max-width: 734px){
+  .categories {
+    display: none;
+  }
+}
+@media (min-width: 735px) {
   .categories {
     flex-direction: row;
     padding: 0.5rem 1.6rem;
