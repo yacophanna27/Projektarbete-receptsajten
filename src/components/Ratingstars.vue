@@ -29,15 +29,15 @@
                 {{ feedbackMessage }}
             </p>
             <button v-if="rating" type="button" @click="submitRating">Submit Rating</button>
-            <Comments :recipe-id="recipeId" />
         </div>
 
         <!-- Efter submit: visa tack-text men behåll stora stjärnan och rubriken (bara om inte readOnly) -->
         <div v-else-if="!readOnly" class="thank-you">
             <p>Thank you for your rating!</p>
-           
         </div>
-        <
+
+        <!-- Visa kommentarssektionen alltid (utom i readOnly läge) -->
+        <Comments v-if="!readOnly" :recipe-id="recipeId" />
     </div>
 </template>
 
