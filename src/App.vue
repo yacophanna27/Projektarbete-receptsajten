@@ -3,13 +3,15 @@ import NavBar from './components/NavBar.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import FlipCountdown from "./components/FlipCountdown.vue";
+import GoToTop from './components/goToTop.vue';
 
 export default {
   components: {
     NavBar,
     Header,
     Footer,
-    FlipCountdown
+    FlipCountdown,
+    GoToTop
   },
 
   data() {
@@ -28,11 +30,9 @@ export default {
 
 <template>
   <NavBar @search="updateSearch" />
-  <router-view :search-text="searchText" />
-  <!-- La till Header i categoriesView istället -->
-  
+  <router-view :search-text="searchText" />  
   <Footer />
-
+  <GoToTop />
 </template>
 
 <style scoped></style>
