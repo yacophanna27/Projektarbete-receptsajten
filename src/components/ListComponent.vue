@@ -41,7 +41,7 @@ export default {
   font-weight: 600;
 }
 
-.list-inner {
+.list-inner { 
   padding: 0;
   margin: 0;
 }
@@ -54,39 +54,92 @@ export default {
   box-shadow: 0 2px 6px rgba(156, 156, 156, 0.5);
 }
 
-.list-inner.ingredients {
-  list-style: none;
+.list-component.instructions {
   padding: 0;
-  margin: 0;
-}
-
-::v-deep(.list-inner.ingredients li) {
-  padding: 14px 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
-  line-height: 1.6;
   color: #333;
 }
 
-::v-deep(.list-inner.ingredients li:last-child) { /*Style <li> elements because component doesn't know it*/
+::v-deep(.instruction-item) {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid #c7c7c7; /* divider */
+}
+
+::v-deep(.instruction-number) {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+
+  flex-shrink: 0;
+}
+
+::v-deep(.instruction-text) {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  font-family: "Montserrat", sans-serif;
+}
+
+::v-deep(.instruction-item:last-child) {
   border-bottom: none;
 }
 
-.list-component.instructions {
-  padding: 0;
-  color: #444;
+/* To hide original checkbox */
+::v-deep(.checkbox-wrapper input[type="checkbox"]) {
+  opacity: 0;
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
 }
 
-.list-component.instructions h2 {
-  margin-bottom: 12px;
+/* My round custom checkbox */
+::v-deep(.custom-checkbox) {
+  width: 28px;       
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  position: relative;
+  transition: all 0.25s ease;
 }
 
-.list-inner.instructions {
-  padding-top: 10px;
-  padding-left: 15px;
-  line-height: 1.8;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+/* Horizontal line inside checkbox*/
+::v-deep(.custom-checkbox::after) {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: 0.2s ease;
+  border-radius: 2px;
 }
+
+/* checked */
+::v-deep(input[type="checkbox"]:checked + .custom-checkbox) {
+  background-color: #c69c6d;
+  border-color: #c69c6d;
+}
+
+::v-deep(input[type="checkbox"]:checked + .custom-checkbox::after) {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
 </style>
 

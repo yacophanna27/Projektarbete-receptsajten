@@ -13,7 +13,7 @@ export default {
       newRating: 0,// Rating given by the user
       loading: true,
       error: null,
-      averageRating: 0 // Det beräknade genomsnittet från API
+      averageRating: 0, // Det beräknade genomsnittet från API
     };
   },
 
@@ -103,15 +103,18 @@ export default {
           <img :src="recipe.imageUrl" :alt="recipe.title" class="recipe-image" />
     
       <ListComponent
-        title="Instructions"
-        :items="recipe.instructions"
-        listTag="ol"
-        variant="instructions"
-        >
-    <template #item="{ item }">
-      <li>{{ item }}</li>
-    </template>
-  </ListComponent>
+  title="Instructions"
+  :items="recipe.instructions"
+  variant="instructions"
+  listTag="div"
+>
+  <template #item="{ item, index }">
+    <div class="instruction-item">
+      <div class="instruction-number">{{ index + 1 }}</div>
+      <p class="instruction-text">{{ item }}</p>
+    </div>
+  </template>
+</ListComponent>
     </div>
 
         <div class="recipe-content"> <!-- Right part of the page -->
@@ -148,15 +151,20 @@ export default {
   :items="recipe.ingredients"
   variant="ingredients"
 >
-  <template #item="{ item }">
-  <li class="ingredient-item">
-    <input type="checkbox" v-model="item.checked" />
+  <template #item="{ item, index }">
+    <div class="instruction-item"> 
 
-    <span :class="{ checked: item.checked }">
-      {{ item.amount }} {{ item.unit }} {{ item.name }}
-    </span>
-  </li>
-</template>
+      <label class="checkbox-wrapper">
+        <input type="checkbox" v-model="item.checked" />
+        <span class="custom-checkbox"></span>
+      </label>
+
+      <p class="instruction-text" :class="{ done: item.checked }">
+        {{ item.amount }} {{ item.unit }} {{ item.name }}
+      </p>
+
+    </div>
+  </template>
 </ListComponent>
   </div>
     </div>
@@ -298,12 +306,6 @@ export default {
   font-style: italic;
 }
 
-.recipe-details p {
-  margin: 6px 0;
-  display: flex;
-  align-items: center;
-}
-
 .time-icon {
   display: flex;
   align-items: center;
@@ -311,10 +313,6 @@ export default {
 }
 
 .bi-clock {
-  color: #b39108;
-}
-
-.bi-person {
   color: #b39108;
 }
 
