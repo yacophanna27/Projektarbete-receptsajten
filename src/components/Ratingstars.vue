@@ -156,8 +156,7 @@ export default {
 }
 
 .commentsfield {
-    margin-top: 2rem;
-    width: 80%;
+    width: 75%;
 }
 
 h3 {

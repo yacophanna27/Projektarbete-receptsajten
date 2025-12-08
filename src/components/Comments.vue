@@ -97,7 +97,6 @@ export default {
     <h3>Comments</h3>
     
     <div class="form-group">
-      <label for="author">Name:</label>
       <input
         id="author"
         v-model="newComment.author"
@@ -108,7 +107,6 @@ export default {
     </div>
 
     <div class="form-group">
-      <label for="comment-text">Comment:</label>
       <textarea
         id="comment-text"
         v-model="newComment.text"
