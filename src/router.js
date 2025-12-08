@@ -21,6 +21,9 @@ export default createRouter({
         {path: '/recipe/:id', 
         name: 'RecipeView', 
         component: RecipeView, 
-        props: true },
-    ]
+        props: true }
+    ],
+    scrollBehavior() {
+        return { top: 0 };
+    }
 });
