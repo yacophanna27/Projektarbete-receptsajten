@@ -36,8 +36,10 @@
             <p>Thank you for your rating!</p>
         </div>
 
+        <div class="commentsfield">
         <!-- Visa kommentarssektionen alltid (utom i readOnly läge) -->
         <Comments v-if="!readOnly" :recipe-id="recipeId" />
+        </div>
     </div>
 </template>
 
@@ -151,6 +153,11 @@ export default {
 <style scoped>
 * {
     box-sizing: border-box;
+}
+
+.commentsfield {
+    margin-top: 2rem;
+    width: 80%;
 }
 
 h3 {
