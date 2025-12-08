@@ -129,7 +129,10 @@ export default {
     class binder dynamiskt mot css klassen (active) och funktionen som anropas i den används
     för styla endast vald kategori och inte alla -->
     <li v-for="category in menuItems" :key="category.value" :class="{ active: isActive(category.value) }"
-      @click="selectCategory(category.value)" role="button" tabindex="0">
+      @click="selectCategory(category.value)" 
+      @keydown.enter="selectCategory(category.value)"
+      role="button" 
+      tabindex="0">
       {{ category.label }} ({{ countRecipes(category.value) }})
     </li>
   </ul>
@@ -145,7 +148,8 @@ export default {
   flex-direction: column;
   align-items: center;
   list-style: none;
-  margin: 3rem auto;
+  margin: auto;
+  margin-top: 6rem;
   background-color: rgba(189, 155, 234, 0.3);
   padding: 0.35rem 0.6rem;
   border-radius: 2rem;
@@ -166,7 +170,7 @@ export default {
   border-radius: 1.6rem;
   font-size: 1.3rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: #f5f0f8;
   cursor: pointer;
   width: fit-content;
   transition: 0.3s ease;
@@ -193,7 +197,6 @@ export default {
     margin-inline: auto;
     justify-content: center;
     border-radius: 3rem;
-
   }
 
   .categories li {
@@ -201,8 +204,6 @@ export default {
     padding: 0.8rem 1rem;
     text-align: center;
     font-weight: 550;
-     
-   
   }
 
   .categories li.active {

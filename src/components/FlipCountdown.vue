@@ -83,7 +83,7 @@ export default {
     gap: 15px;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 10 px;
+    margin-bottom: 10px;
     font: Monsterat, sans-serif;
 }
 

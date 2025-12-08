@@ -40,7 +40,7 @@ main {
 }
 
 .mainText {
-  color: white;
+  color: #f5f0f8;
   margin: 1.5rem;
 }
 
