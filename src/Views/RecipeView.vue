@@ -166,6 +166,21 @@ export default {
     </div>
   </template>
 </ListComponent>
+
+<ListComponent
+  class="instructions-mobile"
+  title="Instructions"
+  :items="recipe.instructions"
+  variant="instructions"
+  listTag="div"
+>
+  <template #item="{ item, index }">
+    <div class="instruction-item">
+      <div class="instruction-number">{{ index + 1 }}</div>
+      <p class="instruction-text">{{ item }}</p>
+    </div>
+  </template>
+</ListComponent>
   </div>
     </div>
       </div>
@@ -347,5 +362,114 @@ h2 {
   font-weight: 600;
   margin-top: 40px;
   color: #444;
+}
+
+@media (max-width: 768px) {
+
+  .recipe-card-wrapper {
+    padding: 20px;
+    border-width: 6px;
+    margin: 20px auto;
+    width: 95%;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .recipe-image-box {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .recipe-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  /* To make more readable */
+  .recipe-content {
+    padding: 0; 
+  }
+
+  .title-row h1 {
+    font-size: 26px;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .recipe-details {
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .instruction-item {
+    padding: 14px 0;
+  }
+
+  .instruction-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .custom-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-checkbox::after {
+    width: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .card-container {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+
+  .recipe-image-box {
+    width: 100%;
+  }
+
+  .recipe-image {
+    height: 450px;
+  }
+
+  /* Npt to show mobile version on the dekstop */
+.instructions-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* To hide dekstop version */
+  .recipe-image-box .instructions {
+    display: none !important;
+  }
+
+  /* To show mobile version */
+  .instructions-mobile {
+    display: block;
+  }
+}
 }
 </style>
