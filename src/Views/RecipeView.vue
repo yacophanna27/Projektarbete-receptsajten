@@ -103,6 +103,7 @@ export default {
           <img :src="recipe.imageUrl" :alt="recipe.title" class="recipe-image" />
     
       <ListComponent
+  class="instructions-desktop"
   title="Instructions"
   :items="recipe.instructions"
   variant="instructions"
@@ -152,7 +153,13 @@ export default {
   variant="ingredients"
 >
   <template #item="{ item, index }">
-    <div class="instruction-item"> 
+    <div class="instruction-item"
+    role="button"
+    tabindex="0"
+    @click="item.checked = !item.checked"
+    @keydown.enter="item.checked = !item.checked"
+  >
+    
 
       <label class="checkbox-wrapper">
         <input type="checkbox" v-model="item.checked" />
@@ -364,6 +371,14 @@ h2 {
   color: #444;
 }
 
+.instructions-desktop {
+  display: block;
+}
+
+.instructions-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .recipe-card-wrapper {
@@ -456,13 +471,13 @@ h2 {
 
   /* Npt to show mobile version on the dekstop */
 .instructions-mobile {
-  display: none;
+  display: block;
 }
 
 @media (max-width: 768px) {
 
   /* To hide dekstop version */
-  .recipe-image-box .instructions {
+  .instructions-desktop {
     display: none !important;
   }
 
