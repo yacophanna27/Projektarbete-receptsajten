@@ -39,13 +39,7 @@ export default {
         <div class="label">{{ label }}</div>
 
         <div class="card">
-            <!-- statisk övre halva -->
-            <div class="upper">
-                {{ formattedValue }}
-            </div>
-
-            <!-- statisk undre halva -->
-            <div class="lower">
+            <div class="display-value">
                 {{ formattedValue }}
             </div>
 
@@ -86,11 +80,9 @@ export default {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* statiska halvor */
-.upper,
-.lower {
+.display-value { 
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,14 +90,7 @@ export default {
     color: goldenrod;
     position: absolute;
     left: 0;
-}
-
-.upper {
     top: 0;
-}
-
-.lower {
-    bottom: 0;
 }
 
 /* anim. container */
@@ -165,14 +150,13 @@ export default {
         height: 50px;
     }
 
-    .upper,
-    .lower {
-        font-size: 20px;
+    .display-value {
+        font-size: 16px;
     }
 
     .flip-upper,
     .flip-lower {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 </style>
