@@ -156,7 +156,7 @@ export default {
 }
 
 .commentsfield {
-    width: 75%;
+    width: 100%;
 }
 
 h3 {
@@ -288,5 +288,17 @@ h3 {
 
 .readonly-stars .star:hover {
     transform: none;
+}
+
+@media (max-width: 600px) {
+    .rating {
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        
+    }
+    .commentsfield{
+        width: 105%;
+    }
 }
 </style>

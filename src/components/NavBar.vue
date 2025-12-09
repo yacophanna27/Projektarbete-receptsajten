@@ -33,7 +33,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-inline: 1.2rem;
-  margin: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .navmenu {
@@ -56,6 +57,7 @@ export default {
   font-weight: bold;
   color: rgb(193, 149, 77);
   margin: 1rem;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {

@@ -48,6 +48,10 @@ main {
   margin-top: 1rem;
   color: var(--color-gold);
 }
+.mainText h1 {
+  font-size: 1.8rem;
+ 
+}
 
 @media (min-width: 768px) {
   main {
