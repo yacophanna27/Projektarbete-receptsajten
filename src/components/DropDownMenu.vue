@@ -37,7 +37,8 @@ export default {
         -->
         <div class="dropdown-content" v-if="isOpen">
             <ul>
-                <li v-for="item in items" :key="item.value" @click="selectItem(item.value)" role="button" tabindex="0">
+                <li v-for="item in items" :key="item.value" @click="selectItem(item.value)" @keydown.enter="selectItem(item.value)"
+                role="button" tabindex="0">
                     {{ item.label }}
 
                 </li>

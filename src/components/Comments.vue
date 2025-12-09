@@ -8,6 +8,7 @@ export default {
       type: String,
       required: true,
     },
+    
   },
 
   data() {
@@ -20,6 +21,7 @@ export default {
       loading: false,
       error: null,
       isSubmitting: false,
+      showThankYou: false,
     };
   },
 
@@ -65,9 +67,9 @@ export default {
         const response = await postComment(this.recipeId, commentData);
         console.log('API response:', response);
         
-        
         this.newComment.author = '';
         this.newComment.text = '';
+        this.showThankYou = true;
         
         
         await this.fetchComments();
@@ -93,36 +95,42 @@ export default {
 </script>
 
 <template>
+
   <div>
     <h3>Comments</h3>
-    
-    <div class="form-group">
-      <input
-        id="author"
-        v-model="newComment.author"
-        type="text"
-        placeholder="Your name"
-        :disabled="isSubmitting"
-      />
+    <div v-if="showThankYou" class="thank-you">
+      <p>Tack för din kommentar!</p>
     </div>
 
-    <div class="form-group">
-      <textarea
-        id="comment-text"
-        v-model="newComment.text"
-        placeholder="Share your thoughts about this recipe..."
-        rows="3"
-        :disabled="isSubmitting"
-      ></textarea>
-    </div>
+    <div v-if="!showThankYou">
+      <div class="form-group">
+        <input
+          id="author"
+          v-model="newComment.author"
+          type="text"
+          placeholder="Your name"
+          :disabled="isSubmitting"
+        />
+      </div>
 
-    <button
-      @click="submitComment"
-      :disabled="isSubmitting"
-      class="submit-btn"
-    >
-      {{ isSubmitting ? 'Posting...' : 'Post Comment' }}
-    </button>
+      <div class="form-group">
+        <textarea
+          id="comment-text"
+          v-model="newComment.text"
+          placeholder="Share your thoughts about this recipe..."
+          rows="3"
+          :disabled="isSubmitting"
+        ></textarea>
+      </div>
+
+      <button
+        @click="submitComment"
+        :disabled="isSubmitting"
+        class="submit-btn"
+      >
+        {{ isSubmitting ? 'Posting...' : 'Post Comment' }}
+      </button>
+    </div>
 
     <div v-if="error" class="error-message">
       {{ error }}
@@ -168,6 +176,14 @@ export default {
   color: #999;
   padding: 1rem;
   font-size: 1rem;
+}
+
+.thank-you {
+  padding: 2rem 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
 }
 
 .no-comments {

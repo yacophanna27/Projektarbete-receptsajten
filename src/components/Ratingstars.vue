@@ -156,7 +156,7 @@ export default {
 }
 
 .commentsfield {
-    width: 100%;
+    width: 75%;
 }
 
 h3 {
