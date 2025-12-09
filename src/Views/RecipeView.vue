@@ -156,7 +156,7 @@ export default {
     <div class="instruction-item"
     role="button"
     tabindex="0"
-    @click="item.checked = !item.checked"
+    @click.self="item.checked = !item.checked"
     @keydown.enter="item.checked = !item.checked"
   >
     
