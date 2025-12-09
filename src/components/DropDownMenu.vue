@@ -95,6 +95,7 @@ export default {
     border-bottom: 1px solid rgb(51, 13, 83);
     text-align: center;
     font-size: 1.1rem;
+    text-transform: capitalize;
     
 }
 
