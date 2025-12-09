@@ -1,29 +1,34 @@
 <script>
 export default {
   name: 'SearchBar',
-  emits: ['search'],
+  emits: ['update:modelValue', 'search'],
 
   props: {
-    initialSearchText: {
+    modelValue: {
       type: String,
       default: ''
     }
   },
 
   data() {
-    return { searchText: this.initialSearchText }
+    return { searchText: this.modelValue }
+  },
+
+  watch: {
+    modelValue(newVal) {
+      this.searchText = newVal;
+    }
   },
 
   methods: {
-    search() {
-      this.$emit('search', this.searchText)
-    }
-    ,
+    onInput() {
+      this.$emit('update:modelValue', this.searchText);
+      this.$emit('search', this.searchText);
+    },
     clear() {
       this.searchText = '';
-      // notify parent that search text was cleared
-      this.$emit('search', this.searchText);
       this.$emit('update:modelValue', this.searchText);
+      this.$emit('search', this.searchText);
     },
     onKeydown(e) {
       if (e.key === 'Escape') {
@@ -31,20 +36,20 @@ export default {
       }
     }
   }
-
 }
 </script>
 
 <template>
   <div class="search-wrapper">
-    <i class="fa fa-search search-icon"></i>
+    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+
     <input
       type="text"
       v-model="searchText"
-      placeholder=" Sök recept..."
-      @input="$emit('search', searchText)"
+      placeholder="Search"
+      @input="onInput"
       @keydown="onKeydown"
-      aria-label="Sök recept"
+      aria-label="Search recipe"
     />
 
     <button
@@ -52,7 +57,7 @@ export default {
       class="clear-btn"
       type="button"
       @click="clear"
-      aria-label="Rensa sökning"
+      aria-label="Clear search"
     >
       ×
     </button>
@@ -60,8 +65,9 @@ export default {
 </template>
 
 <style scoped>
-.search-bar {
+.search-wrapper {
   font-family: 'montserrat', sans-serif;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -77,24 +83,10 @@ input {
   width: 22rem;
   height: 2.5rem;
   outline: none;
+  padding-left: 2rem; /* lite luft runt iconen*/
 }
 
-/* removed invalid selector 'input :focus' */
-
-button {
-  position: absolute;
-  right: 2.5rem;
-  top: 6.3%;
-  transform: translateY(-50%);
-  font-family: 'montserrat', sans-serif;
-  background-color: var(--dark-purple);
-  border: none;
-  border-radius: 8px;
-  color: #b39108;
-  cursor: pointer;
-  font-weight: bold;
-}
-
+/* Clear button */
 .clear-btn {
   position: absolute;
   right: 0.8rem;
@@ -119,7 +111,7 @@ button {
 }
 
 @media (max-width: 600px) {
-  .search-bar {
+  .search-wrapper {
     gap: 1rem;
   }
 
@@ -129,21 +121,9 @@ button {
     font-size: 0.8rem;
   }
 
-  button {
-    position: absolute;
-    right: 2rem;
-    top: 4.9%;
+  .clear-btn {
+    right: 0.6rem;
   }
-}
-
-.search-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-wrapper input {
-  padding-left: 2rem;
 }
 
 .search-icon {

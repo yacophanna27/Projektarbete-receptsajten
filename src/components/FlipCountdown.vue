@@ -47,15 +47,10 @@ export default {
 
 <template>
     <div>
-
         <!-- <h1 class="title">New Year Countdown!</h1> -->
-
-        <div class="countdown">
-            <!-- enheter här -->
-        </div>
-
     </div>
-    <div class="countdown">
+
+    <div class="countdown"> <!-- enheter här -->
 
         <div class="unit">
             <FlipUnit label="Days" :value="days" />
