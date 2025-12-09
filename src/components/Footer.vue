@@ -12,7 +12,7 @@ export default {
 </template>
 
 <style scoped>
-footer {
+.footer {
     font-family: 'montserrat', sans-serif;
     background-color: var(--color-dark);
     color: var(--color-gold);
@@ -21,11 +21,12 @@ footer {
     margin-top: auto;
     font-size: 1rem;
     width:100%;
+    position: relative;
 }
 
 @media (min-width: 768px) {
 
-    footer {
+    .footer {
         font-size: 0.9rem;
     }
 }

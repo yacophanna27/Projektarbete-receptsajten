@@ -1,100 +1,97 @@
 <script>
 export default {
   name: 'SearchBar',
-  emits: ['search'],
+  emits: ['update:modelValue', 'search'],
 
   props: {
-    initialSearchText: {
+    modelValue: {
       type: String,
       default: ''
     }
   },
 
   data() {
-    return { searchText: this.initialSearchText }
+    return { searchText: this.modelValue }
+  },
+   /* Håller koll på ändringar */
+  watch: {
+    modelValue(newVal) {
+      this.searchText = newVal;
+    }
   },
 
   methods: {
-    search() {
-      this.$emit('search', this.searchText)
-    }
-    ,
+    onInput() {
+      this.$emit('update:modelValue', this.searchText);
+      this.$emit('search', this.searchText);
+    },
+    /* Rensar search input*/
     clear() {
       this.searchText = '';
-      // notify parent that search text was cleared
-      this.$emit('search', this.searchText);
       this.$emit('update:modelValue', this.searchText);
+      this.$emit('search', this.searchText);
     },
+    /* Rensar med Escape knappen*/
     onKeydown(e) {
       if (e.key === 'Escape') {
         this.clear();
       }
     }
   }
-
 }
 </script>
 
 <template>
-  <div class="search-wrapper">
-    <i class="fa fa-search search-icon"></i>
+  <div class="search-wrapper" role="search">
+    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+
     <input
       type="text"
       v-model="searchText"
-      placeholder=" Sök recept..."
-      @input="$emit('search', searchText)"
+      placeholder="Search"
+      @input="onInput"
       @keydown="onKeydown"
-      aria-label="Sök recept"
+      aria-label="Search recipe"
     />
-
+    <!--Rensar sök, syns bara när du börjat skriva -->
     <button
       v-if="searchText"
       class="clear-btn"
       type="button"
       @click="clear"
-      aria-label="Rensa sökning"
+      aria-label="Clear search"
     >
-      ×
+      × 
     </button>
   </div>
 </template>
 
 <style scoped>
-.search-bar {
+.search-wrapper {
   font-family: 'montserrat', sans-serif;
+  font-size: 14px;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #b39108;
+  color: goldenrod;
 }
 
 input {
+  font-family: 'montserrat', sans-serif;
+  font-size: 14px;
   padding: 0.4rem 0.6rem;
   border-radius: 2rem;
   border: 2px solid #582f62;
   background-color: var(--light-purple);
-  color: #b39108;
+  color: goldenrod;
   width: 22rem;
   height: 2.5rem;
   outline: none;
+  padding-left: 2rem; /* lite luft runt iconen*/
 }
 
-/* removed invalid selector 'input :focus' */
-
-button {
-  position: absolute;
-  right: 2.5rem;
-  top: 6.3%;
-  transform: translateY(-50%);
-  font-family: 'montserrat', sans-serif;
-  background-color: var(--dark-purple);
-  border: none;
-  border-radius: 8px;
-  color: #b39108;
-  cursor: pointer;
-  font-weight: bold;
-}
-
+/* Clear button */
 .clear-btn {
   position: absolute;
   right: 0.8rem;
@@ -102,7 +99,7 @@ button {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #b39108;
+  color: goldenrod;
   font-size: 1.1rem;
   width: 1.9rem;
   height: 1.9rem;
@@ -114,12 +111,12 @@ button {
 
 .clear-btn:focus,
 .clear-btn:focus-visible {
-  outline: 2px solid #b39108;
+  outline: 2px solid goldenrod;
   outline-offset: 2px;
 }
 
 @media (max-width: 600px) {
-  .search-bar {
+  .search-wrapper {
     gap: 1rem;
   }
 
@@ -129,27 +126,15 @@ button {
     font-size: 0.8rem;
   }
 
-  button {
-    position: absolute;
-    right: 2rem;
-    top: 4.9%;
+  .clear-btn {
+    right: 0.6rem;
   }
-}
-
-.search-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-wrapper input {
-  padding-left: 2rem;
 }
 
 .search-icon {
   position: absolute;
   left: 12px;
-  color: #b39108;
+  color: goldenrod;
   font-size: 1rem;
 }
 </style>
