@@ -40,7 +40,7 @@ export default {
         title="Go to top"
         tabindex="0"
     >
-        <i class="bi bi-arrow-up"></i>
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
     </button>
 </template>
 

@@ -94,7 +94,7 @@ export default {
     <p>Error loading recipes: {{ error }}</p>
   </div>
 
-  <div v-else-if="recipe" class="recipe-card-wrapper"> <!-- The background frame -->
+  <div v-else-if="recipe" class="recipe-card-wrapper" :aria-current="$route.path.startsWith('/recipe/') ? 'page' : null"> <!-- The background frame -->
     <div class="recipe-page-content"> <!-- Main content area -->
       <div class="card-container"> <!-- Grid container -->
 
@@ -120,7 +120,7 @@ export default {
 
         <div class="recipe-content"> <!-- Right part of the page -->
           <div class="title-row"> <!-- Title and rating -->
-            <h1 class="recipe-title">{{ recipe.title }}</h1>
+            <h1 class="recipe-title" :aria-current="$route.params.id === recipe.id ? 'page' : null">{{ recipe.title }}</h1>
           </div>
 
           <div class="divider"></div> <!-- Horizontal divider -->
