@@ -5,7 +5,7 @@ export default {
   name: 'Comments',
   props: {
     recipeId: {
-      type: String,
+      type: String, // ID för receptet att hämta kommentarer för
       required: true,
     },
     
@@ -13,28 +13,28 @@ export default {
 
   data() {
     return {
-      comments: [],
-      newComment: {
+      comments: [], // lista med hämtade kommentarer
+      newComment: { // ny kommentar som ska skickas
         author: '',
         text: '',
       },
       loading: false,
       error: null,
-      isSubmitting: false,
+      isSubmitting: false, // true medan kommentar skickas
       showThankYou: false,
     };
   },
 
   created() {
-    this.fetchComments();
+    this.fetchComments(); // hämta kommentarer när komponenten skapas
   },
   
-  methods: {
+  methods: { // metod att hämta kommentarer
     async fetchComments() {
       this.loading = true;
       this.error = null;
       try {
-        const data = await getComments(this.recipeId);
+        const data = await getComments(this.recipeId); //getComments kommer från apihelpers.js
         this.comments = Array.isArray(data) ? data : [];
         console.log('Comments fetched:', this.comments);
         
@@ -47,7 +47,7 @@ export default {
       }
     },
 
-    async submitComment() {
+    async submitComment() { // skicka ny kommentar till API
       if (!this.newComment.author || !this.newComment.text) {
         this.error = 'Please fill in both author name and comment.';
         return;
@@ -64,15 +64,15 @@ export default {
         };
 
         console.log('Sending comment data:', commentData);
-        const response = await postComment(this.recipeId, commentData);
+        const response = await postComment(this.recipeId, commentData); // postComment från apihelpers.js
         console.log('API response:', response);
         
-        this.newComment.author = '';
-        this.newComment.text = '';
-        this.showThankYou = true;
+        this.newComment.author = ''; // reset fälten
+        this.newComment.text = ''; // resetta fälten
+        this.showThankYou = true; // visa tack-meddelande, i data är den false efter att man skickat in blir den true 
         
         
-        await this.fetchComments();
+        await this.fetchComments(); // hämta nypublicerad kommentar 
         console.log('Comment posted successfully');
       } catch (err) {
         this.error = 'Failed to post comment. Please try again.';
@@ -82,7 +82,7 @@ export default {
       }
     },
 
-    formatDate(dateString) {
+    formatDate(dateString) { // formatera datum för visning
       if (!dateString) return '';
       const date = new Date(dateString);
       return date.toLocaleDateString('sv-SE',{
@@ -98,11 +98,11 @@ export default {
 
   <div>
     <h3>Comments</h3>
-    <div v-if="showThankYou" class="thank-you">
+    <div v-if="showThankYou" class="thank-you"> <!-- Visa tack meddelande efter inskickad kommentar -->
       <p>Tack för din kommentar!</p>
     </div>
 
-    <div v-if="!showThankYou">
+    <div v-if="!showThankYou"> <!-- Visa kommentarsformulär om tack-meddelande inte visas -->
       <div class="form-group">
         <input
           id="author"
@@ -113,7 +113,7 @@ export default {
         />
       </div>
 
-      <div class="form-group">
+      <div class="form-group"> <!-- Textarea för kommentarstext -->
         <textarea
           id="comment-text"
           v-model="newComment.text"
@@ -123,29 +123,29 @@ export default {
         ></textarea>
       </div>
 
-      <button
+      <button 
         @click="submitComment"
         :disabled="isSubmitting"
         class="submit-btn"
-      >
-        {{ isSubmitting ? 'Posting...' : 'Post Comment' }}
+      > 
+        {{ isSubmitting ? 'Posting...' : 'Post Comment' }} <!-- Ändra knapptext baserat på isSubmitting -->
       </button>
     </div>
 
-    <div v-if="error" class="error-message">
+    <div v-if="error" class="error-message"> <!-- Visar felmeddelande om något går fel -->
       {{ error }}
     </div>
 
-    <div v-if="loading" class="loading">
+    <div v-if="loading" class="loading"> <!-- Visar laddningstext medan kommentarer hämtas -->
       Loading comments...
     </div>
 
-    <div v-else>
-      <div v-if="comments.length === 0" class="no-comments">
+    <div v-else> 
+      <div v-if="comments.length === 0" class="no-comments"> <!-- Kollar om det finns några kommentarer så ståe det följande -->
         No comments yet. Be the first to comment!
       </div>
       
-      <div v-for="comment in comments" :key="comment.id" class="comment-item">
+      <div v-for="comment in comments" :key="comment.id" class="comment-item"> <!-- en loop för alla kommentarer som hämtas från api -->
         <div class="comment-header">
           <span class="comment-author">{{ comment.name }}</span>
           <span v-if="comment.createdAt" class="comment-date">
