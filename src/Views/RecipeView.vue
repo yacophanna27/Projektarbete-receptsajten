@@ -49,7 +49,7 @@ export default {
 
         // checkbox status
         if (this.recipe.ingredients) {
-          this.recipe.ingredients = this.recipe.ingredients.map(ing => ({ ...ing, checked: false }));
+          this.recipe.ingredients = this.recipe.ingredients.map(ing => ({ ...ing, checked: false })); // Lägg till 'checked' property
         }
 
         // Hämta och beräkna genomsnittligt betyg från API
@@ -63,7 +63,27 @@ export default {
       } finally {
         this.loading = false;
       }
+
+      this.loadIngredientsState(); // Load states from localStorage
     },
+
+      saveIngredientsState() { // Saving states to localStorage
+        const key = `ingredients-${this.recipe.id}`;
+        const checkedValues = this.recipe.ingredients.map(ing => ing.checked);
+        localStorage.setItem(key, JSON.stringify(checkedValues));
+      },
+
+      loadIngredientsState() { // Loading states when we open the page again
+        const key = `ingredients-${this.recipe.id}`; 
+        const saved = localStorage.getItem(key);
+
+      if (saved) { // If there is saved data
+        const checks = JSON.parse(saved);
+        this.recipe.ingredients = this.recipe.ingredients.map((ing, i) => ({...ing,
+        checked: checks[i] || false
+      }));
+    }
+  },
 
     async handleRatingUpdate(updatedRecipe) {
       console.log('Betyg uppdaterat:', updatedRecipe);
@@ -103,19 +123,19 @@ export default {
           <img :src="recipe.imageUrl" :alt="recipe.title" class="recipe-image" />
     
       <ListComponent
-  class="instructions-desktop"
-  title="Instructions"
-  :items="recipe.instructions"
-  variant="instructions"
-  listTag="div"
->
-  <template #item="{ item, index }">
-    <div class="instruction-item">
-      <div class="instruction-number">{{ index + 1 }}</div>
-      <p class="instruction-text">{{ item }}</p>
-    </div>
-  </template>
-</ListComponent>
+       class="instructions-desktop"
+       title="Instructions"
+       :items="recipe.instructions"
+       variant="instructions"
+       listTag="div"
+      >
+      <template #item="{ item, index }">
+        <div class="instruction-item">
+          <div class="instruction-number">{{ index + 1 }}</div>
+            <p class="instruction-text">{{ item }}</p>
+        </div>
+      </template>
+      </ListComponent>
     </div>
 
         <div class="recipe-content"> <!-- Right part of the page -->
@@ -147,22 +167,22 @@ export default {
         <p>{{ recipe.description }}</p>
       </div> 
         
-          <ListComponent
-  title="Ingredients"
-  :items="recipe.ingredients"
-  variant="ingredients"
->
-  <template #item="{ item, index }">
-    <div class="instruction-item"
-    role="button"
-    tabindex="0"
-    @click.self="item.checked = !item.checked"
-    @keydown.enter="item.checked = !item.checked"
-  >
-    
+      <ListComponent
+         title="Ingredients"
+         :items="recipe.ingredients"
+         variant="ingredients"
+      >
+       <template #item="{ item, index }">
+         <div class="instruction-item"
+         role="button"
+         tabindex="0"
+         @click.self="item.checked = !item.checked"
+         @keydown.enter="item.checked = !item.checked"
+       >
 
       <label class="checkbox-wrapper">
-        <input type="checkbox" v-model="item.checked" />
+        <input type="checkbox" v-model="item.checked"
+        @change="saveIngredientsState()" />
         <span class="custom-checkbox"></span>
       </label>
 
@@ -170,24 +190,24 @@ export default {
         {{ item.amount }} {{ item.unit }} {{ item.name }}
       </p>
 
-    </div>
-  </template>
-</ListComponent>
+      </div>
+      </template>
+      </ListComponent>
 
-<ListComponent
-  class="instructions-mobile"
-  title="Instructions"
-  :items="recipe.instructions"
-  variant="instructions"
-  listTag="div"
->
-  <template #item="{ item, index }">
-    <div class="instruction-item">
-      <div class="instruction-number">{{ index + 1 }}</div>
-      <p class="instruction-text">{{ item }}</p>
-    </div>
-  </template>
-</ListComponent>
+      <ListComponent
+       class="instructions-mobile"
+       title="Instructions"
+       :items="recipe.instructions"
+       variant="instructions"
+       listTag="div"
+      >
+       <template #item="{ item, index }">
+         <div class="instruction-item">
+           <div class="instruction-number">{{ index + 1 }}</div>
+            <p class="instruction-text">{{ item }}</p>
+         </div>
+       </template>
+      </ListComponent>
   </div>
     </div>
       </div>
