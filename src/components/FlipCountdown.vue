@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div>  <!-- Här hade vi en text först -->
         <!-- <h1 class="title">New Year Countdown!</h1> -->
     </div>
 
@@ -79,7 +79,7 @@ export default {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    font: Monsterat, sans-serif;
+    font: monstserrat, sans-serif;
 }
 
 .title {
