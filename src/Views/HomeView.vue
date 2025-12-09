@@ -79,7 +79,7 @@ export default {
 
 <template>
 
-  <div class="home-page-root">
+  <div class="home-page-root" :aria-current="$route.path === '/' || $route.path.startsWith('/category/') ? 'page' : null">
 
     <div class="category-bar">
       <!-- binds mot categories via modelValue, selectedCategory 

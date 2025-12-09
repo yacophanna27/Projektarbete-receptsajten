@@ -123,7 +123,7 @@ export default {
 
   <Header />
 
-  <ul class=" categories">
+  <ul class="categories" :aria-current="$route.path.startsWith('/category/') ? 'page' : null">
 
     <!-- loopar genom genom kategorierna och skapar li för varje kategori, 
     class binder dynamiskt mot css klassen (active) och funktionen som anropas i den används
@@ -132,7 +132,8 @@ export default {
       @click="selectCategory(category.value)" 
       @keydown.enter="selectCategory(category.value)"
       role="button" 
-      tabindex="0">
+      tabindex="0"
+      :aria-current="isActive(category.value) ? 'page' : null">
       {{ category.label }} ({{ countRecipes(category.value) }})
     </li>
   </ul>
