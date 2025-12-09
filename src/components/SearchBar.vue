@@ -13,7 +13,7 @@ export default {
   data() {
     return { searchText: this.modelValue }
   },
-
+   /* Håller koll på ändringar */
   watch: {
     modelValue(newVal) {
       this.searchText = newVal;
@@ -25,11 +25,13 @@ export default {
       this.$emit('update:modelValue', this.searchText);
       this.$emit('search', this.searchText);
     },
+    /* Rensar search input*/
     clear() {
       this.searchText = '';
       this.$emit('update:modelValue', this.searchText);
       this.$emit('search', this.searchText);
     },
+    /* Rensar med Escape knappen*/
     onKeydown(e) {
       if (e.key === 'Escape') {
         this.clear();
@@ -40,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <div class="search-wrapper">
+  <div class="search-wrapper" role="search">
     <i class="fa fa-search search-icon" aria-hidden="true"></i>
 
     <input
@@ -51,7 +53,7 @@ export default {
       @keydown="onKeydown"
       aria-label="Search recipe"
     />
-
+    <!--Rensar sök, syns bara när du börjat skriva -->
     <button
       v-if="searchText"
       class="clear-btn"
@@ -59,7 +61,7 @@ export default {
       @click="clear"
       aria-label="Clear search"
     >
-      ×
+      × 
     </button>
   </div>
 </template>
@@ -67,19 +69,22 @@ export default {
 <style scoped>
 .search-wrapper {
   font-family: 'montserrat', sans-serif;
+  font-size: 14px;
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #b39108;
+  color: goldenrod;
 }
 
 input {
+  font-family: 'montserrat', sans-serif;
+  font-size: 14px;
   padding: 0.4rem 0.6rem;
   border-radius: 2rem;
   border: 2px solid #582f62;
   background-color: var(--light-purple);
-  color: #b39108;
+  color: goldenrod;
   width: 22rem;
   height: 2.5rem;
   outline: none;
@@ -94,7 +99,7 @@ input {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #b39108;
+  color: goldenrod;
   font-size: 1.1rem;
   width: 1.9rem;
   height: 1.9rem;
@@ -106,7 +111,7 @@ input {
 
 .clear-btn:focus,
 .clear-btn:focus-visible {
-  outline: 2px solid #b39108;
+  outline: 2px solid goldenrod;
   outline-offset: 2px;
 }
 
@@ -129,7 +134,7 @@ input {
 .search-icon {
   position: absolute;
   left: 12px;
-  color: #b39108;
+  color: goldenrod;
   font-size: 1rem;
 }
 </style>
