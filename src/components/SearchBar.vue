@@ -25,7 +25,7 @@ export default {
       this.$emit('update:modelValue', this.searchText);
       this.$emit('search', this.searchText);
     },
-    /* Rensar search input*/
+    /* Rensar search input */
     clear() {
       this.searchText = '';
       this.$emit('update:modelValue', this.searchText);
