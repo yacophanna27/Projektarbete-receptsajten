@@ -46,7 +46,9 @@ export default {
   computed: {
     filteredRecipes() {
       let result = this.recipes;
+      // Filtrerar per kategori
 
+      // if-sats för att visa alla kategorier
       if (this.selectedCategory !== 'all') {
         result = result.filter(recipe =>
           recipe.categories && recipe.categories.some(category =>

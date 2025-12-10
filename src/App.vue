@@ -29,8 +29,8 @@ export default {
 </script>
 
 <template>
-  <NavBar @search="updateSearch" />
-  <router-view :search-text="searchText" />  
+  <NavBar @search="updateSearch" /> <!--Tar emot sök från navbar-->
+  <router-view :search-text="searchText" />  <!--Skickar sök till views-->
   <Footer />
   <GoToTop />
 </template>
