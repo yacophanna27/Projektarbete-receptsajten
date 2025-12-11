@@ -1,6 +1,8 @@
+const BASE_URL = 'https://recipes.bocs.se/api/v1/';
+const TEAM_ID = 'b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e';
 export async function getAllRecipes() {
     try {
-        const response = await fetch('https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes');
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/recipes`);
         const data = await response.json();
         console.log('Fetched Recipes:', data);
         return data;
@@ -12,7 +14,7 @@ export async function getAllRecipes() {
 
 export async function getAllCategories() {
     try {
-        const response = await fetch('https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/categories');
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/categories`);
         const data = await response.json();
         console.log('Fetched categories:', data);
         return data;
@@ -24,7 +26,7 @@ export async function getAllCategories() {
 
 export async function getRecipeById(id) {
     try {
-        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}`);
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/recipes/${id}`);
         if (!response.ok) {
             throw new Error(`Recipe with ID ${id} not found`);
         }
@@ -54,7 +56,7 @@ export async function saveNewRecipe(newRecipe, existingRecipesInApi) {
   
   try {
     const response = await fetch(
-      "https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes",
+      `${BASE_URL}${TEAM_ID}/recipes`,
       {
         method: "POST",
         headers: {
@@ -81,7 +83,7 @@ export async function saveNewRecipe(newRecipe, existingRecipesInApi) {
 export async function getRecipeRatings(recipeId) {
   try {
     const response = await fetch(
-      `https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${recipeId}/ratings`
+      `${BASE_URL}${TEAM_ID}/recipes/${recipeId}/ratings`
     );
     
     if (!response.ok) {
@@ -106,7 +108,7 @@ export async function addRecipeRating(recipeId, newRating) {
     
     // 1. POST det nya betyget till ratings endpoint
     const postResponse = await fetch(
-      `https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${recipeId}/ratings`,
+      `${BASE_URL}${TEAM_ID}/recipes/${recipeId}/ratings`,
       {
         method: "POST",
         headers: {
@@ -126,7 +128,7 @@ export async function addRecipeRating(recipeId, newRating) {
     
     // 3. PATCH genomsnittet till receptets rating
     const patchResponse = await fetch(
-      `https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${recipeId}`,
+      `${BASE_URL}${TEAM_ID}/recipes/${recipeId}`,
       {
         method: "PATCH",
         headers: {
@@ -172,7 +174,7 @@ export async function getAverageRating(recipeId, fallbackRating = null) {
 }
 export async function getComments(id) {
     try {
-        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}/comments`);
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/recipes/${id}/comments`);
         if (!response.ok) {
             throw new Error(`Comment with ID ${id} not found`);
         }
@@ -186,7 +188,7 @@ export async function getComments(id) {
 
 export async function postComment(id, commentData) {
     try {
-        const response = await fetch(`https://recipes.bocs.se/api/v1/b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e/recipes/${id}/comments`, {
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/recipes/${id}/comments`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

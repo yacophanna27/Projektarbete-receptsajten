@@ -13,8 +13,8 @@ export default {
 
   data() {
     return {
-      comments: [], // lista med hämtade kommentarer
-      newComment: { // ny kommentar som ska skickas
+      comments: [], 
+      newComment: {
         author: '',
         text: '',
       },
@@ -67,10 +67,9 @@ export default {
         const response = await postComment(this.recipeId, commentData); // postComment från apihelpers.js
         console.log('API response:', response);
         
-        this.newComment.author = ''; // reset fälten
-        this.newComment.text = ''; // resetta fälten
-        this.showThankYou = true; // visa tack-meddelande, i data är den false efter att man skickat in blir den true 
-        
+        this.newComment.author = ''; 
+        this.newComment.text = ''; 
+        this.showThankYou = true; 
         
         await this.fetchComments(); // hämta nypublicerad kommentar 
         console.log('Comment posted successfully');
@@ -82,7 +81,7 @@ export default {
       }
     },
 
-    formatDate(dateString) { // formatera datum för visning
+    formatDate(dateString) { 
       if (!dateString) return '';
       const date = new Date(dateString);
       return date.toLocaleDateString('sv-SE',{
@@ -98,8 +97,7 @@ export default {
 
   <div>
     <h3>Comments</h3>
-    <div v-if="showThankYou" class="thank-you"> <!-- Visa tack meddelande efter inskickad kommentar -->
-      <p>Tack för din kommentar!</p>
+    <div v-if="showThankYou" class="thank-you"> 
     </div>
 
     <div v-if="!showThankYou"> <!-- Visa kommentarsformulär om tack-meddelande inte visas -->
@@ -113,7 +111,7 @@ export default {
         />
       </div>
 
-      <div class="form-group"> <!-- Textarea för kommentarstext -->
+      <div class="form-group"> 
         <textarea
           id="comment-text"
           v-model="newComment.text"
@@ -128,20 +126,20 @@ export default {
         :disabled="isSubmitting"
         class="submit-btn"
       > 
-        {{ isSubmitting ? 'Posting...' : 'Post Comment' }} <!-- Ändra knapptext baserat på isSubmitting -->
+        {{ isSubmitting ? 'Posting...' : 'Post Comment' }} 
       </button>
     </div>
 
-    <div v-if="error" class="error-message"> <!-- Visar felmeddelande om något går fel -->
+    <div v-if="error" class="error-message"> 
       {{ error }}
     </div>
 
-    <div v-if="loading" class="loading"> <!-- Visar laddningstext medan kommentarer hämtas -->
+    <div v-if="loading" class="loading"> 
       Loading comments...
     </div>
 
     <div v-else> 
-      <div v-if="comments.length === 0" class="no-comments"> <!-- Kollar om det finns några kommentarer så ståe det följande -->
+      <div v-if="comments.length === 0" class="no-comments"> 
         No comments yet. Be the first to comment!
       </div>
       
@@ -199,6 +197,8 @@ export default {
   border-radius: 6px;
   border: 1px solid #e0e0e0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .comment-header {
