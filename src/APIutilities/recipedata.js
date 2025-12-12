@@ -1,1920 +1,905 @@
 export const recipes = [
   {
-    "title": 'Hummersoppa',
-    "description": 'Hummersoppa är en soppa som passar utmärk vid festliga tillfällen med lyxiga humrar i huvudrollen. Den krämiga soppan med saffran, konjak, fond och grädde som några smaksättare lyfter humrarna till en högklassig nivå.',
+    "title": "Lobster Soup",
+    "description": "Lobster soup is a perfect dish for festive occasions with luxurious lobsters in the spotlight. The creamy soup with saffron, cognac, stock and cream lifts the lobsters to a top-class level.",
     "timeInMins": 60,
     "ingredients": [
-      {
-        "name": "humrar",
-        "amount": 3,
-        "unit": "st"
-      },
-      {
-        "name": "gul lök",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "vitlöksklyfta",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "morot",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "grädde",
-        "amount": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "rotselleri",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "fiskbuljongtärning",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "tomatpuré",
-        "amount": 2,
-        "unit": "msk"
-      }
+      { "name": "lobsters", "amount": 3, "unit": "pcs" },
+      { "name": "yellow onion", "amount": 1, "unit": "pcs" },
+      { "name": "garlic clove", "amount": 1, "unit": "pcs" },
+      { "name": "carrot", "amount": 1, "unit": "pcs" },
+      { "name": "cream", "amount": 3, "unit": "dl" },
+      { "name": "celeriac", "amount": 100, "unit": "g" },
+      { "name": "fish stock cube", "amount": 1, "unit": "pcs" },
+      { "name": "salt", "amount": 1, "unit": "pinch" },
+      { "name": "tomato paste", "amount": 2, "unit": "tbsp" }
     ],
     "instructions": [
-      "Dagen före festen: Dela och plocka köttet ur humrarna. Krossa skalen grovt. Skala och grovhacka morot, lök, vitlök och selleri.",
-      "Hetta upp olja i en kastrull och bryn skal- och grönsakshacket.",
-      "Tillsätt saffran och tomatpuré. Fräs i ytterligare någon minut.",
-      "Häll i konjak och vin. Låt koka tills hälften av vätskan kokat bort.",
-      "Tillsätt fond och vatten. Låt småkoka i ca 45 minuter. Sila av buljongkoket.",
-      "Koka ihop buljongen med grädden i ca 5 minuter. Red soppan med majsstärkelsen utrört i lite kallt vatten. Smaka av med salt och nymalen vitpeppar. Låt svalna i kastrullen. Sätt på ett lock och ställ in i kylen.",
-      "Skala och strimla schalottenlöken. Fräs några minuter i olivolja, utan att det tar färg. Låt svalna. Spola hastigt av sockerärtorna i hett vatten och strimla dem fint.",
-      "Skär hummerköttet i grova bitar, behåll klorna hela och blanda med löken och de strimlade sockerärterna. Förvara i en täckt skål i kylen.",
-      "Nyårsafton/festtillfället: Fördela hummer, lök och sockerärter i varma djupa tallrikar. Värm soppan under omrörning och häll över hummerköttet.",
-      "Servera direkt medan soppan är rykande varm."
+      "The day before the party: Split and remove the meat from the lobsters. Crush the shells coarsely. Peel and roughly chop the carrot, onion, garlic and celery.",
+      "Heat oil in a saucepan and brown the crushed shells and chopped vegetables.",
+      "Add saffron and tomato paste. Fry for another minute.",
+      "Pour in the cognac and wine. Let it boil until half the liquid has evaporated.",
+      "Add stock and water. Let simmer for about 45 minutes. Strain the broth.",
+      "Boil the broth together with the cream for about 5 minutes. Thicken the soup with cornstarch mixed in cold water. Season with salt and freshly ground white pepper. Let cool in the pot, then refrigerate.",
+      "Peel and slice the shallots. Fry for a few minutes in olive oil without browning. Let cool. Rinse the sugar snap peas quickly in hot water and slice them thinly.",
+      "Cut the lobster meat into coarse pieces, keep the claws whole, and mix with the onion and sliced sugar snap peas. Store in a covered bowl in the fridge.",
+      "On the day of serving: Divide the lobster mixture into warm deep plates. Heat the soup and pour over.",
+      "Serve immediately while steaming hot."
     ],
-    "categories": ['mains'],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250503/cf_259/hummersoppa.jpg"
   },
   {
-    "title": 'Toast skagen',
-    "description": "Klassisk, magiskt god och snabblagad toast Skagen som serveras på smörstekt toast. Skagenröran gör du enkelt med räkor, majonnäs och dill.Servera med en klick löjrom och citronklyftor.",
+  "title": 'Bouillabaisse',
+  "description": 'Classic Provençal bouillabaisse, a fish and shellfish stew. Here we make our own shellfish stock to give the stew extra depth and flavour. Shrimp, mussels and preferably both white fish and salmon add great variety. The richly flavoured stew is often served with aioli and good bread.',
+  "timeInMins": 90,
+  "ingredients": [
+    {
+      "name": "yellow onions",
+      "amount": 2,
+      "unit": "pcs"
+    },
+    {
+      "name": "carrots",
+      "amount": 2,
+      "unit": "pcs"
+    },
+    {
+      "name": "olive oil",
+      "amount": 3,
+      "unit": "tbsp"
+    },
+    {
+      "name": "tomato paste",
+      "amount": 3,
+      "unit": "tbsp"
+    },
+    {
+      "name": "lobster, crayfish and/or shrimp shells",
+      "amount": 500,
+      "unit": "g"
+    },
+    {
+      "name": "fresh mussels",
+      "amount": 1,
+      "unit": "kg"
+    },
+    {
+      "name": "white boneless fish fillet (preferably cod)",
+      "amount": 300,
+      "unit": "g"
+    },
+    {
+      "name": "salmon fillet, skinless",
+      "amount": 300,
+      "unit": "g"
+    },
+    {
+      "name": "parsley",
+      "amount": 1,
+      "unit": "bunch"
+    }
+  ],
+  "instructions": [
+    'Seafood for the bouillabaisse: Thaw the shrimp if frozen. Pat them dry on kitchen paper.',
+    'Shellfish stock: Peel the onion and carrots. Cut them finely. Peel and crush the garlic cloves. Sauté the vegetables in olive oil in a large pot together with the spices.',
+    'Add the tomato paste and fry for a minute.',
+    'Add the shellfish shells, pour in water and crumble in the stock cubes.',
+    'Bring the stock to a boil and let it simmer gently for about 25 minutes without a lid. Skim occasionally. Strain the stock through a fine sieve.',
+    'Bouillabaisse: Remove seeds and chop the pepper into pieces. Trim the fennel and cut into approx. 1×1 cm pieces. Peel the carrot and potato and cut into approx. 1×1 cm pieces. Halve the tomato and squeeze out the seeds.',
+    'Sauté pepper, fennel, carrot and potato in olive oil in a large pot. Add saffron and the tomato flesh (not the seeds). Pour in the shellfish stock and bring to a boil.',
+    'Simmer gently for 25–30 minutes without a lid. Purée the soup until smooth.',
+    'Preheat the oven to 100°C (to keep the mussels warm).',
+    'Seafood for the bouillabaisse: Clean the mussels, brush them and remove the beards. Tap any open mussels lightly and discard those that do not close; also discard broken mussels. Poach the mussels in the soup for a few minutes, covered, until they open. Lift the mussels out of the broth with a slotted spoon, discard any that did not open. Season the soup with salt and pepper.',
+    'Keep the mussels warm in the oven on a serving platter under foil.',
+    'Cut the fish into approx. 2×2 cm cubes. Add the fish and prawns (do not cook ordinary shrimp — sprinkle them on the stew before serving). Bring to a boil and simmer gently 2–3 minutes.',
+    'Roughly chop the parsley. Sprinkle parsley over the mussels.',
+    'To serve: Serve the bouillabaisse in warm deep plates with the mussels, aioli and croutons or sourdough bread.'
+  ],
+  "categories": ['mains'],
+  "ratings": [],
+  "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
+},
+
+  {
+    "title": "Toast Skagen",
+    "description": "Classic, delicious and quick Toast Skagen served on butter-fried toast. The shrimp mixture is easily made with shrimp, mayonnaise and dill. Serve with roe and lemon wedges.",
     "timeInMins": 30,
     "ingredients": [
-      {
-        "name": "räkor i lake",
-        "amount": 1,
-        "unit": "förpackning"
-      },
-      {
-        "name": "dill",
-        "amount": 1,
-        "unit": "kruka"
-      },
-      {
-        "name": "citron",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "peppar",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "formfranska",
-        "amount": 3,
-        "unit": "skivor"
-      },
-      {
-        "name": "smör",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "löjrom",
-        "amount": 80,
-        "unit": "gram"
-      },
+      { "name": "shrimp in brine", "amount": 1, "unit": "package" },
+      { "name": "dill", "amount": 1, "unit": "bunch" },
+      { "name": "lemon", "amount": 1, "unit": "pcs" },
+      { "name": "salt", "amount": 1, "unit": "pinch" },
+      { "name": "pepper", "amount": 1, "unit": "pinch" },
+      { "name": "white bread", "amount": 3, "unit": "slices" },
+      { "name": "butter", "amount": 2, "unit": "tbsp" },
+      { "name": "roe", "amount": 80, "unit": "g" }
     ],
 
     "instructions": [
-      "Låt räkorna rinna av i en sil.",
-      "Hacka dillen (spar några vippor till serveringen). Blanda dillen med majonnäsen.",
-      "Smaka av med citronsaft från halva citronen (för 4 port) samt salt och peppar. Skär resten av citronen i klyftor till serveringen.",
-      "Pressa ur ytterligare lag ur räkorna och blanda dem med majonnäsen.",
-      "Dela brödskivorna på snedden och stek bröden gyllenbruna i smöret i en stekpanna.",
-      "Servera skagenröran på bröden med löjrommen, citronklyftor och toppa med lite extra dill och nymalen svartpeppar.",
+      "Let the shrimp drain in a sieve.",
+      "Chop the dill (save some for garnish). Mix the dill with the mayonnaise.",
+      "Season with lemon juice, salt and pepper. Cut the rest of the lemon into wedges.",
+      "Squeeze excess liquid from the shrimp and mix them into the mayonnaise.",
+      "Cut the bread diagonally and fry golden in butter.",
+      "Serve the Skagen mix on the toast with roe, lemon and dill."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
     "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_229530/cf_259/toast_skagen.jpg'
   },
 
-
   {
-    "title": 'Pannacotta',
-    "description": "Klassiskt grundrecept på pannacotta, som är en underbart god efterrätt med lyxig känsla. Pannacottan, italienarnas klassiska efterrätt, får här en fin vaniljsmak från vaniljstången som kokas med grädden och den serveras allra helst med färska bär.",
+    "title": "Pannacotta",
+    "description": "Classic recipe for pannacotta, a wonderfully delicious dessert with a luxurious feel. The vanilla flavor comes from the vanilla bean boiled with the cream, best served with fresh berries.",
     "timeInMins": 20,
     "ingredients": [
-      {
-        "name": "gelatinblad",
-        "amount": 2,
-        "unit": "st",
-      },
-      {
-        "name": "grädde",
-        "amount": 5,
-        "unit": "dl",
-      },
-      {
-        "name": "vaniljstång",
-        "amount": 1,
-        "unit": "st",
-      },
-      {
-        "name": "socker",
-        "amount": 0.5,
-        "unit": "dl",
-      },
-      {
-        "name": "färska bär",
-        "amount": 20,
-        "unit": "st",
-      }
+      { "name": "gelatin sheets", "amount": 2, "unit": "pcs" },
+      { "name": "cream", "amount": 5, "unit": "dl" },
+      { "name": "vanilla bean", "amount": 1, "unit": "pcs" },
+      { "name": "sugar", "amount": 0.5, "unit": "dl" },
+      { "name": "fresh berries", "amount": 20, "unit": "pcs" }
     ],
     "instructions": [
-      "Lägg gelatinbladen i kallt vatten.",
-      "Häll grädden i en kastrull. Dela vaniljstången på längden och skrapa ur fröna. Lägg fröna och stången i grädden tillsammans med sockret.",
-      "Koka upp grädden och koka den sakta i ca 2 minuter. Vispa så att vaniljfröna blandar sig med grädden. Ta upp vaniljstången.",
-      "Ta upp gelatinbladen och lägg ner dem i den varma grädden. Rör försiktigt så att gelatinbladen löser sig.",
-      "Fördela grädden i portionsglas eller formar.",
-      "Sätt formarna i kylen, minst 5 timmar.",
-      "Till servering: Dekorera med färska bär och servera."
+      "Place the gelatin sheets in cold water.",
+      "Heat the cream with vanilla seeds, pod and sugar.",
+      "Simmer gently, remove the pod.",
+      "Stir in the gelatin until dissolved.",
+      "Divide into glasses.",
+      "Chill for at least 5 hours.",
+      "Decorate with fresh berries."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243738/cf_259/pannacotta.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243738/cf_259/pannacotta.jpg"
   },
+
   {
-    "title": 'Tiramisu',
-    "description": 'Gör din egen lyxiga tiramisu med detta härliga recept! Häll ner len mascarpone- och äggsmet i en form där botten är täckt av smakliga, espressodoppade och spetsade savoiardikex. Ställ in i kylen över natten och servera tiramisun pudrad med kakao och färska hallon.',
+    "title": "Tiramisu",
+    "description": "Make your own luxurious tiramisu with this wonderful recipe! Layer espresso-dipped ladyfingers with creamy mascarpone mixture. Chill overnight and serve with cocoa and raspberries.",
     "timeInMins": 45,
     "ingredients": [
-      {
-        "name": "äggulor",
-        "amount": 5,
-        "unit": "st"
-      },
-      {
-        "name": "mascarpone",
-        "amount": 2,
-        "unit": "burkar"
-      },
-      {
-        "name": "äggvitor",
-        "amount": 5,
-        "unit": "st"
-      },
-      {
-        "name": "socker",
-        "amount": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "kallt kaffe",
-        "amount": 1.75,
-        "unit": "dl"
-      },
-      {
-        "name": "amaretto eller konjak",
-        "amount": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "savoiardikex",
-        "amount": 1,
-        "unit": "förp"
-      },
-      {
-        "name": "kakao",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "färska hallon",
-        "amount": 10,
-        "unit": "st"
-      }
+      { "name": "egg yolks", "amount": 5, "unit": "pcs" },
+      { "name": "mascarpone", "amount": 2, "unit": "tubs" },
+      { "name": "egg whites", "amount": 5, "unit": "pcs" },
+      { "name": "sugar", "amount": 1.5, "unit": "dl" },
+      { "name": "cold coffee", "amount": 1.75, "unit": "dl" },
+      { "name": "amaretto or cognac", "amount": 0.5, "unit": "dl" },
+      { "name": "ladyfingers", "amount": 1, "unit": "package" },
+      { "name": "cocoa powder", "amount": 1, "unit": "tbsp" },
+      { "name": "fresh raspberries", "amount": 10, "unit": "pcs" }
     ],
     "instructions": [
-      "Vispa ihop äggulor och mascarpone till en slät smet.",
-      "Vispa äggvitorna fluffiga med elvisp. Tillsätt sockret lite i taget och fortsätt vispa tills smeten är fast och blank.",
-      "Vänd ner äggvitevispet i äggsmeten med hjälp av en slickepott.",
-      "Blanda spriten med kaffet och doppa hälften av kexen hastigt i kaffet. Lägg kexen i en form (ca 20 x 25 cm, för 8 port). Häll på hälften av äggsmeten och pudra på lite kakao. Doppa sedan resten av kexen och lägg dem på äggsmeten och häll på resten av äggsmeten.",
-      "Häll äggsmeten över kexen och ställ i kylen minst 5 timmar, gärna över natten.",
-      "Pudra över kakao vid servering och servera gärna med hallon.",
+      "Whisk egg yolks and mascarpone.",
+      "Whisk egg whites with sugar until firm.",
+      "Fold the mixtures together.",
+      "Dip half of the ladyfingers in coffee and liqueur, layer in a dish.",
+      "Add half of the mascarpone mixture and cocoa.",
+      "Repeat layers and refrigerate overnight.",
+      "Dust with cocoa and serve with raspberries."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_218797/cf_259/tiramisu.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_218797/cf_259/tiramisu.jpg"
   },
+
   {
-    "title": 'Ryggbiff med rotselleripuré',
-    "description": 'En klassisk festmåltid när den är som bäst: stekt ryggbiff som serveras med len rotselleripuré. Stek ryggbiffen till perfektion genom att hålla koll på innertemperaturen. Svartkålschips blir ett enkelt men elegant tillbehör.',
+    "title": "Sirloin Steak with Celeriac Purée",
+    "description": "A classic festive meal at its best: pan-fried sirloin steak served with smooth celeriac purée. Cook the steak to perfection by monitoring the internal temperature. Crispy black kale chips add a simple yet elegant touch.",
     "timeInMins": 70,
     "ingredients": [
-      {
-        "name": "ryggbiff gärna med fettkappa",
-        "amount": 8,
-        "unit": "skivor"
-      },
-      {
-        "name": "salt",
-        "amount": 3,
-        "unit": "tsk"
-      },
-      {
-        "name": "rotselleri",
-        "amount": 2,
-        "unit": "kg"
-      },
-      {
-        "name": "vitvinsvinäger",
-        "amount": 4,
-        "unit": "msk"
-      },
-      {
-        "name": "svartkål",
-        "amount": 8,
-        "unit": "blad"
-      },
-      {
-        "name": "olja",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "schalottenlökar",
-        "amount": 3,
-        "unit": "styck"
-      },
-      {
-        "name": "smör",
-        "amount": 75,
-        "unit": "g"
-      },
-      {
-        "name": "konc kalvfond",
-        "amount": 2,
-        "unit": "msk"
-      }
+      { "name": "sirloin steak, preferably with fat cap", "amount": 8, "unit": "slices" },
+      { "name": "salt", "amount": 3, "unit": "tsp" },
+      { "name": "celeriac", "amount": 2, "unit": "kg" },
+      { "name": "white wine vinegar", "amount": 4, "unit": "tbsp" },
+      { "name": "black kale", "amount": 8, "unit": "leaves" },
+      { "name": "oil", "amount": 1, "unit": "tbsp" },
+      { "name": "shallots", "amount": 3, "unit": "pieces" },
+      { "name": "butter", "amount": 75, "unit": "g" },
+      { "name": "concentrated veal stock", "amount": 2, "unit": "tbsp" }
     ],
     "instructions": [
-      "Sätt ugnen på 175°C.",
-      "Rotselleripuré: Skala och skär rotsellerin i mindre bitar och lägg i en ugnsform. Lägg vitlöksklyftorna (med skal) till vitlöksskyn i en ugnsform. Rosta rotsellerin och vitlöken i ugnen ca 30 minuter tills rotsellerin är mjuk.",
-      "Mixa rotsellerin i en blender med vinäger och olivolja. Späd med vatten till lagom konsistens. Smaka av med salt.",
-      "Sätt ugnen på 150°C.",
-      "Svartkål: Blanda svartkålsbladen med olja och salt. Sprid ut på en bakpappersklädd plåt och ställ in i mitten av ugnen 15–25 minuter.",
-      "Vitlökssky: Skala och skiva löken. Skala de rostade vitlöksklyftorna. Fräs schalottenlöken i 2 msk av smöret (för 8 port) i en kastrull ca 5 minuter. Tillsätt vinäger och den rostade vitlöken. Låt koka upp och tillsätt fond och vatten, låt koka 2–3 minuter. Tillsätt resten av smöret lite i taget och mixa till en slät sås vid servering. Sila genom en finmaskig sil och smaka av med salt och peppar.",
-      "Sätt ugnen på 100°C.",
-      "Ryggbiff: Krydda köttet med salt och peppar. Stek i omgångar i het panna i olja och smör, 1–2 minuter per sida. Lägg köttet på ett ugnsgaller med plåt under. Sätt in i ugnen, se Innertemperatur för blodigt, medium och välstekt. Låt köttet vila ca 2 minuter innan servering.",
-      "Skiva köttet och servera med rotselleripurén, vitlöksskyn och toppa med svartkålen."
+      "Preheat the oven to 175°C.",
+      "Celeriac purée: Peel and cut the celeriac into smaller pieces and place in an ovenproof dish. Add garlic cloves (with skin) in a separate dish. Roast celeriac and garlic for about 30 minutes until soft.",
+      "Blend the celeriac with vinegar and olive oil. Add water to reach a smooth consistency. Season with salt.",
+      "Preheat the oven to 150°C.",
+      "Black kale: Mix kale leaves with oil and salt. Spread on a lined baking tray and bake for 15–25 minutes.",
+      "Garlic sauce: Peel and slice the onions. Peel the roasted garlic. Sauté shallots in 2 tbsp butter for 5 minutes. Add vinegar and roasted garlic. Bring to a boil, then add stock and water. Let simmer 2–3 minutes. Add the remaining butter gradually and blend until smooth. Strain and season with salt and pepper.",
+      "Preheat the oven to 100°C.",
+      "Sirloin: Season with salt and pepper. Sear in batches, 1–2 minutes per side. Place on an oven rack and finish in the oven until desired temperature. Rest for 2 minutes.",
+      "Slice the meat and serve with celeriac purée, garlic sauce, and black kale."
     ],
-    "categories": ['mains'],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209578/cf_259/ryggbiff_med_rotselleripur%C3%A9_och_vitlokssky.jpg"
   },
 
   {
-    "title": 'Toast med fikon och ricotta',
-    "description": "Festliga snittar! Rostad surdegsbaguette med krämig ricottaost toppas med klyftor av fikon och pinjenötter. Ringla över honung innan servering och bjudningen kan börja.",
+    "title": "Toast with Figs and Ricotta",
+    "description": "Festive appetizers! Toasted sourdough baguette with creamy ricotta topped with fig wedges and pine nuts. Drizzle with honey before serving.",
     "timeInMins": 15,
     "ingredients": [
-      {
-        "name": "surdegsbaugette",
-        "amount": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "fikon",
-        "amount": 4,
-        "unit": "st"
-      },
-      {
-        "name": "ricottaost",
-        "amount": 1,
-        "unit": "förpackning"
-      },
-      {
-        "name": "pinjenötter",
-        "amount": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "flytande honung",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "flingsalt",
-        "amount": 1,
-        "unit": "nypa"
-      },
-      {
-        "name": "svartpeppar",
-        "amount": 1,
-        "unit": "tsk"
-      },
+      { "name": "sourdough baguette", "amount": 0.5, "unit": "pcs" },
+      { "name": "figs", "amount": 4, "unit": "pcs" },
+      { "name": "ricotta", "amount": 1, "unit": "package" },
+      { "name": "pine nuts", "amount": 0.5, "unit": "dl" },
+      { "name": "liquid honey", "amount": 2, "unit": "tbsp" },
+      { "name": "flake salt", "amount": 1, "unit": "pinch" },
+      { "name": "black pepper", "amount": 1, "unit": "tsp" }
     ],
     "instructions": [
-      "Skiva baguetten i tunna skivor. Rosta i en torr stekpanna. Skär fikonen i klyftor.",
-      "Bred ricotta på brödskivorna. Toppa med fikon och pinjenötter. Ringla över honung och strö över salt och peppar.",
+      "Slice the baguette thinly and toast in a dry pan. Cut the figs into wedges.",
+      "Spread ricotta on the bread. Top with figs and pine nuts. Drizzle honey and sprinkle salt and pepper."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_233778/cf_259/toast_med_fikon__ricotta_och_pinjenotter.jpg"
   },
 
-
   {
-    "title": 'Rentartar med brynt sojasmör',
-    "description": "Viltkött gillar svamp lite extra mycket. Här i en lyxig tartar på ytterfilé av ren. Pepparrot och brynt sojasmör förhöjer smaken. Avsluta med att råriva champinjoner och strö över – ett enkelt sätt att få fram doften av en höstig skogspromenad. Ljuvligt som förrätt!",
+    "title": "Reindeer Tartare with Browned Soy Butter",
+    "description": "Game meat pairs beautifully with mushrooms. This luxurious tartare uses reindeer tenderloin and is enhanced with horseradish and browned soy butter. Finished with raw grated mushrooms for a woodland aroma. Perfect as a starter!",
     "timeInMins": 45,
     "ingredients": [
-      {
-        "name": "renytterfilé",
-        "amount": 200,
-        "unit": "gram"
-      },
-      {
-        "name": "ljust surdegsbröd",
-        "amount": 2,
-        "unit": "skivor"
-      },
-      {
-        "name": "rapsolja",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "japansk soja",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "gula steklökar",
-        "amount": 5,
-        "unit": "st"
-      },
-      {
-        "name": "skogschampinjoner",
-        "amount": 100,
-        "unit": "gram"
-      },
-      {
-        "name": "små äggulor",
-        "amount": 8,
-        "unit": "st"
-      },
-      {
-        "name": "riven pepparrot",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "krasse",
-        "amount": 1,
-        "unit": ""
-      },
+      { "name": "reindeer tenderloin", "amount": 200, "unit": "g" },
+      { "name": "light sourdough bread", "amount": 2, "unit": "slices" },
+      { "name": "rapeseed oil", "amount": 1, "unit": "tbsp" },
+      { "name": "Japanese soy sauce", "amount": 2, "unit": "tbsp" },
+      { "name": "yellow frying onions", "amount": 5, "unit": "pcs" },
+      { "name": "forest mushrooms", "amount": 100, "unit": "g" },
+      { "name": "small egg yolks", "amount": 8, "unit": "pcs" },
+      { "name": "grated horseradish", "amount": 1, "unit": "dl" },
+      { "name": "cress", "amount": 1, "unit": "" }
     ],
     "instructions": [
-      "Putsa renköttet fritt från senor och hinnor. Skär det i små tärningar. Förvara övertäckt i kyl.",
-      "Skär brödet i tärningar. Stek runt om i oljan och 1 msk av smöret (för 8 port) i en stekpanna tills de är gyllene. Ta upp och låt rinna av på hushållspapper.",
-      "Hetta upp resterande smör i en liten kastrull. Ta från värmen när det börjar bli lätt brynt och doftar nötigt.",
-      "Sila smöret genom en finmaskig sil och blanda med sojan.",
-      "Skala och skiva löken tunt, gärna med mandolin. Ansa och riv champinjonerna grovt.",
-      "Forma renfiléhacket till 8 lika stora bollar (för 8 port). Lägg på ett fat. Gör en liten urgröpning i varje boll och häll försiktigt i en äggula",
-      "Fördela den skivade löken, brödtärningarna, svamp och pepparrot över. Klipp krassen och strö över.",
-      "Avsluta med att värma sojasmöret och ringla över tartaren. Strö över lite flingsalt."
+      "Trim the reindeer meat and cut into small cubes. Keep chilled.",
+      "Cut the bread into cubes. Fry in oil and 1 tbsp butter until golden. Drain on paper.",
+      "Brown the remaining butter in a saucepan until nutty.",
+      "Strain the butter and mix with soy sauce.",
+      "Peel and slice onions thinly. Trim and grate mushrooms.",
+      "Shape the meat into 8 small balls. Make a hollow and place an egg yolk in each.",
+      "Top with onions, bread cubes, mushrooms, and horseradish. Add cress.",
+      "Warm the soy butter and drizzle over. Finish with flake salt."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_126070/cf_259/rentartar_med_riven_svamp_och_brynt_sojasmor_.jpg"
   },
 
   {
-    "title": 'Torskrygg med räkor och dillsmör',
-    "description": 'Torskrygg i ugn med len potatiscréme och räkor, perfekt till nyår och andra festliga tillfällen. Här kombinerar du rimmad torskrygg med en créme gjord på mandelpotatis. Toppa med lätt smörstekta räkor smaksatta med citron och dill.',
+    "title": "Cod Fillet with Shrimp and Dill Butter",
+    "description": "Oven-baked cod with creamy potato purée and shrimp — perfect for New Year's or other festive occasions. Rim the cod, serve with mandel potato cream, and top with warm dill butter and shrimp.",
     "timeInMins": 50,
     "ingredients": [
-      {
-        "name": "torskryggfilé",
-        "amount": 4,
-        "unit": "port"
-      },
-      {
-        "name": "socker",
-        "amount": 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "mandelpotatis",
-        "amount": 600,
-        "unit": "g"
-      },
-      {
-        "name": "smetana",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "citron",
-        "amount": 1 / 2,
-        "unit": "styck"
-      },
-      {
-        "name": "avrunna skalade räkor i lake",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "färsk dill",
-        "amount": 2,
-        "unit": "kruka"
-      },
-      {
-        "name": "smör",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "färskpressad citronsaft",
-        "amount": 3,
-        "unit": "droppar"
-      }
+      { "name": "cod loin fillet", "amount": 4, "unit": "servings" },
+      { "name": "sugar", "amount": 2, "unit": "tsp" },
+      { "name": "mandel potatoes", "amount": 600, "unit": "g" },
+      { "name": "smetana", "amount": 2, "unit": "dl" },
+      { "name": "lemon", "amount": 0.5, "unit": "piece" },
+      { "name": "drained peeled shrimp in brine", "amount": 2, "unit": "dl" },
+      { "name": "fresh dill", "amount": 2, "unit": "bunch" },
+      { "name": "butter", "amount": 100, "unit": "g" },
+      { "name": "fresh lemon juice", "amount": 3, "unit": "drops" }
     ],
     "instructions": [
-        "Tina torskryggen om fryst används.",
-        "Rimmad torsk: Blanda salt och socker med vattnet och rör om så att det löser sig. Lägg fisken i saltlagen, låt den ligga i lagen 2-3 timmar.",
-        "Sätt ugnen på 125°C.",
-        "Potatiscrème: Skala och koka potatisen mycket försiktigt tills den är mjuk. Häll av vattnet, ställ tillbaka kastrullen på plattan och ånga potatisen torr.",
-        "Riv skalet av en halv citron. Smaksätt potatiscrèmen med salt och peppar och skalet av citronen. Lägg tillbaka i kastrullen och håll potatiscrémen varm på svag värme på spisen.",
-        "Rimmad torsk: Lägg torsken i en ugnssäker form. Sätt in formen mitt i ugnen 25-30 minuter eller tills innertemperaturen på fisken är 56°C.",
-        "Dillsmör: Häll av räkorna i en sil. Ansa, skölj och strimla purjolöken i tunna och små strimlor. Skär dillen fint.",
-        "Smält smöret i en kastrull och koka purjolöken mjuk i smöret.",
-        "Värm räkorna försiktigt i smöret de ska inte koka, då blir de sega. Smaksätt med salt, peppar och några droppar citronsaft. Rör ner dillen i smöret.",
-        "Servera torsken på potatiscrémen, slå över dillsmöret med räkor. Garnera med krasse."
-      ],
-    "categories": ['mains'],
+      "Thaw cod if frozen.",
+      "Brined cod: Mix salt and sugar with water. Add cod and let sit for 2–3 hours.",
+      "Preheat the oven to 125°C.",
+      "Potato cream: Peel and boil potatoes gently until soft. Drain and steam dry.",
+      "Grate lemon zest and season the potato cream with salt, pepper, and zest. Keep warm.",
+      "Bake cod in the oven for 25–30 minutes or until internal temperature reaches 56°C.",
+      "Dill butter: Drain shrimp. Clean and slice leek finely. Chop dill.",
+      "Melt butter and soften leek.",
+      "Warm shrimp gently (do not boil). Season with salt, pepper, and lemon juice. Stir in dill.",
+      "Serve cod on the potato cream and spoon dill butter and shrimp on top."
+    ],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg'
-    },
-    {
-    "title": 'Chokladpavlova med körsbär',
-    "description": 'Det är något barnsligt gott över marängtårta. Det där frasiga yttre och sega inre i kombination med len grädde. Den här chokladpavlovan går inte av för hackor, i sällskap av amarettogrädde och körsbär kommer ingen vid bordet bli ledsen.',
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191313/cf_259/torskrygg_i_ugn_med_rakor_och_dillsmor.jpg"
+  },
+
+  {
+    "title": "Chocolate Pavlova with Cherries",
+    "description": "There is something delightfully nostalgic about a meringue cake — crispy outside, chewy inside, topped with rich cream. This chocolate pavlova with amaretto cream and cherries is guaranteed to impress.",
     "timeInMins": 60,
     "ingredients": [
-        {
-          "name": "äggvitor",
-          "amount": 4,
-          "unit": "st"
-        },
-        {
-          "name": "salt",
-          "amount": 1,
-          "unit": "krm"
-        },
-        {
-          "name": "socker",
-          "amount": 3.5,
-          "unit": "dl"
-        },
-        {
-          "name": "vitvinsvinäger",
-          "amount": 1,
-          "unit": "tsk"
-        },
-        {
-          "name": "kakao",
-          "amount": 2,
-          "unit": "tsk"
-        },
-        {
-          "name": "majsstärkelse",
-          "amount": 1,
-          "unit": "msk"
-        },
-        {
-          "name": "smält mörk choklad (70%)",
-          "amount": 50,
-          "unit": "g"
-        },
-        {
-          "name": "urkärnade körsbär",
-          "amount": 500,
-          "unit": "g"
-        },
-        {
-          "name": "färskpressad citronjuice",
-          "amount": 2,
-          "unit": "msk"
-        },
-        {
-          "name": "vispgrädde",
-          "amount": 3,
-          "unit": "dl"
-        },
-        {
-          "name": "vaniljsocker",
-          "amount": 1,
-          "unit": "msk"
-        },
-        {
-          "name": "amaretto",
-          "amount": 2,
-          "unit": "msk"
-        },
-        {
-          "name": "hyvlad mörk choklad",
-          "amount": 10,
-          "unit": "g"
-        }
-      ],
+      { "name": "egg whites", "amount": 4, "unit": "pcs" },
+      { "name": "salt", "amount": 1, "unit": "pinch" },
+      { "name": "sugar", "amount": 3.5, "unit": "dl" },
+      { "name": "white wine vinegar", "amount": 1, "unit": "tsp" },
+      { "name": "cocoa powder", "amount": 2, "unit": "tsp" },
+      { "name": "cornstarch", "amount": 1, "unit": "tbsp" },
+      { "name": "melted dark chocolate (70%)", "amount": 50, "unit": "g" },
+      { "name": "pitted cherries", "amount": 500, "unit": "g" },
+      { "name": "fresh lemon juice", "amount": 2, "unit": "tbsp" },
+      { "name": "whipping cream", "amount": 3, "unit": "dl" },
+      { "name": "vanilla sugar", "amount": 1, "unit": "tbsp" },
+      { "name": "amaretto", "amount": 2, "unit": "tbsp" },
+      { "name": "shaved dark chocolate", "amount": 10, "unit": "g" }
+    ],
     "instructions": [
-        "Sätt ugnen på 225°C.",
-        "Vispa äggvitor och salt till ett vitt skum. Tillsätt sockret, lite i taget, och fortsätt vispa till en fast maräng. Vispa ner vinägern.",
-        "Blanda kakao och majsstärkelse. Rör ner i marängen. Rör försiktigt, men ändå snabbt, ner den smälta chokladen (rör du för länge riskerar smeten att spricka).",
-        "Bred ut marängsmeten till en rund botten, ca 20 cm i diameter, på en bakpappersklädd plåt. Ställ in i mitten av ugnen och sänk värmen till 125°C. Grädda ca 11/2 timme, tills marängen är hård på ytan men fortfarande lite seg i mitten. Stäng av ugnen och låt stå kvar tills ugnen svalnat.",
-        "Körsbär: Blanda körsbär, socker och citronjuice i en kastrull. Låt koka på svag värme ca 10-15 minuter, till en fast kompott. Låt svalna.",
-        "Mandelgrädde: Vispa grädden. Rör ner vaniljsocker och mandellikör.",
-        "Vid servering: Toppa pavlovan med mandelgrädden och körsbären. Garnera med hyvlad mörk choklad."
-      ],
-    "categories": ['desserts'],
+      "Preheat oven to 225°C.",
+      "Whisk egg whites and salt to a foam. Add sugar slowly and whisk until firm. Add vinegar.",
+      "Mix cocoa and cornstarch and fold into the meringue. Fold in melted chocolate gently but quickly.",
+      "Spread into a round base (~20 cm) on a lined tray. Lower heat to 125°C and bake 1.5 hours. Let cool in oven.",
+      "Cherries: Cook cherries, sugar, and lemon juice for 10–15 minutes until thick. Let cool.",
+      "Amaretto cream: Whip the cream. Add vanilla sugar and amaretto.",
+      "Before serving: Top pavlova with cream, cherries, and shaved chocolate."
+    ],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg'
-    },
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152531/cf_259/chokladpavlova_med_mandelgradde_och_korsbar.jpg"
+  },
 
-    {
-    "title": 'Krämig hallonmimosa',
-    "description": "Krämig hallonmimosa. Drinken är frisk och fruktig, och blir härligt uppfriskande med mousserande vin.",
+  {
+    "title": "Creamy Raspberry Mimosa",
+    "description": "A creamy raspberry mimosa. Fresh and fruity, made wonderfully refreshing with sparkling wine.",
     "timeInMins": 60,
     "ingredients": [
-         {
-          "name": "frysta hallon",
-          "amount": 200,
-          "unit": "gram"
-        },
-        {
-          "name": "strösocker",
-          "amount": 2,
-          "unit": "dl"
-        },
-        {
-          "name": "matlagningsgrädde",
-          "amount": 2.5,
-          "unit": "dl"
-        },
-        {
-          "name": "torrt mousserande vin",
-          "amount": 75,
-          "unit": "cl"
-        },
-      ],
+      { "name": "frozen raspberries", "amount": 200, "unit": "g" },
+      { "name": "granulated sugar", "amount": 200, "unit": "ml" },
+      { "name": "cooking cream", "amount": 250, "unit": "ml" },
+      { "name": "dry sparkling wine", "amount": 750, "unit": "ml" }
+    ],
     "instructions": [
-      "Värm hallon och socker i en kastrull tills sockret löst sig och hallonen är smälta. Passera hallonen genom en finmaskig sil och låt svalna.",
-      "Blanda hallonpurén med grädden och frys ca 5 timmar. Rör då och då.",
-      "Lägg en kula av hallongrädden i varje glas och häll över det mousserande vinet, servera genast.",
-      ],
-    "categories": ['drinks'],
+      "Heat raspberries and sugar in a saucepan until the sugar dissolves and the raspberries melt. Strain through a fine sieve and let cool.",
+      "Mix the raspberry purée with the cream and freeze for about 5 hours. Stir occasionally.",
+      "Place a scoop of the raspberry cream in each glass and pour over sparkling wine. Serve immediately."
+    ],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg'
-    },
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210439/cf_259/kramig_hallonmimosa.jpg"
+  },
 
-    {
-    "title": 'Thai Basil med kokosskum',
-    "description":"Här bjuder vi på en aromatisk och fräsch drink med asiatisk twist! Basilika, lime och gin skapar en smakrik cocktail med spännande karaktär. Toppa med ett läckert kokosskum.",
+  {
+    "title": "Thai Basil with Coconut Foam",
+    "description": "An aromatic and fresh drink with an Asian twist! Basil, lime and gin create a flavorful cocktail topped with a delicious coconut foam.",
     "timeInMins": 25,
     "ingredients": [
-         {
-          "name": "kokosmjölk",
-          "amount": 5,
-          "unit": "dl"
-        },
-          {
-          "name": "strösocker",
-          "amount": 100,
-          "unit": "gram"
-        },
-          {
-          "name": "sockerlag",
-          "amount": 3,
-          "unit": "cl"
-        },
-        {
-          "name": "thaibasilika",
-          "amount": 10,
-          "unit": "blad"
-        },
-        {
-          "name": "gin",
-          "amount": 5,
-          "unit": "cl"
-        },
-        {
-          "name": "citronjuice",
-          "amount": 3,
-          "unit": "cl"
-        },
-        {
-          "name": "isbit",
-          "amount": 1,
-          "unit": "st"
-        },
-      ],
+      { "name": "coconut milk", "amount": 500, "unit": "ml" },
+      { "name": "granulated sugar", "amount": 100, "unit": "g" },
+      { "name": "simple syrup", "amount": 30, "unit": "ml" },
+      { "name": "Thai basil leaves", "amount": 10, "unit": "leaves" },
+      { "name": "gin", "amount": 50, "unit": "ml" },
+      { "name": "lemon juice", "amount": 30, "unit": "ml" },
+      { "name": "ice cube", "amount": 1, "unit": "pcs" }
+    ],
     "instructions": [
-        "Kokosskum: Värm kokosmjölk och socker tills sockret har smält. Låt svalna helt i kylskåp.",
-        "Ställ sifonen (som rymmer 5 dl) i kylen, så att den blir kall.",
-        "Drink: Mixa Sockerlag med thaibasilika. Sila av.",
-        "Fyll sifonen med kokosmjölken.",
-        "Skaka sockerlag, gin och citronjuice kalla.",
-        "Sila upp över en stor isbit i ett lågt glas och toppa med kokosskum från sifonen.",
-        "Garnera eventuellt med thaibasilika.",
-      ],
-    "categories": ['drinks'],
+      "Coconut foam: Heat coconut milk and sugar until dissolved. Let cool completely in the refrigerator.",
+      "Chill the siphon (5 dl/500 ml) in the refrigerator.",
+      "Drink: Blend simple syrup with Thai basil. Strain.",
+      "Fill the siphon with the coconut milk.",
+      "Shake simple syrup, gin and lemon juice with ice.",
+      "Strain into a lowball glass over a large ice cube and top with coconut foam.",
+      "Garnish with Thai basil if desired."
+    ],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg'
-    },
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bupdodddnw8fa0tdpxwx.jpg"
+  },
 
-    {
-    "title": 'Negroni med sötsyrlig twist',
-    "description": "Negroni sour är en variant på den klassiska cocktailen negroni med en sötsyrlig twist och ett fluffigt skum av äggvita. Den är inspirerad av både negroni och klassiska sour-drinkar som whiskey sour. ",
+  {
+    "title": "Negroni with Sweet & Sour Twist",
+    "description": "Negroni sour is a variation of the classic Negroni with a sweet-tart twist and a fluffy egg-white foam, inspired by Negroni and classic sour cocktails like Whiskey Sour.",
     "timeInMins": 35,
     "ingredients": [
-        {
-          "name": "strösocker",
-          "amount": 1,
-          "unit": "dl"
-        },
-        {
-          "name": "vatten",
-          "amount": 1,
-          "unit": "dl"
-        },
-        {
-          "name": "gin",
-          "amount": 12,
-          "unit": "cl"
-        },
-        {
-          "name": "campari",
-          "amount": 12,
-          "unit": "cl"
-        },
-        {
-          "name": "röd sör vermouth",
-          "amount": 12,
-          "unit": "cl"
-        },
-        {
-          "name": "apelsin",
-          "amount": 1,
-          "unit": "st"
-        },
-        {
-          "name": "färskpressad citronjuice",
-          "amount": 18,
-          "unit": "cl"
-        },
-        {
-          "name": "sockerlag(från ovan)",
-          "amount": 12,
-          "unit": "cl"
-        },
-        {
-          "name": "stora äggvitor",
-          "amount": 2,
-          "unit": "st"
-        },
-        {
-          "name": "isbit",
-          "amount": 6,
-          "unit": "st"
-        },
-
-      ],
+      { "name": "granulated sugar", "amount": 100, "unit": "ml" },
+      { "name": "water", "amount": 100, "unit": "ml" },
+      { "name": "gin", "amount": 120, "unit": "ml" },
+      { "name": "Campari", "amount": 120, "unit": "ml" },
+      { "name": "red sweet vermouth", "amount": 120, "unit": "ml" },
+      { "name": "orange", "amount": 1, "unit": "pcs" },
+      { "name": "fresh lemon juice", "amount": 180, "unit": "ml" },
+      { "name": "simple syrup (from above)", "amount": 120, "unit": "ml" },
+      { "name": "large egg whites", "amount": 2, "unit": "pcs" },
+      { "name": "ice cubes", "amount": 6, "unit": "pcs" }
+    ],
     "instructions": [
-        "Sockerlag: Koka upp socker och vatten. Låt svalna och ställ i kylen.",
-        "Blanda gin, campari och vermouth i en flaska och ställ i kylen. Skär 6 skalbitar från apelsinen (för 6 port) med en skalare utan att få med det vita.",
-        "Häll hälften av spritblandningen i en shaker med hälften av citronjuicen, hälften av sockerlagen och 1 äggvita. Skaka utan is tills äggvitan skummar sig. Tillsätt is och skaka kall. Sila upp i 3 glas. Upprepa med resterande. Toppa drinkarna med apelsinskal.",
-      ],
-    "categories": ['drinks'],
+      "Simple syrup: Bring sugar and water to a boil. Let cool in the refrigerator.",
+      "Mix gin, Campari and vermouth in a bottle and refrigerate. Cut six strips of orange peel.",
+      "Pour half of the spirit mixture into a shaker with half the lemon juice, half the syrup and 1 egg white. Dry-shake until foamy. Add ice and shake cold. Strain into 3 glasses. Repeat with the rest. Top with orange peel."
+    ],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg'
-    },
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/bgkpspbuaz5bxdxesasi.jpg"
+  },
+
   {
-    "title": 'Frozen key-lime pie',
-    "description": 'Frisk, krämig och oemotståndligt god! Frozen key lime pie är en härligt syrlig dessert med len limefyllning och knaprig digestivebotten som är perfekt att förbereda i förväg. Toppad med vispad grädde och limeskivor är den dessutom en fröjd för ögat!',
+    "title": "Frozen Key Lime Pie",
+    "description": "Fresh, creamy and irresistible! A tart dessert with smooth lime filling and crunchy digestive crust. Perfect to prepare in advance.",
     "timeInMins": 45,
     "ingredients": [
-      {
-        "name": "smör",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "digestivekex",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "socker",
-        "amount": 4,
-        "unit": "msk"
-      },
-      {
-        "name": "salt",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "lime",
-        "amount": 6,
-        "unit": "st"
-      },
-      {
-        "name": "kondenserad mjölk",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "vaniljsocker",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 5,
-        "unit": "dl"
-      }
+      { "name": "butter", "amount": 100, "unit": "g" },
+      { "name": "digestive biscuits", "amount": 200, "unit": "g" },
+      { "name": "sugar", "amount": 4, "unit": "tbsp" },
+      { "name": "salt", "amount": 1, "unit": "pinch" },
+      { "name": "limes", "amount": 6, "unit": "pcs" },
+      { "name": "condensed milk", "amount": 400, "unit": "g" },
+      { "name": "vanilla sugar", "amount": 1, "unit": "tbsp" },
+      { "name": "whipping cream", "amount": 500, "unit": "ml" }
     ],
     "instructions": [
-      "Sätt ugnen på 175°C.",
-      "Botten: Smält smöret. Mixa kexen till ett fint smul i matberedare eller för hand i en mortel.",
-      "Blanda smul med smält smör, socker och salt. Tryck ut i botten och upp på sidorna i en pajform ca 24 cm i diameter (för 8 port). Grädda pajbotten i mitten av ugnen ca 15 minuter och låt svalna helt i rumstemperatur.",
-      "Fyllning: Riv skalet fint på limen och pressa ut juicen. Blanda kondenserad mjölk med limeskal, limejuice och vaniljsocker i en bunke.",
-      "Vispa grädden fluffig och vänd ner i bunken med fyllning och häll i pajskalet, frys minst 4 timmar.",
-      "Topping: Ta ut pajen 20 till 30 minuter innan servering.",
-      "Vispa grädden fluffig. Toppa pajen med grädde, limeskal och limeskivor."
+      "Preheat the oven to 175°C.",
+      "Crust: Melt the butter. Crush the biscuits finely.",
+      "Mix crumbs with melted butter, sugar and salt. Press into a 24 cm pie dish. Bake for 15 minutes and cool.",
+      "Filling: Zest and juice the limes. Mix condensed milk with lime zest, juice and vanilla sugar.",
+      "Whip the cream and fold into the filling. Pour into crust and freeze at least 4 hours.",
+      "Remove 20–30 min before serving.",
+      "Whip cream for topping. Garnish with lime zest and slices."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/fftbatklk0l2oz4tw9sa.jpg"
   },
+
   {
-    "title": 'Salt kolapannacotta med citrus',
-    "description": 'Denna ljuvligt lyxiga dessert har allt och lite till. Söt och salt kolapannacotta, len chokladmousse med en bitter touch och syrliga clementiner. Smula över några chokladcookies på toppen för gott crunch.',
+    "title": "Salted Caramel Panna Cotta with Citrus",
+    "description": "A luxurious dessert of sweet–salty caramel panna cotta, smooth chocolate mousse and tart clementines. Topped with cookie crumble.",
     "timeInMins": 50,
     "ingredients": [
-      {
-        "name": "gelatinblad",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 7,
-        "unit": "dl"
-      },
-      {
-        "name": "dulce de leche",
-        "amount": 1,
-        "unit": "burk"
-      },
-      {
-        "name": "flingsalt",
-        "amount": 0.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "hackad mörk bakchoklad (55%)",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "clementiner",
-        "amount": 5,
-        "unit": "st"
-      },
-      {
-        "name": "färska hallon",
-        "amount": 10,
-        "unit": "st"
-      },
-      {
-        "name": "krossade chokladkakor",
-        "amount": 5,
-        "unit": "st"
-      }
+      { "name": "gelatin sheets", "amount": 2, "unit": "pcs" },
+      { "name": "whipping cream", "amount": 700, "unit": "ml" },
+      { "name": "dulce de leche", "amount": 1, "unit": "can" },
+      { "name": "sea salt flakes", "amount": 0.5, "unit": "tsp" },
+      { "name": "dark chocolate (55%) chopped", "amount": 100, "unit": "g" },
+      { "name": "clementines", "amount": 5, "unit": "pcs" },
+      { "name": "fresh raspberries", "amount": 10, "unit": "pcs" },
+      { "name": "crushed chocolate cookies", "amount": 5, "unit": "pcs" }
     ],
     "instructions": [
-      "Lägg gelatinblad i kallt vatten enligt anvisningen på förpackningen.",
-      "Pannacotta: Koka upp vispgrädde i en kastrull, ta från värmen. Vispa genast ner dulce de leche. Krama ur gelatinbladen och tillsätt dem under fortsatt vispning. Rör ner flingsalt.",
-      "Häll smeten i 8 glas (för 8 port). Ställ i kylen minst 4 timmar.",
-      "Chokladmousse: Värm vispgrädde (koka ej). Ta från värmen och rör ner hackad choklad, eller chokladknappar. Låt svalna helt i kylen.",
-      "Vid servering: Vispa chokladmoussen fluffig. Toppa pannacottan med moussen, clementiner, skurna i hinnfria klyftor, hallon och krossade chokladcookies."
+      "Soak gelatin sheets in cold water.",
+      "Panna cotta: Bring cream to a boil, remove from heat. Whisk in dulce de leche. Squeeze gelatin sheets and whisk in. Add salt.",
+      "Pour into 8 glasses and chill at least 4 hours.",
+      "Chocolate mousse: Heat cream (do not boil). Stir in chocolate. Cool completely in refrigerator.",
+      "To serve: Whip mousse. Top panna cotta with mousse, clementine segments, raspberries and cookie crumble."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/c7faae66jthqzcl5nxx8.jpg"
   },
+
   {
-    "title": 'Oxfilé och svampduxelle',
-    "description": 'Ingen nyårsmiddag eller nyårsmeny är komplett utan oxfilé. Få en smakstark fullträff till huvudrätt med detta oxfilérecept där du enkelt förbereder alla moment. Den krämiga svampduxellen får en lyxig touch av madeira, och en pigg spenatolja fulländar det möra köttet.',
+    "title": 'Beef Tenderloin with Mushroom Duxelles',
+    "description": 'A luxurious main course featuring tender beef, creamy mushroom duxelles with Madeira, and a fresh spinach oil.',
     "timeInMins": 80,
     "ingredients": [
-      {
-        "name": "oxfilé",
-        "amount": 1,
-        "unit": "kg"
-      },
-      {
-        "name": "rapsolja",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "smör",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "rotselleri",
-        "amount": 500,
-        "unit": "g"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 2.5,
-        "unit": "dl"
-      },
-      {
-        "name": "färskpressad citronjuice",
-        "amount": 1 - 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "champinjoner",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "schalottenlökar",
-        "amount": 3,
-        "unit": "styck"
-      },
-      {
-        "name": "bladspenat",
-        "amount": 65,
-        "unit": "g"
-      }
+      { "name": "beef tenderloin", "amount": 1, "unit": "kg" },
+      { "name": "rapeseed oil", "amount": 2, "unit": "tbsp" },
+      { "name": "butter", "amount": 1, "unit": "tbsp" },
+      { "name": "celeriac", "amount": 500, "unit": "g" },
+      { "name": "whipping cream", "amount": 250, "unit": "ml" },
+      { "name": "fresh lemon juice", "amount": 2, "unit": "tsp" },
+      { "name": "champignon mushrooms", "amount": 250, "unit": "g" },
+      { "name": "shallots", "amount": 3, "unit": "pcs" },
+      { "name": "spinach leaves", "amount": 65, "unit": "g" }
     ],
     "instructions": [
-      "Putsa köttet. Salta och peppra runt om.",
-      "Hetta upp en stor stekpanna och bryn köttet runt om i olja och smör tills det får färg. Ta upp köttet och kyl snabbt. Förvara övertäckt i kylen.",
-      "Rotselleripuré: Skala och skär rotsellerin i små tärningar. Lägg sellerin i en kastrull. Tillsätt grädden. Koka upp och låt koka under lock på svag värme tills rotsellerin är helt mjuk, ca 15 minuter.",
-      "Lyft upp sellerin och lägg i en mixer. Tillsätt först lite av grädden och mixa purén slät. Späd därefter med resten av grädden till lagom konsistens. Smaka av med citronjuice, salt och peppar. Låt svalna, täck över och ställ in i kylen.",
-      "Duxelle: Ansa och finhacka champinjonerna. Skala, dela och finhacka vitlök och schalottenlök. Fräs svamp- och lökhacket i olivolja och smör tills det får lite färg. Tillsätt madeiran och låt koka in. Salta och peppra. Låt svalna, täck över och ställ in i kylen.",
-      "Spenatolja: Mixa rapsolja med bladspenat, skivad purjolök och salt i en blender till en grön olja. Sila genom en finmaskig sil.",
-      "Romanesco & sprouts: Skär romanesco i små buketter. Lägg romanesco och flower sprouts i en kastrull med kokande lättsaltat vatten. Låt koka ca 1 minut. Häll av i ett durkslag och spola med kallt vatten. Låt rinna av. Förvara övertäckt i kylen.",
-      "Gör gärna Rostad vitlökssky med konjak och förvara övertäckt i kylen.",
-      "2 timmar före servering: Ta fram köttet. Lägg det i en ugnsform och stick in en köttermometer i tjockaste delen.",
-      "1 timme före servering: Sätt ugnen på 125°C. Tillaga köttet i mitten av ugnen tills innertemperaturen är 56–65°C (rosa–genomstekt, det tar 30–45 minuter). Linda in köttet i smörpapper. Låt vila fram till servering.",
-      "Sänk ugnsvärmen till 100°C. Ställ in tallrikarna i ugnen så att de blir varma.",
-      "Vid servering: Ta ut tallrikarna. Skär köttet i skivor. Lägg på grönsaker, selleripuré, kött och duxelle. Skeda över lite av såsen och droppa över spenatoljan. Bjud resten av skyn vid sidan av."
+      "Trim the meat. Season with salt and pepper.",
+      "Sear on all sides in oil and butter. Cool quickly and refrigerate.",
+      "Celeriac purée: Simmer celeriac in cream until soft. Blend smooth and season with lemon, salt and pepper. Chill.",
+      "Duxelles: Finely chop mushrooms, garlic and shallots. Sauté in oil and butter. Add Madeira and reduce. Cool.",
+      "Spinach oil: Blend oil with spinach and leek. Strain.",
+      "Romanesco & sprouts: Blanch briefly and cool.",
+      "Prepare garlic gravy if desired.",
+      "2 hours before serving, take out meat. Insert thermometer.",
+      "Cook at 125°C until 56 to 65°C. Rest wrapped in parchment.",
+      "Warm plates at 100°C.",
+      "Slice beef. Serve with vegetables, purée, duxelles, sauce and spinach oil."
     ],
     "categories": ['mains'],
     "ratings": [],
     "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_152633/cf_259/oxfil%C3%A9_med_duxelle_och_rotselleripur%C3%A9.jpg'
   },
   {
-    "title": 'Gnocchi med ricotta och svamp',
-    "description": 'Hemmagjord gnocchi är enkelt, om än lite pilligt, men framförallt väldigt gott! Här har gnocchis huvudingrediens potatis även fått sällskap av rotselleri och serveras med krämig ricotta, stekt svamp och brynt smör med salvia.',
+    "title": "Gnocchi with Ricotta and Mushrooms",
+    "description": "Homemade gnocchi with potato and celeriac, served with creamy ricotta, fried mushrooms and brown butter with sage.",
     "timeInMins": 65,
     "ingredients": [
-      {
-        "name": "fast potatis",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "rotselleri",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "egg",
-        "amount": 1,
-        "unit": "styck"
-      },
-      {
-        "name": "riven parmesan",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "smör",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "vetemjöl",
-        "amount": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "svamp",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "ricottaost",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "hackade hasselnötter",
-        "amount": 1,
-        "unit": "dl"
-      }
+      { "name": "waxy potatoes", "amount": 400, "unit": "g" },
+      { "name": "celeriac", "amount": 400, "unit": "g" },
+      { "name": "egg", "amount": 1, "unit": "pcs" },
+      { "name": "grated Parmesan", "amount": 100, "unit": "ml" },
+      { "name": "butter", "amount": 50, "unit": "g" },
+      { "name": "wheat flour", "amount": 500, "unit": "ml" },
+      { "name": "mushrooms", "amount": 250, "unit": "g" },
+      { "name": "ricotta cheese", "amount": 250, "unit": "g" },
+      { "name": "chopped hazelnuts", "amount": 100, "unit": "ml" }
     ],
     "instructions": [
-      "Rotsellerignocchi: Skala potatis och rotselleri och skär i bitar. Koka mjuka i saltat vatten. Häll av och låt svalna lite. Pressa genom potatispress i en bunke. Blanda med ägg, salt och parmesan till ett mos. Arbeta in mjölet, lite i taget, till en smidig deg. Rulla degen till 2 cm tjocka rullar på mjölad bänk. Skär i ca 2–3 cm stora bitar. Tryck till lätt med gaffel och lägg på mjölat underlag.",
-      "Koka upp rikligt med saltat vatten i en stor kastrull. Koka gnocchin i omgångar ca 5 minuter, de är klara när de flyter upp till ytan. Ta upp med hålslev och låt rinna av på en ren kökshandduk. Blanda med olja så de inte klibbar ihop.",
-      "Bryn smöret. Rör ner salvian och låt fräsa 1 minut. Ta från värmen och rör ner nötterna.",
-      "Ansa och skär svampen i bitar. Stek i smör tills svampen är gyllene. Krydda med salt och peppar och lägg svampen på en tallrik.",
-      "Stek gnocchin i smör och olja i samma panna tills de får lite färg. Blanda ner svampen och krydda med salt och peppar.",
-      "Till servering: Fördela ricottan på tallrikar. Toppa med gnocchifräset och det brynta smöret. Strö över parmesan.",
+      "Gnocchi: Boil potatoes and celeriac until soft. Press through a ricer. Mix with egg, salt and Parmesan. Knead in flour until smooth. Roll into 2 cm ropes and cut into pieces. Shape with fork.",
+      "Boil in salted water until they float. Let dry on towel.",
+      "Brown butter and add sage and nuts.",
+      "Fry mushrooms in butter. Season.",
+      "Fry gnocchi until golden. Mix with mushrooms.",
+      "Serve over ricotta and drizzle with brown butter. Add Parmesan."
     ],
-    "categories": ['mains'],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245454/cf_259/gnocchi_pa_rotselleri_med_ricotta_och_svamp.jpg"
   },
+
   {
-    "title": 'Limoncello spritz',
-    "description": "Limoncello spritz är en svalkande, bubblig och festlig drink inspirerad av Italien där mousserande vin och sodavatten får sällskap av den italienska citronlikören limoncello. Servera din goda limoncello-cocktail med is och citronskivor, gärna i festliga glas på fot. Cin cin!",
+    "title": "Limoncello Spritz",
+    "description": "A refreshing and bubbly Italian-inspired cocktail with sparkling wine, soda water and limoncello.",
     "timeInMins": 15,
     "ingredients": [
-      {
-        "name": "limoncello",
-        "amount": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "mousserande vin",
-        "amount": 1,
-        "unit": "flaska"
-      },
-      {
-        "name": "sodavatten eller kolsyrat vatten",
-        "amount": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "is",
-        "amount": 6,
-        "unit": "st"
-      },
-      {
-        "name": "skivad citron",
-        "amount": 5,
-        "unit": "st"
-      }
+      { "name": "limoncello", "amount": 300, "unit": "ml" },
+      { "name": "sparkling wine", "amount": 1, "unit": "bottle" },
+      { "name": "soda water", "amount": 300, "unit": "ml" },
+      { "name": "ice", "amount": 6, "unit": "pcs" },
+      { "name": "lemon slices", "amount": 5, "unit": "pcs" }
     ],
     "instructions": [
-        "Blanda limoncello, mousserande vin, sodavatten, is och skivad citron och servera i glas eller häll upp i karaff."
+      "Mix limoncello, sparkling wine, soda water, ice and lemon slices in glasses or a carafe."
     ],
-    "categories": ['drinks'],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/x6f5rz9z2lccucapsgkr.jpg"
   },
+
   {
-    "title": 'Bouillabaisse',
-    "description": 'Sydfransk klassisk bouillabaisse, en fisk- och skaldjursgryta som vi här lagar på egen skaldjursfond så blir den extra mustig och god. Räkor, blåmusslor och gärna både vit fisk och lax ger fiskgrytan gott innehåll. Den smakrika grytan serveras gärna med aioli och ett gott bröd.',
-    "timeInMins": 90,
-    "ingredients": [
-      {
-        "name": "gula lökar",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "morötter",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "olivolja",
-        "amount": 3,
-        "unit": "msk"
-      },
-      {
-        "name": "tomatpuré",
-        "amount": 3,
-        "unit": "msk"
-      },
-      {
-        "name": "hummer- kräft och/eller räkskal",
-        "amount": 500,
-        "unit": "g"
-      },
-      {
-        "name": "färska blåmusslor",
-        "amount": 1,
-        "unit": "kg"
-      },
-      {
-        "name": "vit benfri fiskfilé (gärna torskfilè)",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "laxfilé utan skinn",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "persilja",
-        "amount": 1,
-        "unit": "kruka"
-      }
-    ],
-    "instructions": [
-      "Fisk och skaldjur till bouillabaissen: Tina räkorna (om frysta används). Lägg dem på hushållspapper för att torka.",
-      "Skaldjursfond: Skala lök och morötter. Skär dem fint. Skala och krossa vitlöksklyftorna. Fräs grönsakerna i olivoljan i en gryta tillsammans med kryddorna.",
-      "Tillsätt tomatpuré och låt den fräsa med i någon minut.",
-      "Lägg i skaldjursskalen, fyll på med vattnet och smula i buljongtärningarna.",
-      "Koka upp fonden och låt den koka sakta ca 25 minuter utan lock. Skumma då och då. Sila fonden genom en finmaskig sil.",
-      "Bouillabaisse: Dela kärna ur och skär paprikan i bitar. Ansa fänkålen, skär den i ca 1x1 cm stora bitar. Skala moroten och potatisen och skär dem i ca 1x1 cm stora bitar. Dela och krama ur kärnorna ur tomaten.",
-      "Fräs paprika, fänkål, morot och potatis i olivoljan i en stor gryta. Tillsätt saffran och tomatköttet (ej kärnorna). Häll på skaldjursfonden och koka upp.",
-      "Koka sakta 25-30 minuter utan lock. Mixa soppan slät.",
-      "Sätt ugnen på 100°C (till varmhållning av musslorna).",
-      "Fisk och skaldjur till bouillabaissen: Skölj musslorna, borsta dem och ta bort skägget. Knacka lätt på de musslor som är öppna och släng de som inte sluter sig, släng även trasiga musslor. Sjud blåmusslorna i soppan några minuter, under lock, tills de öppnat sig. Ta upp musslorna ur buljongen, med en hålslev, sortera bort och kasta de som inte öppnat sig. Smaksätt soppan med salt och peppar.",
-      "Håll musslorna varma i ugnen på ett serveringsfat under folie.",
-      "Skär fisken i ca 2 x 2 cm stora tärningar. Lägg ner fisken och vannameiräkorna i bouillabaissen (vanliga räkor ska inte koka, strö dem på grytan innan servering) . Koka upp och koka sakta i 2-3 minuter.",
-      "Hacka persiljan grovt. Strö persiljan över musslorna.",
-      "Till servering: Servera bouillabaissen i varma djupa tallrikar med musslorna, aioli och krutonger eller surdegsbröd."
-    ],
-    "categories": ['mains'],
-    "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251713/cf_259/bouillabaisse%C2%A0.jpg'
-  },
-  {
-    "title": 'Baked alaska med svarta vinbär',
-    "description": 'Festligare än så här blir det ej! Baked alaska är det engelska namnet för den franska desserten glace au four. I denna variant görs en ljuvlig svartvinbärsglass som täcks av ett rejält lager maräng. Dina gäster kommer få dåndimpen på grund av något så gott och tjusigt.',
+    "title": "Baked Alaska with Blackcurrants",
+    "description": "More festive than this! Baked Alaska is the English name for the French dessert glace au four. In this version, a luscious blackcurrant ice cream is covered with a generous layer of meringue. Your guests will be amazed by something so delicious and fancy.",
     "timeInMins": 70,
     "ingredients": [
-      {
-        "name": "vispgrädde",
-        "amount": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "frysta svarta vinbär",
-        "amount": 375,
-        "unit": "g"
-      },
-      {
-        "name": "kondencerad mjölk",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "smör",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "ägg",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "socker",
-        "amount": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "vetemjöl",
-        "amount": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "bakpulver",
-        "amount": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "mandelmjöl",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "äggvitor",
-        "amount": 4,
-        "unit": "st"
-      },
-      {
-        "name": "vatten",
-        "amount": 5.25,
-        "unit": "dl"
-      },
-      {
-        "name": "mörk sprit",
-        "amount": 0.5,
-        "unit": "dl"
-      }
+      { "name": "heavy cream", "amount": 2, "unit": "cups" },
+      { "name": "frozen blackcurrants", "amount": 13, "unit": "oz" },
+      { "name": "sweetened condensed milk", "amount": 14, "unit": "oz" },
+      { "name": "butter", "amount": 3.5, "unit": "tbsp" },
+      { "name": "eggs", "amount": 2, "unit": "pcs" },
+      { "name": "sugar", "amount": 2.3, "unit": "cups" },
+      { "name": "all-purpose flour", "amount": 0.25, "unit": "cups" },
+      { "name": "baking powder", "amount": 1, "unit": "tsp" },
+      { "name": "almond flour", "amount": 0.5, "unit": "cups" },
+      { "name": "egg whites", "amount": 4, "unit": "pcs" },
+      { "name": "water", "amount": 2.25, "unit": "cups" },
+      { "name": "dark liquor", "amount": 3, "unit": "tbsp" }
     ],
     "instructions": [
-      "Tina svarta vinbären till glassen.",
-      "Svartvinbärsglass: Lättvispa grädden.",
-      "Mixa svarta vinbären med kondenserad mjölk till så slätt som möjligt gärna i en kannmixer. Vänd ner grädden och rör till en jämn smet. Häll smeten i en skål klädd med plastfilm, som rymmer 1,5 l och är max 22 cm i diameter i överkant. Ställ in i frysen minst 6 timmar. ",
-      "Sätt ugnen på 175°C.",
-      "Sockerkaksbotten: Lägg ett bakplåtspapper i botten på en form med löstagbar kant, ca 24 cm i diameter (för 10 -12 port). Smörj kanterna med smör.",
-      "Vispa ägg och socker pösigt i en bunke. Blanda vetemjöl och bakpulver.",
-      "Sikta ner mjölblandningen i äggsmeten och tillsätt mandelmjölet. Blanda försiktigt med en slickepott till en jämn smet.",
-      "Häll smeten i formen. Grädda i nedre delen av ugnen ca 15 minuter. Kontrollera med provsticka att kakan är helt torr. Låt svalna helt i formen.",
-      "Italiensk maräng: Lägg vitorna i en rostfri bunke, gärna en som hör till en köksmaskin.",
-      "Koka upp socker och vatten i en kastrull. Låt koka till 121°C, använd en digital termometer. Ta från värmen.",
-      "Vispa äggvitorna till ett fast skum. Tillsätt den heta sockerlagen i en tunn stråle i äggviteskummet under fortsatt vispning.",
-      "Fortsätt vispa på medelhastighet tills marängen svalnat helt (känn på bunken), det tar 10-15 minuter. Ställ i kylen medan resten görs.",
-      "Fyllning: Koka ihop vinbär och socker till en sylt på medelvärme ca 10 minuter under omrörning. Låt svalna helt.",
-      "Sockerlag: Koka ihop sprit, socker och vatten under omrörning tills sockret löst sig. Låt svalna helt.",
-      "Montering: Pensla sockerlagen på sockerkakan. Bred ut sylten på glassens botten när den fortfarande ligger kvar i skålen. Lägg på sockerkakan, den kan behöva anpassas genom att skära av lite av kanten. Stjälp upp glassen på ett tårtfat. Bred på marängen och bränn av med brännare."
+      "Thaw the blackcurrants for the ice cream.",
+      "Blackcurrant ice cream: Whip the cream lightly.",
+      "Blend blackcurrants with condensed milk until smooth, preferably in a blender. Fold in the cream and mix until smooth. Pour into a bowl lined with plastic wrap, holding 1.5 liters and max 22 cm in diameter. Freeze for at least 6 hours.",
+      "Preheat oven to 175°C (350°F).",
+      "Sponge cake base: Line a springform pan (~24 cm / 9.5 in) with parchment paper and butter the sides.",
+      "Whip eggs and sugar until fluffy. Mix flour and baking powder.",
+      "Sift the flour mixture into the eggs and fold in almond flour. Mix gently with a spatula until smooth.",
+      "Pour batter into pan. Bake in lower oven rack for ~15 minutes. Check with a toothpick. Cool completely in the pan.",
+      "Italian meringue: Place egg whites in a stainless bowl.",
+      "Boil sugar and water in a saucepan to 121°C (250°F). Remove from heat.",
+      "Whip egg whites to stiff peaks. Pour hot sugar syrup slowly into egg whites while whisking.",
+      "Continue whisking until meringue cools completely, 10–15 minutes. Refrigerate until ready to use.",
+      "Filling: Cook blackcurrants with sugar into a jam for 10 minutes. Cool completely.",
+      "Sugar syrup: Boil liquor, sugar, and water until sugar dissolves. Cool completely.",
+      "Assembly: Brush sponge with syrup. Spread jam on ice cream base while still in bowl. Place sponge on top, trimming edges if needed. Unmold ice cream onto a serving plate. Spread meringue on top and torch lightly."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/r7cqqryx2qudvsdmynxd.jpg"
   },
   {
-    "title": 'Lingon spritz med grapefrukt',
-    "description": "Är du sugen på en läskande, julig fördrink? Då ska du prova denna bubbliga spritz på mousserande vin med smak av lingon, grapefrukt och rosmarin. En juldrink lika uppfriskande som god och enkel!",
+    "title": "Lingon Spritz with Grapefruit",
+    "description": "A refreshing, festive pre-drink! This sparkling spritz combines lingonberries, grapefruit, and rosemary. A perfect Christmas cocktail that is both refreshing and easy to make.",
     "timeInMins": 50,
     "ingredients": [
-      {
-        "name": "röda grapefrukt",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "frysta lingon",
-        "amount": 250,
-        "unit": "gram"
-      },
-      {
-        "name": "rosmarinkvistar",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "strösocker",
-        "amount": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "vatten",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "is",
-        "amount": 4,
-        "unit": "st"
-      },
-      {
-        "name": "mousserande vin",
-        "amount": 750,
-        "unit": "ml"
-      },
+      { "name": "red grapefruit", "amount": 2, "unit": "pcs" },
+      { "name": "frozen lingonberries", "amount": 250, "unit": "g" },
+      { "name": "rosemary sprigs", "amount": 2, "unit": "pcs" },
+      { "name": "granulated sugar", "amount": 0.6, "unit": "cups" },
+      { "name": "water", "amount": 0.85, "unit": "cups" },
+      { "name": "ice", "amount": 4, "unit": "pcs" },
+      { "name": "sparkling wine", "amount": 750, "unit": "ml" }
     ],
     "instructions": [
-    "Tvätta en grapefrukt noga (för 6 port). Skär bort skalet och se till att få med så lite som möjligt av det vita. Koka upp grapefruktskal, lingon, rosmarin, socker och vatten och låt koka 2 till 3 minuter. Sila och låt svalna.",
-    "Pressa juicen ur båda grapefrukterna och fördela i 6 glas med lingonsockerlagen, för 6 port.",
-    "Till servering: Fyll på med is. Häll på mousserande vin och toppa med rosmarin.",
+      "Wash one grapefruit thoroughly. Remove the peel, avoiding the white pith. Boil grapefruit peel, lingonberries, rosemary, sugar, and water for 2–3 minutes. Strain and cool.",
+      "Juice both grapefruits and divide into 6 glasses with lingonberry syrup.",
+      "To serve: Add ice. Pour sparkling wine and garnish with rosemary."
     ],
-    "categories": ['drinks'],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244803/cf_259/lingon_spritz_med_grapefrukt.jpg"
   },
-  
   {
-    "title": 'Rimmad torsk med champagnesås',
-    "description": 'Ugnsbakad, rimmad torsk som serveras tillsammans med blåmusslor, smörstekt spenat och en len champagnesås är en festrätt av rang som passar utmärkt på nyårsfirandet eller middagsbjudningen.',
+    "title": "Salted Cod with Champagne Sauce",
+    "description": "Oven-baked, salted cod served with mussels, buttered spinach, and a smooth champagne sauce. A festive dish perfect for New Year's or dinner parties.",
     "timeInMins": 55,
     "ingredients": [
-      {
-        "name": "schalottenlökar",
-        "amount": 3,
-        "unit": "styck"
-      },
-      {
-        "name": "smör",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "champagne eller torrt vitt vin",
-        "amount": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 4,
-        "unit": "dl"
-      },
-      {
-        "name": "färskpressad citronjuice",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "finskuren gräslök",
-        "amount": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "torskrygg",
-        "amount": 900,
-        "unit": "g"
-      },
-      {
-        "name": "blåmusslor",
-        "amount": 1,
-        "unit": "kg"
-      },
-      {
-        "name": "vitt vin",
-        "amount": 2,
-        "unit": "dl"
-      }
+      { "name": "shallots", "amount": 3, "unit": "pcs" },
+      { "name": "butter", "amount": 50, "unit": "g" },
+      { "name": "champagne or dry white wine", "amount": 3, "unit": "dl" },
+      { "name": "heavy cream", "amount": 4, "unit": "dl" },
+      { "name": "fresh lemon juice", "amount": 2, "unit": "tbsp" },
+      { "name": "chopped chives", "amount": 0.5, "unit": "dl" },
+      { "name": "cod fillet", "amount": 900, "unit": "g" },
+      { "name": "mussels", "amount": 1, "unit": "kg" },
+      { "name": "white wine", "amount": 2, "unit": "dl" }
     ],
     "instructions": [
-      "Champagnesås: Skala och finhacka löken. Bryn smöret i en kastrull, ta från värmen och tillsätt löken. Ställ tillbaka på låg värme och låt löken fräsa lite. Tillsätt timjan, lagerblad och champagne och koka tills hälften återstår. Tillsätt grädde och koka ihop några minuter. Rör ner citronjuice och smaka av med salt. Lyft upp timjan och lagerblad. Mixa såsen med stavmixer och sila.",
-      "Sätt ugnen på 150°C.",
-      "Torsk: Skär torsken i 6 bitar (för 6 port). Krydda runtom med salt och låt stå i rumstemperatur 30 minuter.",
-      "Musslor: Skölj och rensa musslorna. Släng de som är trasiga. Om någon har öppnat sig så knacka den försiktigt mot köksbänken. Stänger den sig inte så släng den. Skala och finhacka löken.",
-      "Torsk: Lägg torsken i en ugnsform och ställ in i mitten av ugnen tills innertemperaturen är 56°C, ca 15–20 minuter. Låt fisken vila några minuter innan servering.",
-      "Musslor: Fräs löken till musslorna i oljan i en stor gryta eller kastrull. Höj värmen och häll i musslorna. Rör runt och häll i vinet och salt, lägg på lock och låt koka 3–4 minuter eller tills musslorna öppnar upp sig. Släng de musslor som inte har öppnat sig.",
-      "Spenat: Fräs spenaten i smör i en stor stekpanna tills den mjuknar. Smaka av med salt.",
-      "Plocka ur musslorna ur skalen. Värm såsen och tillsätt gräslök. Servera torsken med såsen, spenaten och musslorna.",
+      "Champagne sauce: Peel and finely chop shallots. Melt butter in a saucepan, remove from heat, add shallots, and return to low heat to sweat. Add thyme, bay leaves, and champagne, reduce by half. Add cream and simmer a few minutes. Stir in lemon juice, season with salt. Remove thyme and bay leaves. Blend and strain.",
+      "Preheat oven to 150°C (300°F).",
+      "Cod: Cut into 6 portions, season with salt, and let sit 30 minutes at room temperature.",
+      "Mussels: Clean and discard broken ones. Chop shallots.",
+      "Cod: Bake in oven until internal temp 56°C (133°F), ~15–20 min. Let rest.",
+      "Mussels: Sauté shallots in oil, add mussels, pour in wine, cover, cook 3–4 minutes until opened. Discard unopened mussels.",
+      "Spinach: Sauté in butter until wilted, season with salt.",
+      "Serve cod with sauce, spinach, and mussels."
     ],
-    "categories": ['mains'],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg"
   },
   {
-    "title": 'Inkokta klementiner med pistageglass',
-    "description": "Inkokta klementiner i lag som smaksätts av kardemumma det blir supergott. Att göra egen glass är också både kul och gott. Här smaksätts glassen av pistagenötter, dadlar och lite citron. Börja dock i tid, klementinerna smakar bäst efter 12 timmar i lagen och glassen bör vara i frysen minst 6 timmar.",
+    "title": "Candied Clementines with Pistachio Ice Cream",
+    "description": "Candied clementines in a cardamom-flavored syrup are delicious. Homemade ice cream is fun and tasty, flavored with pistachios, dates, and a hint of lemon. Start early: the clementines taste best after 12 hours in syrup, and the ice cream needs at least 6 hours in the freezer.",
     "timeInMins": 40,
     "ingredients": [
-      {
-        "name": "clementiner",
-        "amount": 12,
-        "unit": "st"
-      },
-      {
-        "name": "råsocker",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "vatten",
-        "amount": 6,
-        "unit": "dl"
-      },
-      {
-        "name": "kardemummakärnor",
-        "amount": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "pistagenötter",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "färska dadlar",
-        "amount": 10,
-        "unit": "st"
-      },
-      {
-        "name": "citron",
-        "amount": 1,
-        "unit": "st"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "kondenserad mjölk",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "salt",
-        "amount": 1,
-        "unit": "krm"
-      }
+      { "name": "clementines", "amount": 12, "unit": "pcs" },
+      { "name": "raw sugar", "amount": 2, "unit": "dl" },
+      { "name": "water", "amount": 6, "unit": "dl" },
+      { "name": "cardamom seeds", "amount": 1, "unit": "tsp" },
+      { "name": "pistachios", "amount": 1, "unit": "dl" },
+      { "name": "fresh dates", "amount": 10, "unit": "pcs" },
+      { "name": "lemon", "amount": 1, "unit": "pcs" },
+      { "name": "heavy cream", "amount": 5, "unit": "dl" },
+      { "name": "sweetened condensed milk", "amount": 400, "unit": "g" },
+      { "name": "salt", "amount": 1, "unit": "pinch" }
     ],
     "instructions": [
-      "Skala klementinerna och ta bort så mycket av de vita hinnorna som det går. Dela klementinerna i klyftor och picka klyftorna med en gaffel, så att det går hål på skinnet.",
-      "Koka upp socker, vatten och kardemumma i en kastrull.",
-      "Lägg klementinklyftorna i den varma lagen och låt det svalna. Låt klementinerna marinera i ca 12 timmar i kylen.",
-      "Glass: Hacka pistagenötterna fint. Skär dadlarna i små tärningar. Tvätta citronen. Riv det yttersta av skalet från halva citronen och pressa ur ca 1/2 dl saft (för 8 port). Blanda citronsaft, citronskal, nötter och dadlar.",
-      "Vispa grädden, lite hårdare än lösvispad.",
-      "Vänd ner kondenserad mjölk, salt och nötblandningen i grädden, rör till en jämn smet. Häll smeten i en brödform, som rymmer ca 1 liter (för 8 port).",
-      "Ställ in formen i frysen i minst 6 timmar.",
-      "Ta ut glassen från frysen ca 10 minuter före servering.",
-      "Lägg upp klementinklyftorna och servera dem med glassen."
+      "Peel clementines and remove as much of the white pith as possible. Cut into segments and prick with a fork.",
+      "Boil sugar, water, and cardamom.",
+      "Place clementine segments in warm syrup and let cool. Refrigerate ~12 hours.",
+      "Ice cream: Chop pistachios finely. Dice dates. Wash lemon, zest half, and juice ~1/2 dl (1.7 fl oz). Mix lemon juice, zest, nuts, and dates.",
+      "Whip cream slightly stiffer than soft peaks.",
+      "Fold in condensed milk, salt, and nut mixture. Pour into a 1-liter loaf pan.",
+      "Freeze at least 6 hours.",
+      "Remove 10 minutes before serving. Serve clementines with ice cream."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_251097/cf_259/inkokta_klementiner_med_dadlar_och_pistageglass.jpg"
   },
   {
-    "title": 'Cosmopolitan',
-    "description": "Cosmo, som Cosmopolitan också kallas, är en stilren och älskad klassiker med fräsch smak av tranbär och lime! Denna rosa cocktail är både elegant och lätt att älska – perfekt för festliga tillfällen.",
+    "title": "Cosmopolitan",
+    "description": "Cosmo, as Cosmopolitan is also called, is a stylish classic with fresh cranberry and lime flavors! This pink cocktail is elegant and easy to love – perfect for festive occasions.",
     "timeInMins": 20,
     "ingredients":[
-       {
-        "name": "vodka",
-        "amount": 3,
-        "unit": "cl"
-      },
-       {
-        "name": "cointreau",
-        "amount": 2,
-        "unit": "cl"
-      },
-       {
-        "name": "tranbärsjuice",
-        "amount": 3,
-        "unit": "cl"
-      },
-       {
-        "name": "färsk limesaft",
-        "amount": 1,
-        "unit": "cl"
-      },
-       {
-        "name": "is",
-        "amount": 4,
-        "unit": "st"
-      },
-       {
-        "name": "apelsinskal",
-        "amount": 1,
-        "unit": "tsk"
-      },
+      { "name": "vodka", "amount": 3, "unit": "cl" },
+      { "name": "cointreau", "amount": 2, "unit": "cl" },
+      { "name": "cranberry juice", "amount": 3, "unit": "cl" },
+      { "name": "fresh lime juice", "amount": 1, "unit": "cl" },
+      { "name": "ice", "amount": 4, "unit": "pcs" },
+      { "name": "orange peel", "amount": 1, "unit": "tsp" }
     ],
     "instructions": [
-      "Häll upp alla ingredienser i en shaker och skaka med isbitar.",
-      "Sila ner drinken i ett martiniglas och pressa apelsinskalet så att skalets olja droppar ner i drinken. Servera genast."
+      "Pour all ingredients into a shaker with ice and shake well.",
+      "Strain into a martini glass and press orange peel to release oils. Serve immediately."
     ],
-    "categories": ['drinks'],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/syvfko5ulht1n9rnllzu.jpg"
   },
   {
-    "title": 'Gratinerade havskräftor',
-    "description": "Gratinera dina havskräftor med parmesan, persilja och citron och du kommer kunna servera supergoda kräftor. Servera gärna de gratinerade havskräftorna med citronklyftor, lite sallad och ett gott bröd.",
+    "title": "Gratinated Langoustines",
+    "description": "Gratinate langoustines with parmesan, parsley, and lemon for a delicious dish. Serve with lemon wedges, salad, and good bread.",
     "timeInMins": 25,
     "ingredients": [
-       {
-        "name": "persilja",
-        "amount": 1,
-        "unit": "kruka"
-      },
-       {
-        "name": "skal och saft av citron",
-        "amount": 0.5,
-        "unit": "st"
-      },
-       {
-        "name": "vitlöksklyfta",
-        "amount": 1,
-        "unit": "st"
-      },
-       {
-        "name": "riven parmesan",
-        "amount": 2,
-        "unit": "dl"
-      },
-       {
-        "name": "rumstempererat smör",
-        "amount": 100,
-        "unit": "gram"
-      },
-       {
-        "name": "panko",
-        "amount": 1.5,
-        "unit": "msk"
-      },
-       {
-        "name": "svartpeppar",
-        "amount": 1,
-        "unit": "krm"
-      },
-       {
-        "name": "kokta havskräftor med skal",
-        "amount": 1,
-        "unit": "kg"
-      },
-       {
-        "name": "spritspåse",
-        "amount": 1,
-        "unit": "st"
-      },
-
+      { "name": "parsley", "amount": 1, "unit": "bunch" },
+      { "name": "lemon zest and juice", "amount": 0.5, "unit": "pcs" },
+      { "name": "garlic clove", "amount": 1, "unit": "pcs" },
+      { "name": "grated parmesan", "amount": 2, "unit": "dl" },
+      { "name": "room temperature butter", "amount": 100, "unit": "g" },
+      { "name": "panko breadcrumbs", "amount": 1.5, "unit": "tbsp" },
+      { "name": "black pepper", "amount": 1, "unit": "pinch" },
+      { "name": "cooked langoustines with shells", "amount": 1, "unit": "kg" },
+      { "name": "piping bag", "amount": 1, "unit": "pcs" }
     ],
     "instructions": [
-      "Sätt ugnen på 250°C. Övervärme.",
-      "Hacka persiljan. Tvätta citronen och riv det yttersta av skalet. Skala och riv vitlöken. Riv parmesanosten fint på ett rivjärn.",
-      "Blanda smöret med hälften av persiljan, citronskal, 1 tsk citronsaft, vitlök, 1 1/2 dl av parmesanen (för 4 port), panko och peppar. Lägg smöret i en engångsspritspåse.",
-      "Klyv havskräftorna på längden. Lägg dem med skalsidan neråt i en ugnsform.",
-      "Spritsa smöret på kräfthalvorna.",
-      "Gratinera kräftorna i övre delen av ugnen ca 5 minuter, eller tills smöret fått fin färg. Toppa med resterande persilja och parmesan.",
+      "Preheat oven to 250°C (480°F), top heat.",
+      "Chop parsley. Wash lemon and zest. Peel and grate garlic. Grate parmesan finely.",
+      "Mix butter with half the parsley, lemon zest, 1 tsp lemon juice, garlic, 1.5 dl parmesan, panko, and pepper. Put into a piping bag.",
+      "Halve langoustines lengthwise and place shell-side down in a baking dish.",
+      "Pipe butter mixture onto langoustines.",
+      "Gratinate in the upper oven for ~5 minutes until butter is golden. Top with remaining parsley and parmesan."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_241052/cf_259/gratinerade_havskraftor.jpg"
   },
+
   {
-    "title": 'Renytterfilé med chili och chevrekräm',
-    "description": 'Renytterfilé kryddad med chili är överraskande gott. Servera filén med ugnsrostade rödbetor och en krämig röra på chevre. Toppa med en sötsyrlig balsamico gjord på blåbär.',
+    "title": "Reindeer Tenderloin with Chili and Goat Cheese Cream",
+    "description": "Reindeer tenderloin seasoned with chili is surprisingly delicious. Serve the fillet with oven-roasted beets and a creamy goat cheese spread. Top with a sweet and tangy blueberry balsamic.",
     "timeInMins": 75,
     "ingredients": [
-      {
-        "name": "renytterfilé eller hjortytterfilé",
-        "amount": 500,
-        "unit": "g"
-      },
-      {
-        "name": "olivolja",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "anchochilipulver",
-        "amount": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "balsamvinäger",
-        "amount": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "strösocker",
-        "amount": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "blåbärssylt",
-        "amount": 3.4,
-        "unit": "dl"
-      },
-      {
-        "name": "getost",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "mjölk",
-        "amount": 3.4,
-        "unit": "dl"
-      },
-      {
-        "name": "kokta skalade rödbetor",
-        "amount": 500,
-        "unit": "g"
-      }
+      { "name": "reindeer or venison tenderloin", "amount": 1.1, "unit": "lbs" },
+      { "name": "olive oil", "amount": 2, "unit": "tbsp" },
+      { "name": "ancho chili powder", "amount": 1, "unit": "tsp" },
+      { "name": "balsamic vinegar", "amount": 0.63, "unit": "cups" },
+      { "name": "granulated sugar", "amount": 0.63, "unit": "cups" },
+      { "name": "blueberry jam", "amount": 1.44, "unit": "cups" },
+      { "name": "goat cheese", "amount": 8.8, "unit": "oz" },
+      { "name": "milk", "amount": 1.44, "unit": "cups" },
+      { "name": "cooked peeled beets", "amount": 1.1, "unit": "lbs" }
     ],
     "instructions": [
-      "Putsa köttet noggrant. Skär i fyra lika stora bitar (för 4 portioner). Lägg i en ugnsfast form och pensla med hälften av oljan.",
-      "Blanda chilipeppar med hälften av saltet och svartpeppar i en skål. Gnid in köttet runt om med kryddorna. Låt vila ca 20 minuter i rumstemperatur.",
-      "Sätt ugnen på 125°C.",
-      "Blåbärsbalsamico: Koka upp balsamvinäger och strösocker. Låt koka på svag värme 20-25 minuter tills hälften av vätskan återstår. Rör då och då. Låt svalna. Blanda med blåbärssylten.",
-      "Chevrekräm: Mixa ost och mjölk krämigt med en stavmixer.",
-      "Bryn köttet runt om. Lägg i en ugnsform och sätt in i ugnen ca 25 minuter (innertemperatur 58°C). Låt köttet vila ca 10 minuter före servering.",
-      "Höj ugnstemperaturen till 225°C. Skär rödbetorna i klyftor och lägg i en ugnsform. Blanda med resten av oljan och hälften av saltet.",
-      "Sätt in i mitten av ugnen 15-20 minuter.",
-      "Skär köttet i skivor. Servera med rödbetor, chevrekräm och blåbärsbalsamico. Garnera gärna med färska örter."
+      "Trim the meat carefully. Cut into 4 equal pieces (for 4 servings). Place in an ovenproof dish and brush with half of the olive oil.",
+      "Mix chili powder with half the salt and black pepper in a bowl. Rub the meat all over with the spices. Let rest at room temperature for 20 minutes.",
+      "Preheat oven to 125°C (260°F).",
+      "Blueberry balsamic: Boil balsamic vinegar and sugar over low heat 20–25 minutes until half the liquid remains, stirring occasionally. Let cool. Mix with blueberry jam.",
+      "Goat cheese cream: Blend goat cheese and milk until creamy using an immersion blender.",
+      "Sear the meat on all sides. Place in an oven dish and bake ~25 minutes (internal temperature 58°C / 136°F). Let rest 10 minutes before serving.",
+      "Increase oven to 225°C (435°F). Cut beets into wedges and toss with remaining oil and half the salt. Roast in oven 15–20 minutes.",
+      "Slice meat. Serve with beets, goat cheese cream, and blueberry balsamic. Garnish with fresh herbs if desired."
     ],
-    "categories": ['mains'],
+    "categories": ["mains"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_160279/cf_259/renytterfil%C3%A9_med_chili__chevrekram_och_betor.jpg"
   },
   {
-    "title": 'Kladdkaka med italiensk maräng',
-    "description": 'Håll i dig nu för säsongens godaste julkladdkaka kommer här! Klassiskt kladdig med vit choklad i såväl smet som ganache och med ljuvlig italiensk maräng på toppen. Godare är så här blir det knappast.',
+    "title": "Chocolate Cake with Italian Meringue",
+    "description": "Get ready for the season's best chocolate cake! Classic gooey cake with white chocolate in both batter and ganache, topped with luscious Italian meringue. It hardly gets better than this.",
     "timeInMins": 40,
     "ingredients": [
-      {
-        "name": "vit choklad",
-        "amount": 125,
-        "unit": "g"
-      },
-      {
-        "name": "vispgrädde",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "rumstempererat smör",
-        "amount": 5,
-        "unit": "msk"
-      },
-      {
-        "name": "ströbröd",
-        "amount": 5,
-        "unit": "msk"
-      },
-      {
-        "name": "vetemjöl",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "salt",
-        "amount": 0.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "bakpulver",
-        "amount": 1.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "socker",
-        "amount": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "vaniljsocker",
-        "amount": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "grovhackad vit choklad",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "smör",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "ägg",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "äggvitor",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "vatten",
-        "amount": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "lingon",
-        "amount": 10,
-        "unit": "st"
-      },
-      {
-        "name": "färska fikon",
-        "amount": 6,
-        "unit": "st"
-      }
+      { "name": "white chocolate", "amount": 4.4, "unit": "oz" },
+      { "name": "heavy cream", "amount": 0.42, "unit": "cups" },
+      { "name": "room temperature butter", "amount": 5, "unit": "tbsp" },
+      { "name": "bread crumbs", "amount": 5, "unit": "tbsp" },
+      { "name": "all-purpose flour", "amount": 0.84, "unit": "cups" },
+      { "name": "salt", "amount": 0.5, "unit": "tsp" },
+      { "name": "baking powder", "amount": 1.5, "unit": "tsp" },
+      { "name": "sugar", "amount": 1.27, "unit": "cups" },
+      { "name": "vanilla sugar", "amount": 1, "unit": "tsp" },
+      { "name": "coarsely chopped white chocolate", "amount": 5.3, "unit": "oz" },
+      { "name": "butter", "amount": 3.5, "unit": "oz" },
+      { "name": "eggs", "amount": 2, "unit": "pcs" },
+      { "name": "egg whites", "amount": 2, "unit": "pcs" },
+      { "name": "water", "amount": 2, "unit": "tbsp" },
+      { "name": "lingonberries", "amount": 10, "unit": "pcs" },
+      { "name": "fresh figs", "amount": 6, "unit": "pcs" }
     ],
     "instructions": [
-      "Ganache: Grovhacka chokladen och lägg den i en skål. Koka upp grädden, häll den över chokladen och rör till en slät smet. Rör i smöret. Låt svalna helt.",
-      "Sätt ugnen på 175°C.",
-      "Kaka: Klipp ut en bit bakplåtspapper och lägg i botten en springform (ca 22 cm i diameter), så blir det lättare att flytta över kakan till ett tårtfat. Smörj och bröda formen.",
-      "Blanda alla torra ingredienser i en skål.",
-      "Grovhacka chokladen. Smält smöret. Ta av kastrullen från plattan och rör i 100 g av chokladen (för 10 bitar), rör tills all choklad smält. Låt svalna ett par minuter. Häll ner blandningen i de torra ingredienserna och tillsätt äggen. Rör ihop allt till en jämn smet. Vänd i resten av den hackade vita chokladen.",
-      "Häll smeten i formen och grädda i ca 20 till 22 minuter. Låt svalna helt, så att kakan stelnar lite.",
-      "Lossa kakan från kanten och lägg upp på ett tårtfat. Häll ganachen på kakan.",
-      "Italiensk maräng: Lägg äggvitan i en skål. Koka upp vatten och socker i en liten kastrull till 110°C. När sockret kokar börja vispa äggvitan med en elvisp till ett mjukt fast skum, under tiden låter du sockret koka upp till 121°C (obs ej högre än 121°C).",
-      "Häll sedan det varma sockret i en fin stråle ner i äggvitan och vispa kraftigt under tiden. Fortsätt vispa till marängen är hård och kall. Fyll en eller flera spritspåsar med marängen och använd gärna olika tyllar (spritsmunstycken). Spritsa toppar på kakan och bränn gärna marängen med en gasolbrännare.",
-      "Till garnering: Toppa kladdkakan med lingon och fikon."
+      "Ganache: Chop chocolate and place in a bowl. Boil cream and pour over chocolate, stir until smooth. Stir in butter. Let cool completely.",
+      "Preheat oven to 175°C (350°F).",
+      "Cake: Line a 22 cm (9 in) springform pan with parchment. Butter and dust with crumbs.",
+      "Mix dry ingredients in a bowl.",
+      "Chop chocolate. Melt butter and stir in 100 g (3.5 oz) of chopped chocolate until melted. Let cool a few minutes. Mix into dry ingredients and add eggs. Stir until smooth. Fold in remaining chopped white chocolate.",
+      "Pour batter into pan and bake 20–22 minutes. Cool completely.",
+      "Remove cake from pan and place on a serving plate. Pour ganache on top.",
+      "Italian meringue: Place egg whites in a bowl. Boil water and sugar to 110°C (230°F). Whip egg whites to soft peaks. When sugar reaches 121°C (250°F), pour in thin stream while whisking. Continue whisking until meringue is stiff and cooled. Fill piping bags and decorate cake. Torch meringue if desired.",
+      "Garnish with lingonberries and figs."
     ],
-    "categories": ['desserts'],
+    "categories": ["desserts"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221608/cf_259/julkladdkaka_med_italiensk_marang.jpg"
   },
   {
-    "title": 'Aperitivo',
-    "description": "Den här alkoholfria drinken med blodgrapejuice, svartvinbärssaft och rosmarin passar perfekt att servera till minglet eller som fördrink tillsammans med småplock som ost och chark.",
+    "title": "Aperitivo",
+    "description": "This non-alcoholic drink with blood grapefruit juice, blackcurrant syrup, and rosemary is perfect for mingling or as a pre-drink with snacks like cheese and charcuterie.",
     "timeInMins": 15,
     "ingredients": [
-      {
-        "name": "blodgrapefruktsjuice",
-        "amount": 8,
-        "unit": "cl"
-      },
-       {
-        "name": "koncentrerad svartvinbärssaft",
-        "amount": 2,
-        "unit": "cl"
-      },
-      {
-        "name": "sanbitter",
-        "amount": 10,
-        "unit": "cl"
-      },
-      {
-        "name": "sodavatten eller rosmarinssodavatten",
-        "amount": 12,
-        "unit": "cl"
-      },
-      
+      { "name": "blood grapefruit juice", "amount": 2.7, "unit": "oz" },
+      { "name": "concentrated blackcurrant syrup", "amount": 0.7, "unit": "oz" },
+      { "name": "Sanbitter", "amount": 3.4, "unit": "oz" },
+      { "name": "soda water or rosemary soda", "amount": 4.1, "unit": "oz" }
     ],
     "instructions": [
-    "Blanda alla ingredienser utom sodavatten och häll i ett glas. Fyll på med is och toppa med sodavatten eller rosmarinsodavatten.",
-    "Till garnering: Garnera med skivad blodgrape och rosmarin."
+      "Mix all ingredients except soda and pour into a glass. Add ice and top with soda water or rosemary soda.",
+      "Garnish with sliced blood grapefruit and rosemary."
     ],
-    "categories": ['drinks'],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg"
   },
   {
-    "title": 'Getostbollar med krispigt baconsmul',
-    "description": "Ett aptitretande och festligt tilltugg som är enkelt att göra: ostbollar med getost och färskost som rullas i ett smul av krispigt stekt bacon och hackade nötter. Perfekt till glöggfest eller adventsmingel!",
+    "title": "Goat Cheese Balls with Crispy Bacon Crumbs",
+    "description": "A tasty and festive appetizer: goat and cream cheese balls rolled in crispy bacon crumbs and chopped nuts. Perfect for holiday parties or mingles.",
     "timeInMins": 30,
     "ingredients": [
-      {
-        "name": "skivat bacon",
-        "amount": 1,
-        "unit": "förpackning",
-      },
-      {
-        "name": "getost",
-        "amount": 200,
-        "unit": "gram",
-      },
-      {
-        "name": "hackad färsk timjan",
-        "amount": 1,
-        "unit": "msk",
-      },
-      {
-        "name": "finhackade rostade hasselnötter",
-        "amount": 1,
-        "unit": "dl",
-      },
+      { "name": "sliced bacon", "amount": 1, "unit": "package" },
+      { "name": "goat cheese", "amount": 7, "unit": "oz" },
+      { "name": "chopped fresh thyme", "amount": 1, "unit": "tbsp" },
+      { "name": "finely chopped roasted hazelnuts", "amount": 0.42, "unit": "cups" }
     ],
-
-    "instructions":[
-        "Strimla baconet och stek knaprigt. Låt rinna av på hushållspapper.",
-        "Smula getosten och blanda med färskosten till en slät smet. Rulla smeten till bollar. Ställ bollarna i kylen.",
-        "Smula baconet och finhacka timjan och blanda ihop med nötterna.",
-        "Rulla bollarna i smulet."
-      ],
-
-    "categories": ['starters'],
+    "instructions": [
+      "Slice and fry bacon until crispy. Drain on paper towels.",
+      "Crumble goat cheese and mix with cream cheese until smooth. Roll into balls and chill.",
+      "Crumble bacon, chop thyme, and mix with nuts.",
+      "Roll cheese balls in the bacon-nut mixture."
+    ],
+    "categories": ["starters"],
     "ratings": [],
     "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_208890/cf_259/getostbollar_med_krispigt_baconsmul.jpg'
   },
-
   {
-    "title": 'Clementinbubbel med rosmarin',
-    "description": "En läskande bubbeldrink med clementin och rosmarin som är både törstsläckande och himmelskt god! Servera denna festliga drink på glöggmingel, fest eller självaste nyårsafton.",
+    "title": "Clementine Fizz with Rosemary",
+    "description": "A refreshing sparkling drink with clementine and rosemary, perfect for holiday parties or New Year's Eve.",
     "timeInMins": 35,
     "ingredients": [
-      {
-        "name": "rosmarin",
-        "amount": 2,
-        "unit": "kvistar"
-      },
-      {
-        "name": "strösocker",
-        "amount": 3,
-        "unit": "msk"
-      },
-      {
-        "name": "färskpressad clementinjuice",
-        "amount": 4,
-        "unit": "dl"
-      },
-      {
-        "name": "tonic water",
-        "amount": 4,
-        "unit": "dl"
-      },
-      {
-        "name": "mousserande vin",
-        "amount": 1,
-        "unit": "flaska"
-      }
+      { "name": "rosemary", "amount": 2, "unit": "sprigs" },
+      { "name": "granulated sugar", "amount": 3, "unit": "tbsp" },
+      { "name": "fresh clementine juice", "amount": 1.7, "unit": "cups" },
+      { "name": "tonic water", "amount": 1.7, "unit": "cups" },
+      { "name": "sparkling wine", "amount": 1, "unit": "bottle" }
     ],
     "instructions": [
-      "Mortla rosmarin och socker. Blanda med juicen och låt stå och dra ca 30 minuter.",
-      "Sila juicen. Fördela juice och tonic water i glasen. Toppa med mousserande vin. Garnera med rosmarinkvistar."
+      "Crush rosemary and sugar. Mix with juice and let infuse 30 minutes.",
+      "Strain juice. Divide juice and tonic water into glasses. Top with sparkling wine. Garnish with rosemary sprigs."
     ],
-    "categories": ['drinks'],
+    "categories": ["drinks"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_189804/cf_259/clementinbubbel_med_rosmarin%C2%A0.jpg"
   },
   {
-    "title": 'Räkcrostini med koriandermajo',
-    "description": "Gör en asiatisk snitt till fördrinken. Blanda räkor med krämig majonnäs, syrligt limeskal och smakrik koriander. Toppa med chiliflakes för lite extra sting. Oemotståndligt gott.",
+    "title": "Shrimp Crostini with Coriander Mayo",
+    "description": "An Asian-inspired appetizer: shrimp mixed with creamy mayo, lime zest, and fresh coriander, topped with chili flakes for a little kick.",
     "timeInMins": 20,
     "ingredients": [
-      {
-        "name": "majonnäs",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "färsk koriander",
-        "amount": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "salt",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "skalade räkor",
-        "amount": 200,
-        "unit": "gram"
-      },
-      {
-        "name": "finrivet limeskal",
-        "amount": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "chiliflakes",
-        "amount": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "crostini",
-        "amount": 20,
-        "unit": "st"
-      },
-      {
-        "name": "sesamfrön",
-        "amount": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "chiliflakes",
-        "amount": 1,
-        "unit": "tsk"
-      },
+      { "name": "mayonnaise", "amount": 0.42, "unit": "cups" },
+      { "name": "fresh coriander", "amount": 0.42, "unit": "cups" },
+      { "name": "salt", "amount": 1, "unit": "pinch" },
+      { "name": "peeled shrimp", "amount": 7, "unit": "oz" },
+      { "name": "finely grated lime zest", "amount": 1, "unit": "tsp" },
+      { "name": "chili flakes", "amount": 1, "unit": "pinch" },
+      { "name": "crostini", "amount": 20, "unit": "pcs" },
+      { "name": "sesame seeds", "amount": 1, "unit": "tbsp" },
+      { "name": "chili flakes", "amount": 1, "unit": "tsp" }
     ],
     "instructions": [
-    "Mixa majonnäs och koriander slätt. Krydda med salt och peppar.",
-    "Hacka räkor grovt. Blanda med majonnäsen, limeskal och chiliflakes.",
-    "Fördela på ca 20 crostini. Toppa med sesamfrön och chiliflakes.",
+      "Blend mayonnaise and coriander until smooth. Season with salt and pepper.",
+      "Coarsely chop shrimp. Mix with mayo, lime zest, and chili flakes.",
+      "Spread on crostini. Top with sesame seeds and chili flakes."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_173649/cf_259/rakcrostini_med_koriandermajo.jpg"
   },
   {
-    "title": 'Hummer, forellrom och citronsmetana',
-    "description": "Bjud på en lyxig förrätt med hummer till nyår! Här serveras kall hummer tillsammans med smetana, lök, rom, dill och krasse. En förrätt som är enkel att förbereda i förskott och laga till många. Perfekt förrätt till nyårsafton.",
+    "title": "Lobster, Trout Roe and Lemon Smetana",
+    "description": "A luxurious appetizer for New Year's! Cold lobster served with smetana, onion, roe, dill, and cress. Easy to prepare ahead and great for large gatherings.",
     "timeInMins": 30,
     "ingredients": [
-      {
-        "name": "kokta humrar",
-        "amount": 2,
-        "unit": "st"
-      },
-      {
-        "name": "smetana",
-        "amount": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "salt",
-        "amount": 2,
-        "unit": "krm"
-      },
-      {
-        "name": "färskpressad citronjuice",
-        "amount": 0.5,
-        "unit": "msk"
-      },
-      {
-        "name": "silverlök",
-        "amount": 0.25,
-        "unit": "st"
-      },
-      {
-        "name": "forell-eller löjrom",
-        "amount": 80,
-        "unit": "gram"
-      },
-      {
-        "name": "dill",
-        "amount": 0.5,
-        "unit": "kruka"
-      },
-      {
-        "name": "smörgåskrasse",
-        "amount": 1,
-        "unit": "ask"
-      },
+      { "name": "cooked lobsters", "amount": 2, "unit": "pcs" },
+      { "name": "smetana", "amount": 0.85, "unit": "cups" },
+      { "name": "salt", "amount": 2, "unit": "pinch" },
+      { "name": "fresh lemon juice", "amount": 0.25, "unit": "tbsp" },
+      { "name": "pickled onion", "amount": 0.25, "unit": "pcs" },
+      { "name": "trout or vendace roe", "amount": 2.8, "unit": "oz" },
+      { "name": "dill", "amount": 0.5, "unit": "bunch" },
+      { "name": "cress", "amount": 1, "unit": "box" }
     ],
     "instructions": [
-      "Skala hummern och skär köttet i mindre bitar. Lägg i kylen.",
-      "Blanda smetana, salt och citronjuice.",
-      "Finhacka löken och lägg i kallt vatten ca 5 minuter så den blir lite mildare, låt torka på hushållspapper.",
-      "Lägg smetana i botten på tallrikarna, toppa med hummer, rom, lök, plockad dill och klippt krasse.",
+      "Shell lobster and cut meat into smaller pieces. Chill.",
+      "Mix smetana with salt and lemon juice.",
+      "Finely chop onion and soak in cold water 5 minutes to soften. Drain.",
+      "Plate smetana, top with lobster, roe, onion, dill, and chopped cress."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg'
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_191807/cf_259/hummer_med_citronsmetana__forellrom_och_krasse.jpg"
   },
   {
-    "title": 'Apelsinsallad med lufttorkad skinka',
-    "description": "Den mångsidiga apelsinen kan spela huvudrollen i såväl salta som söta rätter. Här tar citrusfrukten plats i en vacker, vintersallad med smulad getost, lingon och lufttorkad skinka. God som både förrätt, tillbehör eller på buffébordet.",
+    "title": "Orange Salad with Air-Dried Ham",
+    "description": "Versatile oranges shine in a beautiful winter salad with crumbled goat cheese, lingonberries, and air-dried ham. Delicious as appetizer, side, or on a buffet.",
     "timeInMins": 15,
     "ingredients": [
-      {
-        "name": "apelsiner",
-        "amount": 4,
-        "unit": "st"
-      },
-       {
-        "name": "chèvre",
-        "amount": 200,
-        "unit": "gram"
-      },
-       {
-        "name": "tinade frysta lingon",
-        "amount": 1,
-        "unit": "dl"
-      },
-       {
-        "name": "hackad sötmandel",
-        "amount": 1,
-        "unit": "dl"
-      },
-       {
-        "name": "lufttorkad skinka",
-        "amount": 150,
-        "unit": "gram"
-      },
-       {
-        "name": "olivolja",
-        "amount": 1,
-        "unit": "msk"
-      },
-       {
-        "name": "flingsalt",
-        "amount": 1,
-        "unit": "nypa"
-      },
-       {
-        "name": "svartpeppar",
-        "amount": 1,
-        "unit": "nypa"
-      },
+      { "name": "oranges", "amount": 4, "unit": "pcs" },
+      { "name": "goat cheese (chèvre)", "amount": 7, "unit": "oz" },
+      { "name": "thawed frozen lingonberries", "amount": 0.42, "unit": "cups" },
+      { "name": "chopped sweet almonds", "amount": 0.42, "unit": "cups" },
+      { "name": "air-dried ham", "amount": 5.3, "unit": "oz" },
+      { "name": "olive oil", "amount": 1, "unit": "tbsp" },
+      { "name": "flake salt", "amount": 1, "unit": "pinch" },
+      { "name": "black pepper", "amount": 1, "unit": "pinch" }
     ],
     "instructions": [
-      "Skala apelsinerna med kniv och skär i skivor. Lägg på ett fat och toppa med smulad chèvre, lingon, mandel och skinka. Ringla över olja och strö över flingsalt och peppar.",
-      "Till servering: Servera gärna med bröd.",
+      "Peel oranges and slice. Arrange on a platter and top with crumbled chèvre, lingonberries, almonds, and ham. Drizzle with olive oil and sprinkle with salt and pepper.",
+      "Serve with bread if desired."
     ],
-    "categories": ['starters'],
+    "categories": ["starters"],
     "ratings": [],
-    "imageUrl": 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg'
-  },
-];
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_244901/cf_259/apelsinsallad_med_lingon_och_lufttorkad_skinka.jpg"
+  }
+
+]
+
+

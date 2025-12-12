@@ -38,6 +38,24 @@ export async function getRecipeById(id) {
     }
 }
 
+export async function deleteRecipe(id) {
+    try {
+        const response = await fetch(`${BASE_URL}${TEAM_ID}/recipes/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        if (!response.ok) {
+            throw new Error(`Recipe with ID ${id} not found`);
+        }
+        return true;
+    } catch (error) {
+        console.error('Error deleting recipe:', error);
+        throw error;
+    }
+}
+
 export function recipeExists(title, recipes) {
     const recipe = recipes.find(recipe => recipe.title === title);
     const exists = recipe !== undefined;
