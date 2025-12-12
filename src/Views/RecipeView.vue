@@ -7,19 +7,18 @@ export default {
   props: ['id'],
   data() {
     return {
-      recipe: null, // The recipe object to display
-      newName: '', // Name of the user submitting a comment
-      newComment: '', // Content of the user's comment
-      newRating: 0,// Rating given by the user
+      recipe: null,
+      newName: '',
+      newComment: '',
+      newRating: 0,
       loading: true,
       error: null,
-      averageRating: 0, // Det beräknade genomsnittet från API
+      averageRating: 0,
     };
   },
 
   computed: {
     currentAverageRating() {
-      // Använd det beräknade genomsnittet eller fallback till receptets rating
       return this.averageRating || (this.recipe ? this.recipe.rating || 0 : 0);
     }
   },
@@ -32,7 +31,7 @@ export default {
         this.loading = true;
         this.error = null;
 
-        const recipeId = this.$route.params.id; // Använd ID som sträng (UUID)
+        const recipeId = this.$route.params.id;
 
         // Försök först att hämta specifikt recept via ID
         try {
@@ -52,7 +51,6 @@ export default {
           this.recipe.ingredients = this.recipe.ingredients.map(ing => ({ ...ing, checked: false })); // Lägg till 'checked' property
         }
 
-        // Hämta och beräkna genomsnittligt betyg från API
         if (this.recipe) {
           this.averageRating = await getAverageRating(this.recipe.id, this.recipe.rating);
         }
@@ -91,7 +89,6 @@ export default {
         // Uppdatera receptet
         this.recipe = { ...updatedRecipe };
 
-        // Hämta nytt genomsnitt från API
         this.averageRating = await getAverageRating(this.recipe.id, this.recipe.rating);
         console.log('Nytt genomsnittligt betyg:', this.averageRating);
       }
@@ -236,13 +233,13 @@ export default {
 }
 
 .recipe-card-wrapper {
-  border: 9px solid #f9f9fa; /* Thick light border */
-  border-radius: 24px;  /* Rounded corners */
+  border: 9px solid #f9f9fa;
+  border-radius: 24px;
   padding: 40px;
   margin: 40px auto;
   max-width: 1400px;
   background-color: #f0e6f7;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .recipe-page-content {

@@ -31,7 +31,6 @@ export async function getRecipeById(id) {
             throw new Error(`Recipe with ID ${id} not found`);
         }
         const data = await response.json();
-        // console.log('Fetched Recipe:', data); //känns onödig i konsollen?
         return data;
     } catch (error) {
         console.error('Error fetching recipe:', error);
@@ -88,7 +87,7 @@ export async function getRecipeRatings(recipeId) {
     
     if (!response.ok) {
       if (response.status === 404) {
-        return []; // Inga ratings än
+        return [];
       }
       throw new Error(`Failed to fetch ratings: ${response.status}`);
     }
@@ -97,7 +96,7 @@ export async function getRecipeRatings(recipeId) {
     return ratings;
   } catch (error) {
     console.error("Error fetching recipe ratings:", error);
-    return []; // Returnera tom array vid fel
+    return []; 
   }
 }
 
@@ -156,7 +155,6 @@ export async function addRecipeRating(recipeId, newRating) {
 // Beräkna genomsnittligt betyg från API
 export async function getAverageRating(recipeId, fallbackRating = null) {
   try {
-    // Hämta alla individuella ratings från API
     const allRatings = await getRecipeRatings(recipeId);
     
     if (allRatings.length > 0) {

@@ -66,18 +66,13 @@ export default {
     },
     data() {
         return {
-            // Sparar det valda betyget som ett antal (0 när inget valt)
             rating: 0,
-            // Temporärt betyg vid hover för visuell feedback
             hoverRating: 0,
-            // Feedback-text som visas baserat på valt betyg
             feedbackMessage: '',
-            // true efter lyckad submit -> visar tack-text
             submitted: false
         };
     },
     mounted() {
-        // Sätt initialt rating direkt från prop
         this.rating = this.initialRating || 0;
     },
     watch: {
@@ -86,23 +81,16 @@ export default {
         }
     },
     methods: {
-        // Sätter hover-värde för att visa temporär highlight
         hoverStars(ratingValue) {
             this.hoverRating = ratingValue;
         },
-
-        // Rensar hover (återställ till valt betyg)
         clearHover() {
             this.hoverRating = 0;
         },
-
-        // Användaren klickar på en stjärna -> spara betyg och uppdatera feedback
         selectRating(ratingValue) {
             this.rating = ratingValue;
             this.feedbackMessage = this.getFeedbackMessage(ratingValue);
         },
-
-        // Returnerar feedback-text baserat på betyg
         getFeedbackMessage(ratingValue) {
             switch (String(ratingValue)) {
                 case '1': return 'Will not make again.';
@@ -126,23 +114,19 @@ export default {
                 console.log(`Submitting rating ${this.rating} for recipe ${this.recipeId}`);
                 console.log('Current submitted state:', this.submitted);
 
-                // Skicka betyget till API:t
                 const updatedRecipe = await addRecipeRating(this.recipeId, this.rating);
                 console.log('Got updated recipe:', updatedRecipe);
 
-                // Visa tack-text
                 this.submitted = true;
                 this.feedbackMessage = '';
 
                 console.log('Set submitted to true, new state:', this.submitted);
 
-                // Emittera det uppdaterade receptet till föräldrakomponenten
                 this.$emit('rating-updated', updatedRecipe);
 
             } catch (error) {
                 console.error('Failed to update recipe rating:', error);
                 console.log('Error occurred, submitted stays:', this.submitted);
-                // Visa felmeddelande till användaren om API-anropet misslyckas
                 this.feedbackMessage = 'Kunde inte uppdatera betyget i databasen.';
             }
         }
