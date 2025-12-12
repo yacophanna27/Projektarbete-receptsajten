@@ -14,7 +14,6 @@ export default {
   },
   computed: {
     displayRating() {
-      // Använd det beräknade genomsnittet eller fallback till receptets rating
       return this.averageRating || this.recipe.rating || 0;
     }
   },
@@ -174,14 +173,14 @@ export default {
 
 /* Anpassa Ratingstars för RecipeCard */
 .details :deep(.rating) { /*Deep är specifikt för Vue för att komma åt barn-komponenten*/
-  background: transparent; /*Tar bort lila lådan*/
-  box-shadow: none; /*Tar bort skuggan runt lådan*/
-  padding: 0.5rem; /*Lite snyggare avstånd */
-  max-width: none; /*Så komponenten tar full bredd*/
+  background: transparent;
+  box-shadow: none;
+  padding: 0.5rem;
+  max-width: none; 
   border: none;
 }
 
 .details :deep(.readonly-stars .star) {
-  font-size: 20px; /* Gör stjärnorna lite större än texten */
+  font-size: 20px; 
 }
 </style>

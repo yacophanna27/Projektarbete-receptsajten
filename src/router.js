@@ -5,23 +5,23 @@ import RecipeView from './Views/RecipeView.vue';
 export default createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/', 
+        {
+        path: '/', 
         component: HomeView, 
-        props:true },
-
-        // Category routningen 
-        {path: '/category/:category',
+        props:true
+        },
+        {
+        path: '/category/:category',
         name: 'CategoryView',
         component: HomeView, 
-        props: true,
-
+        props: true
         },
-
-        // La till category i pathen 
-        {path: '/recipe/:id', 
+        {
+        path: '/recipe/:id', 
         name: 'RecipeView', 
         component: RecipeView, 
-        props: true }
+        props: true 
+        }
     ],
     scrollBehavior() {
         return { top: 0 };
