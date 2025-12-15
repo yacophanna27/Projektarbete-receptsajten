@@ -9,27 +9,34 @@ export default {
     items: Array,
     listTag: {
       type: String,
-      default: 'ul'
+      default: 'ul',
+      validator: function (value) {
+        return ['ul', 'ol'].includes(value);
+      }
     },
     variant: {
       type: String,
-      default: 'default'   // "ingredients", "instructions" or "comments"
+      default: 'ingredients',   // "ingredients", "instructions" or "comments"
+      validator: function (value) {
+        return ['ingredients', 'instructions'].includes(value);
+      }
     }
   }
 };
 </script>
 
 <template>
-  <div :class="['list-component', variant]">
-    <h2 v-if="title">{{ title }}</h2>
+<div :class="['list-component', `list--${variant}`]">
+  <h2 v-if="title">{{ title }}</h2>
 
-    <component :is="listTag" :class="['list-inner', variant]">
-      <template v-for="(item, index) in items" :key="index">
-        <slot name="item" :item="item" :index="index" /> <!--Custom item rendering via slot-->
-      </template>
-    </component>
-  </div>
+  <component :is="listTag" class="list-inner">
+    <template v-for="(item, index) in items" :key="item.id || index">
+      <slot name="item" :item="item" :index="index" />
+    </template>
+  </component>
+</div>
 </template>
+
 
 <style scoped>
 .list-component {
@@ -46,7 +53,7 @@ export default {
   margin: 0;
 }
 
-.list-component.ingredients {
+.list--ingredients {
   background: #f5f0f8;
   padding: 14px 20px 18px;
   margin-top: 10px;
@@ -54,7 +61,7 @@ export default {
   box-shadow: 0 2px 6px rgba(156, 156, 156, 0.5);
 }
 
-.list-component.instructions {
+.list--instructions {
   padding: 0;
   color: #333;
 }
@@ -137,7 +144,7 @@ export default {
   border-color: #c69c6d;
 }
 
-::v-deep(input[type="checkbox"]:checked + .custom-checkbox::after) {
+::v-deep(input[type="checkbox"]:checked + .custom-checkbox::after) { /* Show horizontal line when checked */
   transform: translate(-50%, -50%) scaleX(1);
 }
 
