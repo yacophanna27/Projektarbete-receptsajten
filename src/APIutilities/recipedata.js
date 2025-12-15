@@ -268,7 +268,7 @@ export const recipes = [
   },
 
   {
-    "title": "Cod Fillet with Shrimp and Dill Butter",
+    "title": "Cod Fillet with Shrimp & Dill",
     "description": "Oven-baked cod with creamy potato purée and shrimp — perfect for New Year's or other festive occasions. Rim the cod, serve with mandel potato cream, and top with warm dill butter and shrimp.",
     "timeInMins": 50,
     "ingredients": [
@@ -629,7 +629,7 @@ export const recipes = [
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235254/cf_259/lattrimmad_torsk_med_blamusslor_och_champagnesas.jpg"
   },
   {
-    "title": "Candied Clementines with Pistachio Ice Cream",
+    "title": "Candied Clementines with Pistachio",
     "description": "Candied clementines in a cardamom-flavored syrup are delicious. Homemade ice cream is fun and tasty, flavored with pistachios, dates, and a hint of lemon. Start early: the clementines taste best after 12 hours in syrup, and the ice cream needs at least 6 hours in the freezer.",
     "timeInMins": 40,
     "ingredients": [
@@ -707,7 +707,7 @@ export const recipes = [
   },
 
   {
-    "title": "Reindeer Tenderloin with Chili and Goat Cheese Cream",
+    "title": "Reindeer Tenderloin with Chili",
     "description": "Reindeer tenderloin seasoned with chili is surprisingly delicious. Serve the fillet with oven-roasted beets and a creamy goat cheese spread. Top with a sweet and tangy blueberry balsamic.",
     "timeInMins": 75,
     "ingredients": [
@@ -791,7 +791,7 @@ export const recipes = [
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_179512/cf_259/aperitivo.jpg"
   },
   {
-    "title": "Goat Cheese Balls with Crispy Bacon Crumbs",
+    "title": "Goat Cheese Balls with Crispy Bacon",
     "description": "A tasty and festive appetizer: goat and cream cheese balls rolled in crispy bacon crumbs and chopped nuts. Perfect for holiday parties or mingles.",
     "timeInMins": 30,
     "ingredients": [
