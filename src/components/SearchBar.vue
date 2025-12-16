@@ -13,7 +13,7 @@ export default {
   data() {
     return { searchText: this.modelValue }
   },
-   /* Håller koll på ändringar */
+  /* Håller koll på ändringar */
   watch: {
     modelValue(newVal) {
       this.searchText = newVal;
@@ -45,23 +45,11 @@ export default {
   <div class="search-wrapper" role="search">
     <i class="fa fa-search search-icon" aria-hidden="true"></i>
 
-    <input
-      type="text"
-      v-model="searchText"
-      placeholder="Search"
-      @input="onInput"
-      @keydown="onKeydown"
-      aria-label="Search recipe"
-    />
+    <input type="text" v-model="searchText" placeholder="Search" @input="onInput" @keydown="onKeydown"
+      aria-label="Search recipe" />
     <!--Rensar sök, syns bara när du börjat skriva -->
-    <button
-      v-if="searchText"
-      class="clear-btn"
-      type="button"
-      @click="clear"
-      aria-label="Clear search"
-    >
-      × 
+    <button v-if="searchText" class="clear-btn" type="button" @click="clear" aria-label="Clear search">
+      ×
     </button>
   </div>
 </template>
@@ -88,7 +76,7 @@ input {
   width: 22rem;
   height: 2.5rem;
   outline: none;
-  padding-left: 2rem; /* lite luft runt iconen*/
+  padding-left: 2rem;
 }
 
 /* Clear button */

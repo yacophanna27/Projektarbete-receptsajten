@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-    <div>  <!-- Här hade vi en text först -->
+    <div> <!-- Här hade vi en titel först -->
         <!-- <h1 class="title">New Year Countdown!</h1> -->
     </div>
 

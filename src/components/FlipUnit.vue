@@ -80,7 +80,7 @@ export default {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.display-value { 
+.display-value {
     width: 100%;
     height: 100%;
     display: flex;
@@ -144,6 +144,7 @@ export default {
         transform: rotateX(-90deg);
     }
 }
+
 @media (max-width: 600px) {
     .card {
         width: 40px;
