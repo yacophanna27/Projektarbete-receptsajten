@@ -1,17 +1,25 @@
 # Projektarbete-receptsajten
 Team B, FUX-25
 
-
 **Deltagare**
 
-Jennifer Gahne
-Louise Rylander
-Nataliia Rusanova
-Yacop Hanna
+Jennifer Gahne: @gahnejennifer
+Louise Rylander: @Louise-Lollo
+Nataliia Rusanova: @rusanovasnataly
+Yacop Hanna: @yacophanna27
+
+
+**Länk till planeringsverktyget**
+
+https://github.com/users/yacophanna27/projects/1
+
+**Projektbeskrivning**
+
+Detta är en receptsajt för dig som vill laga god mat på nyårsafton och vill ha recept för kvällens alla rätter samlade.
 
 # ReceptSajten
 
-This template should help get you started developing with Vue 3 in Vite.
+Nedan följer instruktioner för att kunna ta del av receptsajten.
 
 ## Recommended IDE Setup
 
